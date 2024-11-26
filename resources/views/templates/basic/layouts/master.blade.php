@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> {{ $general->sitename(__($pageTitle)) }}</title>
   @include('partials.seo')
+      <!-- OWL CAROUSEL -->
+      <link rel="stylesheet" href="{{asset('assets/global/css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/global/css/owl.theme.default.min.css')}}">
+  <!-- OWL CAROUSEL -->
   <!-- bootstrap 5  -->
   <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/lib/bootstrap.min.css')}}">
   <!-- fontawesome 5  -->
@@ -15,6 +19,8 @@
   <!--  -->
   <link href="{{ asset('assets/global/css/select2.min.css') }}" rel="stylesheet" />
   <!-- slick slider css -->
+
+
   <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/lib/slick.css')}}">
   
   <!-- main css -->
@@ -56,11 +62,23 @@
     <!-- main js -->
     <script src="{{asset($activeTemplateTrue.'js/app.js')}}"></script>
     <script src="{{ asset('assets/global/js/select2.min.js') }}"></script>
+    
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script> -->
+    <!-- owl carousel -->
+    <script src="{{ asset('assets/global/js/owl.carousel.js') }}"></script>
+    <script src="{{ asset('assets/global/js/owl.carousel.min.js') }}"></script>
+   
     @stack('script')
 
     @include('partials.plugins')
 
     @include('partials.notify')
+
+    
+
 
     <script>
       "use strict";

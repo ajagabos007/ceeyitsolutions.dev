@@ -1,8 +1,21 @@
 @extends($activeTemplate.'layouts.frontend')
+<head>
+  <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="{{asset('assets/global/css/owl.carousel.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/global/css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/global/css/owl.theme.default.min.css')}}">
+  <!-- OWL CAROUSEL -->
+</head>
 @section('style')
 <style>
+	@font-face {
+    font-family: 'Atyp text';
+    src: url("/public/assets/font/AtypText-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
 	body {
-		font-family: 'Inter', sans-serif;
+		/* font-family: 'Inter', sans-serif; */
 	}
 
 	.navbar {
@@ -23,13 +36,10 @@
 
 
 	.hero-section {
-		padding: 4rem 0;
+		padding: 1rem 0;
 	}
 
 	.hero-title {
-		font-size: 3.5rem;
-		font-weight: 700;
-		line-height: 1.2;
 		display: flex;
 		flex-direction: column;
 	}
@@ -52,21 +62,31 @@
 		margin-bottom: 3rem;
 	}
 
+	
+
 	.section-title {
+		font-family:'Atyp Text',sans-serif;
 		font-size: 2.5rem;
-		font-weight: 700;
-		margin-bottom: 1rem;
+		font-weight: 600;
+		line-height:50px;
+		margin-bottom: 28px;
 		text-align: center;
+		color:#2C2B32;
 	}
 
 	.section-subtitle {
-		color: #64748B;
+		font-family:'Atyp Text',sans-serif;
+		color: #302F35;
+		font-size:15.98px;
+		line-height:26.64px;
+		font-weight:400;
 		text-align: center;
-		max-width: 700px;
-		margin: 0 auto 2rem;
+		margin: auto;
+		max-width: 476px;
+		margin-bottom: 2.9rem;
 	}
 
-	.course-card {
+	/* .course-card {
 		background-color: white;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -84,27 +104,37 @@
 	}
 
 	.course-card hr {
-		/* margin: 2rem 0; */
+		margin: 2rem 0;
 		opacity: 0.2;
-	}
+	} */
 
 	.who-card {
-		background-color: #1E293B;
-		border-radius: 16px;
-		overflow: hidden;
+		background: linear-gradient(103.12deg, #201E27 7.94%, #4B4B4B 114.59%);
+		border-radius: 19.33px;
+	    width:100%;
+		/* max-height: 278px; */
 		height: 100%;
+		border-radius:19.33px;
+
 	}
 
 	.who-card .content {
-		padding: 2rem;
 		color: white;
 	}
+	 .content-left {
+		padding: 1rem 1rem 0rem 1rem;
+	}
+	.content-right {
+		padding: 1rem 1rem 0rem 1rem;
+	} 
 
-	.who-card .image {
-		height: 100%;
-		min-height: 300px;
-		background-size: cover;
-		background-position: center;
+	.who-card img {
+		padding: 0;
+		width:100%;
+		height:100%;
+		object-fit:contain;
+		border-bottom-left-radius: 19.33px;
+		border-bottom-right-radius:19.33px;
 	}
 
 	.feature-card {
@@ -160,15 +190,15 @@
 		background-color: #00BFA5;
 	}
 
-	span,
+	/* span,
 	.accent-text {
 		width: 580px;
 		height: 137;
 		font-size: 75px;
-		letter-spacing: -4%;
+		letter-spacing: -0.04em;
 		font-weight: bolder;
 		line-height: 85px;
-	}
+	} */
 
 	.fin-aid-outline {
 		width: 152px;
@@ -244,26 +274,36 @@
 		border-radius: 40px;
 	}
 
-	.hero-section {
+	/* .hero-section {
 		padding: 80px 0;
-	}
+	} */
 
 	.hero-title {
-		font-size: 75px;
-		font-weight: 700;
+		font-family:"Atyp text",sans-serif;
+		font-size: 60px;
+		font-weight: 400;
 		line-height: 1.2;
 		margin-bottom: 20px;
+		letter-spacing: -0.04em;
+		color:#2C2B31;
 	}
 
-	.hero-title span {
-		color: #00CED1;
+	.hero-title .highlight {
+		font-family:"Atyp text",sans-serif;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: -0.04em;
+		color: #15BAB1;
 	}
 
 	.hero-description {
-		font-size: 1.1rem;
-		color: #666;
-		margin-bottom: 30px;
-		max-width: 600px;
+		font-family:"Atyp text",sans-serif;
+		font-size: 15px;
+		font-weight:400;
+		line-height:21.36px;
+		color: #2C2B31;
+		max-width: 548px; 
 	}
 
 	.hero-buttons .btn {
@@ -273,16 +313,21 @@
 		margin-right: 15px;
 	}
 
-	/* .btn-get-started {
-            background-color: #00CED1;
-            color: white;
-            border: none;
-        } */
-
 	.btn-financial-aid {
+		font-family: "Atyp Text", sans-serif;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 21.36px;
+		width: 152px;
 		background-color: transparent;
-		border: 1px solid #00CED1;
-		color: #00CED1;
+		border: 1px solid #15BAB1;
+		color: #15BAB1;
+		
+	}
+
+	.btn-financial-aid:hover {
+		border: 1px solid #15BAB1;
+		color: #15BAB1;
 	}
 
 	.hero-image {
@@ -340,36 +385,64 @@
 
 
 	.course-card {
-		aspect-ratio: 1;
-		width: 260px;
+		/* aspect-ratio: 1 / 1; */
+		width: 294px;
+		min-width: 100%;
 		height: 258px;
 		border-radius: 40px;
-		padding: 20px;
+		/* padding: 20px; */
+		padding-left: 29px;
+		padding-right:30px;
 		color: white;
+		column-gap:20px !important;
 		transition: transform 0.3s ease;
-		margin-bottom: 20px;
+		/* margin-bottom: 20px; */
 		display: flex;
 		flex-direction: column;
 		align-items: start;
-		justify-content: start;
+		/* justify-content: center; */
+		flex-shrink:0;
 	}
 
+    .course-card .icon {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 1rem;
+	}
 
+	.course-card hr {
+		/* margin: 2rem 0; */
+		opacity: 0.2;
+	} 
+
+	.course-card h5 {
+		font-family:"Atyp text",sans-serif;
+		font-size:28px;
+		font-weight:400;
+		line-height:28px;
+		max-width: 179px;
+	}
 
 	.course-card:hover {
 		transform: scale(1.05);
 	}
 
-	.python-bg {
-		background-color: #FF69B4;
+	.pink-gradient {
+		background: linear-gradient(89.17deg, #FB729F 0.75%, #F55989 99.36%);
+        box-shadow: 0px 30px 90px 0px #FA72A040;
+
 	}
 
-	.data-analysis-bg {
-		background-color: #8A2BE2;
+	.purple-gradient {
+		background: linear-gradient(89.17deg, #A08CFD 0.75%, #917AFC 99.36%);
+		box-shadow: 0px 30px 90px 0px #937DFC40;
+
+
 	}
 
-	.data-eng-bg {
-		background: linear-gradient(180deg, #65D5F3 10%, #4BC9E9 100%);
+	.light-blue-gradient {
+		background: linear-gradient(89.17deg, #65D5F3 0.75%, #4BC9E9 99.36%);
+        box-shadow: 0px 30px 90px 0px #55CEED40;
 	}
 
 	.site-reliability-bg {
@@ -377,7 +450,9 @@
 	}
 
 	.cloud-eng-bg {
-		background-color: #40E0D0;
+		background: linear-gradient(89.17deg, #65D5F3 0.75%, #4BC9E9 99.36%);
+		box-shadow: 0px 30px 90px 0px #55CEED40;
+
 	}
 
 	.project-management-bg {
@@ -398,15 +473,23 @@
 	}
 
 	.courses-title {
-		color: #333;
-		margin-bottom: 0.5rem;
-		text-align: center;
+		font-family:"Atyp Text", sans-serif;
+		color: #2C2B31;
+		font-size: 2rem;
+		font-weight:600;
+		line-height:32px;
+		margin: 1rem 0;
 	}
 
 	.courses-subtitle {
-		color: #666;
+		font-family:"Atyp Text", sans-serif;
+		font-weight: 400;
+		font-size:15.98px;
+		line-height: 20px;
+		opacity: 80%;
+		color: #302F35;
 		margin-bottom: 2rem;
-		text-align: center;
+	
 	}
 
 	.container {
@@ -425,18 +508,348 @@
 		font-weight: 400;
 	}
 
+	.content h3 {
+		font-family:"Atyp Text",sans-serif;
+		font-weight:400;
+		font-size:27.07px;
+		line-height:39.25px;
+		color:#ffffff
+	}
+
 	p.about-us {
 		color: #FFFFFF;
 		font-size: 12px;
 	}
-
+    .content .about-us {
+		font-family:"Atyp Text",sans-serif;
+		font-weight:400;
+		font-size:12.57px;
+		line-height:17.72px;
+		color:#ffffff
+	}
 	.no-wrap {
 		white-space: nowrap;
 	}
 
-	button.btn-get-started {
+	.btn-get-started {
+		width: 152px;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359;
 		color: #FFFFFF;
 	}
+
+	.btn-get-started:hover {
+		color: #ffffff;
+	}
+
+	.card-container {
+		display:flex;
+		flex-direction:column;
+		gap:20px;
+	  }
+
+	.access-btn {
+		font-family:"Atyp Text",sans-serif;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		/* box-shadow: 0px 4px 15px 0px #03BDB359; */
+		border-radius:20px;
+		text-wrap:nowrap;
+		font-weight:400;
+		color:#ffffff;
+		border:0;
+		outline:0;
+		font-size:15px;
+		line-height:21.36px;
+		width:152px;
+	}
+
+	.access-btn:hover{
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+	}
+
+	.students-btn {
+	  font-family:"Atyp Text",sans-serif;
+	  font-weight:400;
+	  font-size:8px;
+	  line-height:11.39px;
+	  color:#ffffff;
+	  text-wrap:nowrap;
+      border:0;
+	}
+
+	.card-bg {
+		background-color: #313036 !important;
+		border-radius: 59.94px;
+		padding: 12px;
+		height: 100%;
+	}
+
+	.rounded-img {
+	 width: 368.94px;
+	 height:251.73px;
+	 /* width:100%;
+	 height:100%; */
+	 border-top-left-radius: 53.28px;
+	 border-top-right-radius: 53.28px;
+	}
+	.card-content {
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		margin-top: 36px;
+
+	}
+	.card-content h5{
+	  font-family:"Atyp Text",sans-serif;
+	  font-weight: 400;
+	  font-size: 24px;
+	  line-height:35px;
+	  text-align:center;
+	}
+	.card-content p {
+	  font-family:"Atyp Text",sans-serif;
+	  font-weight: 400;
+	  font-size: 1rem;
+	  line-height: 27px;
+	  opacity: 70%;
+	  text-align:center;
+	  max-width: 258px;
+	}
+
+	.btn-consult {
+		width:230px;
+		padding-top:10px;
+		padding-bottom:10px;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+		color: #ffffff;
+		border: 0;
+        border-radius: 20px;
+	}
+
+	.btn-consult:hover {
+		color: #ffffff;
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+	}
+
+    .bg-orange {
+		display: flex;
+		align-items:center;
+		justify-content:center;
+		background: linear-gradient(104.4deg, #F7B15E -1.31%, #E18C28 97.25%);
+		color: #ffffff;
+		border-radius: 20px;
+		/* padding-left: 40px;
+		padding-right: 41px;
+		padding-top: 53px;
+		padding-bottom: 52px; */
+		padding:1rem;
+		height:173px;
+	}
+
+	.bg-pink {
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	    background: linear-gradient(104.69deg, #FB729F 1.73%, #D8386A 92.33%);
+		color: #ffffff;
+		border-radius: 20px;
+		/* padding-left: 40px;
+		padding-right: 41px;
+		padding-top: 53px;
+		padding-bottom: 52px; */
+		padding:1rem;
+		height:173px;
+	}
+
+	.bg-purple {
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	    background: linear-gradient(102.52deg, #A08CFD -0.23%, #5B3EE0 82.23%);
+		color: #ffffff;
+		border-radius: 20px;
+		/* padding-left: 40px;
+		padding-right: 41px;
+		padding-top: 53px;
+		padding-bottom: 52px; */
+		padding:1rem;
+		height:173px;
+	}
+    .para {
+		font-family: "Atyp Text",sans-serif;
+		font-weight:400;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.img-container {
+		display:flex;
+		flex-shrink: 0;
+		gap: 9px;
+		position: absolute;
+		bottom: -68px;
+		left: 25px;
+		z-index: 1;
+		align-items: self-end;
+
+	}
+
+	.img-bottom { 
+       width:88px !important;
+	   height:80.38px !important;
+	   border-radius: 16.92px;
+	   border: 2px solid #FFFFFF;
+	   object-fit: cover;
+	}
+
+	.professional-title {
+      display:flex;
+	  flex-direction: column;
+	  justify-content: end;
+	}
+
+	.professional-title  h5 {
+      font-family:"Atyp Text",sans-serif;
+	  font-weight: 600;
+	  font-size: 20px;
+	  line-height: 28.78px;
+	  color: #313035;
+	}
+
+	.professional-title  p {
+      font-family:"Atyp Text",sans-serif;
+	  font-weight: 400;
+	  font-size: 10px;
+	  line-height: 14.24px;
+	  color: #313035;
+	}
+
+
+	.owl-theme .owl-dots .owl-dot span {
+  width: 22px; 
+  height: 7px;
+  background-color: #E6E3E3; 
+  border-radius: 50px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Active dot style */
+.owl-theme .owl-dots .owl-dot.active span {
+  width:42px;
+  background-color: #04A198;
+}
+	/* MEDIA QUERY */
+	@media (min-width:576px) {
+		.hero-title {	
+			font-family:"Atyp text",sans-serif;
+			font-size: 75px;
+			font-weight: 600;
+			line-height: 85px;
+			margin-bottom: 41px;
+			letter-spacing: -0.04em;
+		}
+
+		.hero-title .highlight {
+			font-family:"Atyp text",sans-serif;
+			font-size: 75px;
+			font-weight: 400;
+			line-height: 85px;
+			letter-spacing: -0.04em;
+	   }
+
+	   .hero-description {
+		margin-bottom: 41px;
+		max-width: 548px;
+	   }
+
+	   .courses-title {
+		font-size:40px;
+		margin-bottom: 1.75rem;
+		line-height: 40px;
+		text-align: center;
+	   }
+
+	  .courses-subtitle {
+		line-height:26.64px;
+		text-align: center;
+		margin-bottom: 4rem;
+	   }
+       
+	  .card-container {
+		display:flex;
+		flex-direction:row;
+		gap:20px;
+	  }
+	  .course-card {
+		max-width:294px;
+	  }
+	  
+      .who-card {
+        border-radius:19.33px;
+	  }
+
+	  /* .who-card img {
+		height: 100%;
+		border-top-right-radius:19.33px;
+		border-bottom-right-radius:19.33px;
+	  } */
+
+	  .content-left {
+		padding-top: 45.37px;
+		padding-left: 26px;
+		padding-right: 30px;
+		/* padding-bottom: 4rem; */
+	}
+	.content-right {
+		padding-top: 45.37px;
+		padding-left: 26px;
+		padding-right: 30px;
+	}
+
+	/* .owl-prev{
+		color: black !important;
+	}
+	.owl-next{
+		color: black !important; 
+	}
+	    */
+	}
+	@media (min-width:768px) {
+		.hero-section {
+		padding: 4rem 0;
+	   }
+
+	   .who-card img {
+		height: 100%;
+		border-radius: 0px;
+		border-top-right-radius:19.33px;
+		border-bottom-right-radius:19.33px;
+	  }
+	  
+	}
+	@media (min-width:992px) {
+		.hero-section {
+		padding: 4rem 0;
+	   }
+	   .course-card {
+		width:294px;
+	  }
+	}
+	@media (min-width:1200px) {
+		.hero-section {
+		padding: 4rem 0;
+	   }
+	}
+	@media (min-width:1400px) {
+		.hero-section {
+		padding: 4rem 0;
+	   }
+	   .hero-image {
+		margin-top: -15rem;
+	   }
+	}
+	/* MEDIA QUERY */
 </style>
 @endsection
 @section('content')
@@ -466,18 +879,19 @@ $banner = getContent('banner.content',true)->data_values;
 	</section> -->
 
 <!-- Hero Section -->
-<div class="container">
+<div class="container mx-auto">
 	<div class="hero-section row align-items-center">
-		<div class="col-lg-6">
+		<div class="col col-md-6">
 			<h1 class="hero-title">Building the<br><span class="no-wrap">Next <span class="highlight">Tech&nbsp;Giants</span></span></span></h1>
-			<p class="hero-description">Ceeyit offers a self-paced platform to learn software development and management skills. Our e-learning programs has been developed to build giants in tech.</p>
+			<p class="hero-description">Ceeyit offers a self-paced platform to learn software development and management skills. Our e-learning programs has been developed to build <br> giants in tech.</p>
 			<div class="hero-buttons">
-				<a href="{{route('user.register')}}" class="btn btn-get-started btn-sm">@lang('Get Started')</a>
+				<a href="{{route('user.register')}}" class="btn btn-get-started">@lang('Get Started')</a>
 				<button class="btn btn-financial-aid">Financial Aid</button>
 			</div>
 		</div>
-		<div class="col-lg-6">
+		<div class="d-none d-md-block col col-md-6">
 			<div class="hero-image">
+			<!-- <img src="assets/images/hero_image.png" alt="Student learning" style="float: right;"> -->
 				<img src="assets/images/boy_with_book.jpg" alt="Student learning" style="float: right;">
 				<img src="assets/images/aid_overlay_svg.svg" alt="" style="position: absolute; border-radius: 10px; right: 250px; width: 354px; height: 150px; top: 50px;">
 				<img src="assets/images/it_overlay_svg.svg" alt="" style="position: absolute; border-radius: 10px; top: 90px; right: 200px; width: 354px; height: 150px; top: 130px; right: 190px;">
@@ -500,79 +914,97 @@ $banner = getContent('banner.content',true)->data_values;
 	<!-- Courses Section -->
 	<div class="container courses-section">
 		<h2 class="courses-title">Our top essential career courses</h2>
-		<p class="courses-subtitle">Introductory courses or modules that covers basic principles and concepts of DevOps</p>
+		<p class="courses-subtitle">Introductory courses or modules that covers basic principles and concepts of information technology.</p>
 
-		<div class="row g-4">
+		<div class="row flex-xl-nowrap g-3" style="gap:15px !important;">
 			<!-- First Row -->
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card python-bg">
+			<!-- CARD 1 -->
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="course-card pink-gradient">
 					<div class="icon-wrapper">
-						<img src="assets/images/python_vector.png" alt="">
+						<img src="{{asset('/assets/images/python_vector.svg')}}" alt="">
 					</div>
 					<h5>Phython</h5>
 					<hr class="me-5">
 				</div>
-			</div>
+            </div>
+			<!-- END CARD 1 -->
 
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card data-analysis-bg">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				 <!-- CARD 2 -->
+				  <div class="course-card purple-gradient">
 					<div class="icon-wrapper">
-						<img src="assets/images/Data-Analysis-vector.png" alt="">
+						<img src="{{asset('assets/images/data_analysis_vector.svg')}}" alt="">
 					</div>
 					<h5>Data Analysis</h5>
 					<hr style="clear: both;">
-				</div>
-			</div>
+				  </div>
+                </div>
+				 <!-- END CARD 2 -->
 
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card data-eng-bg">
+				  <!-- CARD 3 -->
+				  <div class="col-12 col-sm-6  col-md-4 col-lg-3">
+				   <div class="course-card light-blue-gradient">
 					<div class="icon-wrapper">
-						<img src="assets/images/Data-Engineering_vector.png" alt="">
+						<img src="{{asset('assets/images/data_engineering_vector.svg')}}" alt="">
 					</div>
 					<h5>Data Engineering</h5>
 					<hr>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card site-reliability-bg">
+				   </div>
+				 </div>
+				  <!-- END OF CARD 3 -->
+				   <!-- CARD 4 -->
+				   <div class="col-12  col-sm-6 col-md-4 col-lg-3">
+				   <div class="course-card site-reliability-bg">
+						<div class="icon-wrapper">
+							<img src="{{asset('assets/images/site_reliability_vector.svg')}}" alt="">
+						</div>
+						<h5>Site Reliability Engineering</h5>
+						<hr>
+				    </div>
+				    </div>
+				   <!--END OF CARD 4 -->
+		</div>
+		<!-- SECOND ROW-->
+		<div class="row justify-content-start justify-content-lg-center" style="gap: 20px;">
+			<!-- CARD 1 -->
+			<div class="col" style="max-width: 295px;">
+				<div class="course-card light-blue-gradient">
 					<div class="icon-wrapper">
-						<img src="assets/images/site-reliability-engineering_vector.png" alt="">
-					</div>
-					<h5>Site Reliability Engineering</h5>
-					<hr>
-				</div>
-			</div>
-
-			<!-- Second Row -->
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card site-reliability-bg">
-					<div class="icon-wrapper">
-						<img src="assets/images/cloud_vector.png" alt="">
+						<img src="{{asset('assets/images/cloud_vector.svg')}}" alt="">
 					</div>
 					<h5>Cloud Engineering</h5>
-					<hr>
+					<hr class="me-5">
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card python-bg">
+			<!-- END CARD 1 -->
+
+			<!-- CARD 2 -->
+			<div class="col" style="max-width: 294px;">
+				<div class="course-card pink-gradient">
 					<div class="icon-wrapper">
-						<img src="assets/images/prjt-mgmt-vector.png" alt="">
+						<img src="assets/images/project_management_vector.svg" alt="">
 					</div>
 					<h5>Project Management</h5>
-					<hr>
+					<hr style="clear: both;">
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="course-card data-analysis-bg">
+			<!-- END CARD 2 -->
+
+			<!-- CARD 3 -->
+			<div class="col" style="max-width: 295px;">
+				<div class="course-card purple-gradient">
 					<div class="icon-wrapper">
-						<img src="assets/images/Devops_bg.png" alt="">
+						<img src="assets/images/devops_vector.svg" alt="">
 					</div>
-					<h5>DevOps Engineering</h5>
+					<h5>Devops Engineering</h5>
 					<hr>
 				</div>
 			</div>
+			<!-- END CARD 3 -->
 		</div>
+
+		
 	</div>
 </section>
 
@@ -580,41 +1012,41 @@ $banner = getContent('banner.content',true)->data_values;
 	<div class="container">
 		<div class="section-header">
 			<h2 class="section-title">Who Are We?</h2>
-			<p class="section-subtitle">Introductory courses or modules that covers basic principles and concepts of DevOps</p>
+			<p class="section-subtitle">Your trusted tech partner building solutions for a digital world.</p>
 		</div>
 
-		<div class="row g-4">
-			<div class="col-md-6">
+		<div class="row g-4 g-lg-3">
+			<div class="col-12 col-sm-6">
 				<div class="who-card">
-					<div class="row g-0">
+					<div class="row">
 						<div class="col-md-6">
-							<div class="content">
+							<div class="content content-left">
 								<h3>About us</h3>
-								<p class="about-us">Ceeyit Solutions is a platform that equips individuals with technical and
-									non technical skills to become a DevOps Engineer. Students learn through stored and
-									live course materials online; assignments, quizzes and exams. Students can monitor due dates;
-									grade results and provide relevant feedback all in one place.</p>
+								<p class="about-us">Ceeyit Solutions equips individuals with the skills needed to succeed as IT professionals. We offer live classes, pre-recorded videos, and online resources, along with assignments, quizzes, and exams. We also provide certification training and interview prep to ensure our students are job-ready.</p>
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="image" style="background-image: url('assets/images/what-WE_Offer-1.png');"></div>
+						<div class="col-12 col-md-6">
+							<img class="img-fluid" src="{{asset('assets/images/what-WE_Offer-1.png')}}">
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-12 col-sm-6">
 				<div class="who-card">
-					<div class="row g-0">
+					<div class="row">
 						<div class="col-md-6">
-							<div class="content">
+							<div class="content content-right">
 								<h3>Eligibility</h3>
-								<p class="about-us">Individuals with or without background and experience in Engineering and
-									Computer Science fields can join it. If you desire to be a Software developer,
-									Network Engineer, Testing Engineer & QA Engineer, System Administrator or Cloud Engineer.</p>
+								<p class="about-us">Individuals with or without background and experience in Computer Science and Engineering fields can join it. If you desire to be a software developer, project manager, data analyst and engineer.</p>
+
+								<div class="d-flex pb-4 pb-lg-0">
+									<button class="btn access-btn">Gain access</button>
+									<button class="btn students-btn">For students</button>
+								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="image" style="background-image: url('assets/images/what-we-offer-2.png');"></div>
+							<img class="img-fluid" src="{{asset('assets/images/what-we-offer-2.png')}}">
 						</div>
 					</div>
 				</div>
@@ -628,34 +1060,79 @@ $banner = getContent('banner.content',true)->data_values;
 	<div class="container g-4">
 		<div class="section-header">
 			<h2 class="section-title">What we offer</h2>
-			<p class="section-subtitle">Introductory courses or modules that covers basic principles and concepts of DevOps</p>
+			<p class="section-subtitle">Essential principles and core concepts for beginners in IT.</p>
 		</div>
 
 		<div class="row align-items-center gy-5">
+			<!-- CARD 1 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<img src="assets/images/fundamental_concepts.png" alt="Fundamental Concepts" class="img-fluid">..
+				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+					<img src="assets/images/clear_fundamental_concept.png" alt="Fundamental Concepts" class="img-fluid rounded-img">
+					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+						<h5 class="card-title">Fundamental Concepts</h5>
+						<p class="card-text">Building a Strong Knowledge Base in IT Fundamentals.</p>
+					</div>
+				</div>
 			</div>
+			<!-- END CARD 1 -->
+			
 			<!-- Repeat for other features -->
-
-			<div class="col-md-4">
-				<img src="assets/images/hands_on_experience.jpg" alt="Fundamental Concepts" class="img-fluid">
+			 <!-- CARD 2 -->
+			<div class="col-md-4 d-flex justify-content-center">
+				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<img src="assets/images/clear_hands_experience.png" alt="Fundamental Concepts" class="img-fluid rounded-img">
+					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+						<h5 class="card-title">Hands-on Experience</h5>
+						<p class="card-text">Gaining Practical Skills Through Real-World Applications.</p>
+					</div>
+				</div>
 			</div>
+			<!-- END CARD 2 -->
 
-			<div class="col-md-4">
-				<img src="assets/images/toolchain_training.jpg" alt="Fundamental Concepts" class="img-fluid">
+			 <!-- CARD 3 -->
+			<div class="col-md-4 d-flex justify-content-center">
+				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<img src="assets/images/clear_tool_chain.png" alt="Tool chain" class="img-fluid rounded-img">
+					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+						<h5 class="card-title">Toolchain Training</h5>
+						<p class="card-text">Equipping You with Essential Tools and Techniques.</p>
+					</div>
+				</div>
 			</div>
-
-			<div class="col-md-4">
-				<img src="assets/images/cloud_infrastructure.jpg" alt="Fundamental Concepts" class="img-fluid">
+			<!-- END CARD 3 -->
+			 <!-- CARD 4 -->
+			<div class="col-md-4 d-flex justify-content-center">
+				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<img src="assets/images/clear_cloud_infastructure_img.png" alt="Cloud Infrastructure" class="img-fluid rounded-img">
+					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+						<h5 class="card-title">Cloud Infrastructure</h5>
+						<p class="card-text">Developing Expertise in Cloud-Based Systems and Services.</p>
+					</div>
+				</div>
 			</div>
-
-			<div class="col-md-4">
-				<img src="assets/images/certificates.jpg" alt="Fundamental Concepts" class="img-fluid">
+			<!-- END CARD 4 -->
+			 <!-- CARD 5 -->
+			<div class="col-md-4 d-flex justify-content-center">
+				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<img src="assets/images/clear_certificate_image.png" alt="Certification & Assessments" class="img-fluid rounded-img">
+					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+						<h5 class="card-title">Certification & Assessments</h5>
+						<p class="card-text">Preparing You for Industry-Recognized Certifications.</p>
+					</div>
+				</div>
 			</div>
-
-			<div class="col-md-4">
-				<img src="assets/images/support.jpg" alt="Fundamental Concepts" class="img-fluid">
+			<!-- END CARD 5 -->
+			 <!-- CARD 6 -->
+			<div class="col-md-4 d-flex justify-content-center">
+				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<img src="assets/images/clear_support.png" alt="Support" class="img-fluid rounded-img">
+					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+						<h5 class="card-title">Support</h5>
+						<p class="card-text">Providing Guidance and Resources Every Step of the Way.</p>
+					</div>
+				</div>
 			</div>
+			<!-- END CARD 6 -->
 		</div>
 	</div>
 </section>
@@ -1025,30 +1502,76 @@ $banner = getContent('banner.content',true)->data_values;
 
 <!-- Student's Feedback Section -->
 <section class="py-5 bg-light">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="section-header">
-			<h2 class="section-title">Student's Feedback</h2>
-			<p class="section-subtitle">Introductory courses or modules that covers basic principles and concepts of DevOps</p>
+			<h2 class="section-title">Student’s Feedback</h2>
+			<p class="section-subtitle">Testimonials from our CEEYIT alumnis.</p>
 		</div>
 
-		<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="assets/images/chika_feedback.png" class="d-block w-50 img-fluid" alt="Student Feedback" height="228px" width="399">
-				</div>
-				<div class="carousel-item">
-					<img src="assets/images/dave_feedback.png" class="d-block w-50 img-fluid" alt="Student Feedback">
-				</div>
-				<div class="carousel-item">
-					<img src="assets/images/tosin_feedback.png" class="d-block w-50 img-fluid" alt="Student Feedback">
-				</div>
-			</div>
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-				<button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-				<button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
-			</div>
-		</div>
+		
+		<!-- <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"> -->
+		<div id="" class="owl-carousel owl-theme">
+		    <div class="">
+                <div class="py-5 my-5">
+                    <div class="card position-relative align-items-center justify-content-center bg-pink" style="width: 400px;">
+					    <p class="para">Ceeyit Solutions offered a curriculum that connected every concept to real-world applications, making it easier to shift my perspective and embrace a new set of tools and methodologies. I highly recommend Ceeyit Solutions to anyone looking to make a similar transition.</p>
+                        <div class="img-container">
+                            <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
+                            <div class="professional-title">
+                                <h5 class="mb-0">Tosin</h5>
+                                <p class="mb-0">DevOps Student, United States</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+				
+			<div class="">
+                <div class="py-5 my-5">
+                    <div class="card position-relative align-items-center justify-content-center bg-orange" style="width: 400px;">
+					     <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
+                        <div class="img-container">
+                            <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
+                            <div class="professional-title">
+                                <h5 class="mb-0">Dave</h5>
+                                <p class="mb-0">DevOps Student, United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="">
+                <div class="py-5 my-5">
+                    <div class="card position-relative align-items-center justify-content-center bg-purple" style="width: 400px;">
+					    <p class="para">Till this day, I belive that Cynthia from CeeyIT was sent to my life by my guardian angel. If you are reading this don’t think twice, register from here. I secured myself a 6-figure salary job in under 3 months after the class. Life changing is an understatement.</p>
+                        <div class="img-container">
+                            <img src="{{asset('assets/images/carousel_2.jpeg')}}" class="img-bottom" alt="Student Feedback">
+                            <div class="professional-title">
+                                <h5 class="mb-0">Chika</h5>
+                                <p class="mb-0">DevOps Student, United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="">
+                <div class="py-5 my-5">
+                    <div class="card position-relative align-items-center justify-content-center bg-orange" style="width: 400px;">
+                        <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
+                        <div class="img-container">
+                            <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
+                            <div class="professional-title">
+                                <h5 class="mb-0">Dave</h5>
+                                <p class="mb-0">DevOps Student, United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 	</div>
 </section>
 
@@ -1056,8 +1579,8 @@ $banner = getContent('banner.content',true)->data_values;
 <section class="py-5">
 	<div class="container text-center">
 		<h2 class="section-title">Get Expert Consultation</h2>
-		<p class="section-subtitle">Introductory courses or modules that covers basic principles and concepts of DevOps</p>
-		<a href="{{ url('consultation')}}" class="btn btn-signup btn-sm" style="width: 230; height: 43; border-radius: 20px;">Get Consultation</a>
+		<p class="section-subtitle">Speak with our experts for insights and support to achieve your goals.</p>
+		<a href="{{ url('consultation')}}" class="btn btn-consult">Get Consultation</a>
 	</div>
 </section>
 
@@ -1078,10 +1601,42 @@ $banner = getContent('banner.content',true)->data_values;
 
 </section> -->
 <br>
-
+@push('script')
+<script src="{{asset('assets/global/js/jquery-3.6.0.min.js')}}"></script>
+ <!-- owl carousel -->
+ <script src="{{ asset('assets/global/js/owl.carousel.js') }}"></script>
+<script src="{{ asset('assets/global/js/owl.carousel.min.js') }}"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+  console.log('Initializing Owl Carousel');
+  $(".owl-carousel").owlCarousel({
+    items: 3,
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: true,
+	autoplay: true,
+    autoplayTimeout: 1500, // Time in milliseconds between transitions (3 seconds)
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1 // 1 item for small screens
+      },
+      600: {
+        items: 1 // 2 items for medium screens
+      },
+      1000: {
+        items: 3 // 3 items for large screens
+      }
+    }
+  });
+});
+</script>
+@endpush
 @if($sections->secs != null)
 @foreach(json_decode($sections->secs) as $sec)
 <!-- @include($activeTemplate.'sections.'.$sec) -->
 @endforeach
 @endif
 @endsection
+

@@ -3,6 +3,46 @@ $footer = getContent('footer.content',true)->data_values;
 $social = getContent('social_icon.element',false,'',1);
 $policies = getContent('policies.element',false,'',1);
 @endphp
+<style>
+  .footer-bg{
+    background-color: #222126;
+    color: #ffffff;
+  }
+
+  .footer-links {
+    margin:0;
+    padding:0;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 19.18px;
+    width: 46.36px
+  }
+
+  .footer-links li {
+    padding: 12px;
+    border: 0.61px solid #FFFFFF80 ;
+    border-radius: 6.1px;
+    list-style: none;
+  }
+
+  .footer-links li a {
+   
+  }
+
+  .privacy-policy {
+    font-family: "Atyp Text",sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 26.64px;
+    text-align:center;
+    color: #ffffff;
+    padding-right: 60px;
+  }
+</style>
 {{-- style="background-image: url('{{getImage('assets/images/frontend/footer/'.@$footer->background_image,'1920x1280')}}');" --}}
 <!-- <footer class="footer bg_img">
   <div class="footer__top">
@@ -69,38 +109,44 @@ $policies = getContent('policies.element',false,'',1);
 
 <!-- Footer -->
 <footer>
-  <div class="container-fluid bg-dark text-white py-5">
+  <div class="container-fluid footer-bg  text-white py-5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-auto mb-4">
-          <img src="assets/images/ceeyit_footer_logo.png" alt="">
+          <img src="{{asset('assets/images/ceeyit_footer_logo.svg')}}" alt="Footer logo Image">
         </div>
       </div>
       <div class="row justify-content-center mt-4">
         <div class="col-auto">
-          <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><img src="/assets/images/message_icon.png" alt=""></a>
-          <a href="https://facebook.com" target="_blank" class="text-white me-3"><img src="/assets/images/facebook_icon.png" alt=""></a>
-          <a href="https://x.com" target="_blank" class="text-white me-3"><img src="/assets/images/x_icon.png" alt=""></a>
-          <a href="https://www.instagram.com" target="_blank" class="text-white"><img src="/assets/images/instagram_icon.png" alt=""></a>
+          <ul class="footer-links">
+            <li>
+             <a href="https://www.linkedin.com" target="_blank" class="text-white"><img src="/assets/images/email_vector.svg" alt=""></a>
+            </li>
+            <li>
+             <!-- <a href="https://facebook.com" target="_blank" class="text-white me-3"><img src="/assets/images/facebook_icon.png" alt=""></a> -->
+             <a href="https://www.linkedin.com" target="_blank" class="text-white"><img src="/assets/images/email_vector.svg" alt=""></a>
+            </li>
+            <li>
+             <a href="https://x.com" target="_blank" class="text-white"><img src="/assets/images/x_vector.svg" alt=""></a>
+            </li>
+            <li>
+            <a href="https://www.instagram.com" target="_blank" class="text-white"><img src="/assets/images/instagram_vector.svg" alt=""></a>
+            </li>
+          </ul>
         </div>
-
       </div>
-      <div class="row justify-content-center mt-4">
+      <div class="row  justify-content-center mt-4">
         <div class="col-auto">
-
           <p class="mb-4">
             @foreach ($policies as $links)
-            <a class="foot-text" style="text-decoration:none; color:white" href="{{route('links',[slug(@$links->data_values->title),$links->id])}}">{{__(@$links->data_values->title)}}</a>
+            <a class="privacy-policy" style="text-decoration:none; color:white" href="{{route('links',[slug(@$links->data_values->title),$links->id])}}">{{__(@$links->data_values->title)}}</a>
             @endforeach
           </p>
         </div>
 
-
-
-
         <div class="row justify-content-center mt-0">
-          <div class="col-auto">
-            <p class="mb-0">{{date('Y')}} © {{$general->sitename}} <span class="foot-text"> @lang('All Right Reserved')</span></p>
+          <div class="col">
+            <p class="mb-0 privacy-policy">{{date('Y')}} © {{$general->sitename}} <span class="" style="text-end"> @lang('All Right Reserved')</span></p>
           </div>
         </div>
       </div>
