@@ -399,9 +399,11 @@
 		/* margin-bottom: 20px; */
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		align-items: start;
 		/* justify-content: center; */
 		flex-shrink:0;
+		padding-bottom: 31px;;
 	}
 
     .course-card .icon {
@@ -420,7 +422,6 @@
 		font-size:28px;
 		font-weight:400;
 		line-height:28px;
-		max-width: 179px;
 	}
 
 	.course-card:hover {
@@ -648,10 +649,12 @@
 	}
 
 	.bg-pink {
+		
 		display: flex;
 		align-items:center;
 		justify-content:center;
 	    background: linear-gradient(104.69deg, #FB729F 1.73%, #D8386A 92.33%);
+		backdrop-filter: blur(9.218500137329102px);
 		color: #ffffff;
 		border-radius: 20px;
 		/* padding-left: 40px;
@@ -700,6 +703,7 @@
 	   border-radius: 16.92px;
 	   border: 2px solid #FFFFFF;
 	   object-fit: cover;
+	   background-color: #232222;
 	}
 
 	.professional-title {
@@ -724,21 +728,23 @@
 	  color: #313035;
 	}
 
+    .card-width {
+		width: 300px;
+	}
 
 	.owl-theme .owl-dots .owl-dot span {
-  width: 22px; 
-  height: 7px;
-  background-color: #E6E3E3; 
-  border-radius: 50px;
-  margin: 5px;
-  transition: background-color 0.3s ease;
-}
+	width: 22px; 
+	height: 7px;
+	background-color: #E6E3E3; 
+	border-radius: 50px;
+	margin: 5px;
+	transition: background-color 0.3s ease;
+	}
 
-/* Active dot style */
-.owl-theme .owl-dots .owl-dot.active span {
-  width:42px;
-  background-color: #04A198;
-}
+	.owl-theme .owl-dots .owl-dot.active span {
+	width:42px;
+	background-color: #04A198;
+	}
 	/* MEDIA QUERY */
 	@media (min-width:576px) {
 		.hero-title {	
@@ -807,6 +813,10 @@
 		padding-right: 30px;
 	}
 
+	.card-width {
+		width: 300px;
+	}
+
 	/* .owl-prev{
 		color: black !important;
 	}
@@ -819,7 +829,12 @@
 		.hero-section {
 		padding: 4rem 0;
 	   }
-
+       .course-card h5 {
+		max-width: 150px;
+	   }
+       .course-card h5:last-of-type {
+         max-width: 194px;
+       }
 	   .who-card img {
 		height: 100%;
 		border-radius: 0px;
@@ -827,6 +842,9 @@
 		border-bottom-right-radius:19.33px;
 	  }
 	  
+	  .card-width {
+		width: 400px;
+	}
 	}
 	@media (min-width:992px) {
 		.hero-section {
@@ -925,7 +943,7 @@ $banner = getContent('banner.content',true)->data_values;
 						<img src="{{asset('/assets/images/python_vector.svg')}}" alt="">
 					</div>
 					<h5>Phython</h5>
-					<hr class="me-5">
+					<hr class="me-5 w-100">
 				</div>
             </div>
 			<!-- END CARD 1 -->
@@ -937,7 +955,7 @@ $banner = getContent('banner.content',true)->data_values;
 						<img src="{{asset('assets/images/data_analysis_vector.svg')}}" alt="">
 					</div>
 					<h5>Data Analysis</h5>
-					<hr style="clear: both;">
+					<hr class="w-100" style="clear: both;">
 				  </div>
                 </div>
 				 <!-- END CARD 2 -->
@@ -949,7 +967,7 @@ $banner = getContent('banner.content',true)->data_values;
 						<img src="{{asset('assets/images/data_engineering_vector.svg')}}" alt="">
 					</div>
 					<h5>Data Engineering</h5>
-					<hr>
+					<hr class="w-100">
 				   </div>
 				 </div>
 				  <!-- END OF CARD 3 -->
@@ -960,7 +978,7 @@ $banner = getContent('banner.content',true)->data_values;
 							<img src="{{asset('assets/images/site_reliability_vector.svg')}}" alt="">
 						</div>
 						<h5>Site Reliability Engineering</h5>
-						<hr>
+						<hr class="w-100">
 				    </div>
 				    </div>
 				   <!--END OF CARD 4 -->
@@ -974,7 +992,7 @@ $banner = getContent('banner.content',true)->data_values;
 						<img src="{{asset('assets/images/cloud_vector.svg')}}" alt="">
 					</div>
 					<h5>Cloud Engineering</h5>
-					<hr class="me-5">
+					<hr class="me-5 w-100">
 				</div>
 			</div>
 			<!-- END CARD 1 -->
@@ -986,7 +1004,7 @@ $banner = getContent('banner.content',true)->data_values;
 						<img src="assets/images/project_management_vector.svg" alt="">
 					</div>
 					<h5>Project Management</h5>
-					<hr style="clear: both;">
+					<hr class="w-100" style="clear: both;">
 				</div>
 			</div>
 			<!-- END CARD 2 -->
@@ -998,7 +1016,7 @@ $banner = getContent('banner.content',true)->data_values;
 						<img src="assets/images/devops_vector.svg" alt="">
 					</div>
 					<h5>Devops Engineering</h5>
-					<hr>
+					<hr class="w-100">
 				</div>
 			</div>
 			<!-- END CARD 3 -->
@@ -1512,11 +1530,12 @@ $banner = getContent('banner.content',true)->data_values;
 		<!-- <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"> -->
 		<div id="" class="owl-carousel owl-theme">
 		    <div class="">
-                <div class="py-5 my-5">
-                    <div class="card position-relative align-items-center justify-content-center bg-pink" style="width: 400px;">
+                <div class="" style="height:40%">
+                    <div class="position-relative align-items-center justify-content-center bg-pink card-width">
+					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
 					    <p class="para">Ceeyit Solutions offered a curriculum that connected every concept to real-world applications, making it easier to shift my perspective and embrace a new set of tools and methodologies. I highly recommend Ceeyit Solutions to anyone looking to make a similar transition.</p>
                         <div class="img-container">
-                            <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
+                            <img src="{{asset('assets/images/person_vector.svg')}}" class="img-bottom" alt="Student Feedback">
                             <div class="professional-title">
                                 <h5 class="mb-0">Tosin</h5>
                                 <p class="mb-0">DevOps Student, United States</p>
@@ -1527,8 +1546,9 @@ $banner = getContent('banner.content',true)->data_values;
             </div>
 				
 			<div class="">
-                <div class="py-5 my-5">
-                    <div class="card position-relative align-items-center justify-content-center bg-orange" style="width: 400px;">
+                <div class="" style="height:40%">
+                    <div class="card position-relative align-items-center justify-content-center bg-orange card-width">
+					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
 					     <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
                         <div class="img-container">
                             <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
@@ -1541,8 +1561,9 @@ $banner = getContent('banner.content',true)->data_values;
                 </div>
             </div>
 			<div class="">
-                <div class="py-5 my-5">
-                    <div class="card position-relative align-items-center justify-content-center bg-purple" style="width: 400px;">
+                <div class="" style="height:40%">
+                    <div class="card position-relative align-items-center justify-content-center bg-purple card-width">
+					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
 					    <p class="para">Till this day, I belive that Cynthia from CeeyIT was sent to my life by my guardian angel. If you are reading this don’t think twice, register from here. I secured myself a 6-figure salary job in under 3 months after the class. Life changing is an understatement.</p>
                         <div class="img-container">
                             <img src="{{asset('assets/images/carousel_2.jpeg')}}" class="img-bottom" alt="Student Feedback">
@@ -1556,8 +1577,9 @@ $banner = getContent('banner.content',true)->data_values;
             </div>
 
 			<div class="">
-                <div class="py-5 my-5">
-                    <div class="card position-relative align-items-center justify-content-center bg-orange" style="width: 400px;">
+                <div class="" style="height:40%">
+                    <div class="card position-relative align-items-center justify-content-center bg-orange card-width">
+					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
                         <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
                         <div class="img-container">
                             <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
@@ -1610,7 +1632,7 @@ $banner = getContent('banner.content',true)->data_values;
 	$(document).ready(function() {
   console.log('Initializing Owl Carousel');
   $(".owl-carousel").owlCarousel({
-    items: 3,
+    items: 5,
     loop: true,
     margin: 10,
     nav: true,
@@ -1623,11 +1645,11 @@ $banner = getContent('banner.content',true)->data_values;
         items: 1 // 1 item for small screens
       },
       600: {
-        items: 1 // 2 items for medium screens
+        items: 2 // 2 items for medium screens
       },
       1000: {
         items: 3 // 3 items for large screens
-      }
+      },
     }
   });
 });

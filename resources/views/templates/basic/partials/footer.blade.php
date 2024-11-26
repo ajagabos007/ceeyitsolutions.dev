@@ -40,7 +40,8 @@ $policies = getContent('policies.element',false,'',1);
     line-height: 26.64px;
     text-align:center;
     color: #ffffff;
-    padding-right: 60px;
+    text-decoration:none;
+    /* padding-right: 60px; */
   }
 </style>
 {{-- style="background-image: url('{{getImage('assets/images/frontend/footer/'.@$footer->background_image,'1920x1280')}}');" --}}
@@ -110,12 +111,13 @@ $policies = getContent('policies.element',false,'',1);
 <!-- Footer -->
 <footer>
   <div class="container-fluid footer-bg  text-white py-5">
-    <div class="container">
+    <div class="container mx-auto">
       <div class="row justify-content-center">
         <div class="col-auto mb-4">
           <img src="{{asset('assets/images/ceeyit_footer_logo.svg')}}" alt="Footer logo Image">
         </div>
       </div>
+
       <div class="row justify-content-center mt-4">
         <div class="col-auto">
           <ul class="footer-links">
@@ -135,20 +137,24 @@ $policies = getContent('policies.element',false,'',1);
           </ul>
         </div>
       </div>
-      <div class="row  justify-content-center mt-4">
-        <div class="col-auto">
-          <p class="mb-4">
-            @foreach ($policies as $links)
-            <a class="privacy-policy" style="text-decoration:none; color:white" href="{{route('links',[slug(@$links->data_values->title),$links->id])}}">{{__(@$links->data_values->title)}}</a>
-            @endforeach
-          </p>
-        </div>
 
-        <div class="row justify-content-center mt-0">
-          <div class="col">
-            <p class="mb-0 privacy-policy">{{date('Y')}} © {{$general->sitename}} <span class="" style="text-end"> @lang('All Right Reserved')</span></p>
+      <div class="mt-5 text-center">
+          <div class="">
+           <p class="mb-3 d-flex justify-content-evenly" style="text-wrap: nowrap;">
+            @foreach ($policies as $links)
+            <a class="privacy-policy" href="{{route('links',[slug(@$links->data_values->title),$links->id])}}">{{__(@$links->data_values->title)}}</a>
+            @endforeach
+           </p>
           </div>
-        </div>
       </div>
-    </div>
+      <div class="mt-4 text-center">
+          <div class="">
+            <p class="mb-3 d-flex justify-content-evenly" style="text-wrap: nowrap;">
+              <a class="privacy-policy">{{date('Y')}} © {{$general->sitename}}</a>
+              <a class="privacy-policy"> @lang('All Right Reserved')</a>
+            </p>
+          </div>
+      </div>
+    </div> 
+  </div>
 </footer>
