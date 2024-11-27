@@ -4,257 +4,215 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #FAFAFA;
-  }
 
-  /* Navbar Styles */
-  .navbar {
-    padding: 1rem 2rem;
-    background-color: white;
+  /* courses */
+  .container-top {
+    min-height: 100vh;
+    padding: 4rem 1rem; 
+    margin-bottom: 14rem; 
   }
-
-  .nav-link {
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0.5rem 1.5rem;
-  }
-
-  .navbar-nav {
-    align-items: center;
-  }
-
-  .profile-button {
-    background-color: #E6F7F5;
+  .custom-input {
+    display: flex;
+    justify-content:center;
+    margin:auto;
     border-radius: 50px;
-    padding: 0.5rem 1rem;
-    border: none;
-    white-space: nowrap;
+    border: 1px solid #C0D4D3;
+    padding-top: 1.3rem;
+    padding-bottom:1.3rem;
+    padding-left: 66px !important;
   }
-
-  .profile-image {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 8px;
+  .form-control::placeholder{
+    font-family:"Atyp Text",sans-serif;
+    font-weight: 400;
+    font-size:18px;
+    line-height: 25.38px;
+    color:#2C2A31;
+    opacity: 30%;
+    height:100%;
   }
-
-  /* Mobile navbar styles */
-  @media (max-width: 991px) {
-    .navbar-collapse {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    .nav-link {
-      padding: 0.75rem 1rem;
-    }
-
-    .profile-button {
-      /* margin-top: 1rem; */
-      width: 126px;
-      height: 43px;
-      border: 1.37 solid #0000000D;
-      border-radius: 162px;
-      justify-content: center;
-      /* display: flex; */
-      align-items: center;
-    }
-  }
-
-  /* Search Section Styles */
-  .search-section {
-    margin: 2rem auto;
-    max-width: 1200px;
-  }
-
-  .search-container {
+  .input-container {
     position: relative;
-    margin-bottom: 2rem;
-  }
-
-  .search-input {
-    border: 1px solid #E0E0E0;
-    border-radius: 50px;
-    padding: 1rem 1rem 1rem 3rem;
     width: 100%;
-    font-size: 14px;
   }
 
   .search-icon {
     position: absolute;
-    left: 1rem;
-    top: 45%;
-    transform: translateY(-50%);
-    color: #666;
+    top: 35px;
+    left: 25px;
   }
 
-  .hero-search-form__btn {
-    position: absolute;
-    left: 68rem;
-    top: 47%;
-    transform: translateY(-50%);
+   /* SELECT DROPDOWN */
+   .custom-select {
+    position: relative;
+    width: 190px;
+    background-color: #DDFFFD;
     border-radius: 50px;
-  }
-
-  .filter-button {
-    background-color: #E6F7F5;
-    border: none;
-    border-radius: 50px;
-    padding: 0.75rem 1.5rem;
     color: #059B93;
-    font-size: 17.94px;
-    font-weight: 500;
-  }
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left:25px;
+    font-family:"Atyp Text",sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    line-height: 25.54px;
+    padding-left: 40px;
+    
+   }
 
-  /* Course Card Styles */
-  .course-card {
+   .custom-select .option {
+    color:#059B93;
+    padding-left:14px;
+   }
+
+   .select-course-icon {
+    position:absolute;
+    top:25px;
+    left:20px;
+    z-index: 1;
+   }
+   /* SELECT DROPDOWN */
+
+   /* CARD */
+   .card-container {
+    /* width: 294px; */
+    height: 400px;
     border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-
+    box-shadow: 0px 2px 12px 0px #50CAE92E;
+    border-radius: 20px !important;
   }
 
-  .course-icon {
-    height: 160px;
+  .card-top-image {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+     width:100%;
+     /* height: 100%; */
 
-  .course-icon i {
-    font-size: 48px;
-    color: white;
-  }
+   }
 
-  .card-body {
-    background-color: white;
-    padding: 1.5rem;
-    height: 230px;
-  }
-
-  .course-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  .course-stats {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 1rem;
-  }
-
-  .course-rating i {
-    color: #FFB800;
-    font-size: 12px;
-    margin-bottom: 1rem;
-  }
-
-  .failed {
-    color: #9b98ad !important;
-    font-size: 12px;
-    margin-bottom: 1rem;
-  }
-
-  .view-course-btn {
-    background-color: #00A896;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    font-size: 12px;
-    color: white;
-  }
-
-  .nav-link.active {
-    font-weight: 600;
-    /* Makes current page link bold */
-  }
-
-  .view-course-btn {
-    float: right;
-    /* Aligns button to the right */
-    width: 103px;
-    height: 29.14;
-    font-size: 10.16px;
-    border-radius: 13.55px;
-    background: linear-gradient(180deg, #00E8DB 0%, #095450 100%);
-  }
-
-  .rate {
+   .card-container h5 {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 21.77px;
+    font-weight: 500;
+    line-height: 31.33px;
+    text-decoration-skip-ink: none;
     color: #302F35;
-    font-size: 9px;
-    font-weight: bolder
-  }
+    text-wrap: nowrap;
 
-  ::placeholder {
-    color: #2C2A31;
-    font-size: 18px;
-    font-weight: 400;
-    opacity: 30%;
-    width: 235px;
-    /* height: 13px; */
-  }
+   }
 
-  .profile-span {
-    width: 64px;
-    height: 18px;
-    font-size: 13.74px;
-    size: 6.39px;
-    color: #2C2A31;
-    text-wrap: wrap;
-  }
+   .time-icon {
+    width:9.22px !important;
+    height: 9.22px !important;
+   }
 
-  .profile-i {
-    font-size: 6.39px;
-    font-weight: 400;
-    line-height: 7.99px;
-  }
+   .course-icon {
+    width:9.22px !important;
+    height: 9.22px !important;
+   }
 
-  .profile-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+   .course-card-subtitle {
+     font-family: "Atyp Text",sans-serif;
+     font-weight: 400;
+     font-size: 10px;
+     line-height: 17.28px;
+     color:#302F35;
+     margin-left: 3px;
+   }
 
-  .student-label {
+   .course-ratings {
+    display:flex;
+    /* align-items: center; */
+    color: #FCC318;
     font-size: 12px;
-    color: #666;
+    width: 14.6px;
+    height: 14.6px;
+    margin-top: 9px;
+   }
+
+   .course-rating-score {
+    font-family: "Atyp Text",sans-serif;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 17.28px;
+    color: #302F35;
+    margin-left: 5px;
+
+   }
+
+   .view-courses-btn {
+    font-family: "Atyp Text",sans-serif;
+    font-weight: 400;
+    font-size: 10.16px;
+    line-height: 14.47px;
+    color:#ffffff;
+    width: 103px;
+    border: none;
+    border-radius: 13.55px;
+    margin-top: 5px;
+    background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+
+   }
+   
+   .gap-y-45 {
+    row-gap: 45px; 
+   }
+   /* CARD */
+
+  @media (min-width:576px) {
+    .input-container {
+      display: flex;
+      justify-content:center;
+   
+    }
+      .custom-input {
+      border-radius: 50px;
+      border: 1px solid #C0D4D3;
+      padding: 1.3rem 3.2rem;
+
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 35px;
+      left: 25px;
+    }
+
+    .card-container {
+    height: 321px;
+    }
+   
   }
 
-  /* Course Card Colors */
-  .bg-python {
-    background-color: #17A2B8;
-  }
+  @media (min-width:768px) {
+    .input-container {
+      
+    }
 
-  .bg-data-analysis {
-    background-color: #8C6FF0;
-  }
+    .card-container {
+    height: 321px;
+    }
 
-  .bg-data-engineering {
-    background-color: #FF6B9C;
+    .gap-y-45 {
+    row-gap: 73px; 
+   }
   }
+    @media (min-width:992px) {
+      .input-container {
+      width: 820px;
+    }
 
-  .bg-site-reliability {
-    background-color: #FF9F43;
-  }
-
-  .bg-cloud {
-    background-color: #FF9F43;
-  }
-
-  .bg-project {
-    background-color: #FF6B9C;
-  }
-
-  .bg-devops {
-    background-color: #8C6FF0;
-  }
+	}
+    @media (min-width:1200px) {
+      
+    }
+    @media (min-width:1400px) {
+      
+    }
+  
+  /* courses */
 </style>
 @endsection
 @section('content')
@@ -448,99 +406,286 @@
 </section> -->
 
 <!-- //// NEW IMPLEMENTATION /// -->
-<!-- Search Section -->
-<div class="container search-section">
-  <div class="search-container">
-    <form class="hero-search-form category-search-form mb-0" action="" method="GET">
-      <i class="fas fa-search search-icon"></i>
-      <input type="text" class="search-input" placeholder="Browse courses, tags, titles">
-      <button type="submit" class="hero-search-form__btn btn btn-success">@lang('Search')</button>
-    </form>
-  </div>
-  <div class="mb-4">
-    <!-- <button class="filter-button">
-      <img src="assets/images/book_image.png" alt="" ms-5>
-      Courses
-      <img src="assets/images/dropdown_image.png" alt="" mx-5>
-    </button> -->
-    <select class="select cat filter-button" onChange="window.location.href=this.value" mx-5>
-      <option value="{{queryBuild('category','')}}" {{request('category') == '' ? 'selected':''}} ms-5>
-        <img src="assets/images/book_image.png" alt="" ms-5>
-        Courses
-      </option>
-      @foreach ($categories as $category)
-      <option value="{{queryBuild('category',$category->slug)}}" {{request('category') == $category->slug ? 'selected':''}}>{{$category->name}}</option>
-      @endforeach
-    </select>
-  </div>
-
-  <!-- Course Grid -->
-  <div class="row g-4">
-    @forelse ($courses as $course)
-
-    <!-- Python Course -->
-    <div class="col-md-3">
-      <div class="course-card">
-        <div class="course-icon bg-python">
-          <img src="{{getImage(imagePath()['course']['path'].'/thumb_'.$course->thumbnail,imagePath()['course']['preview_size'])}}" width=100% alt="Python">
+  <div class="container container-top mx-auto " style="min-height: screen;">
+    <div>
+      <form action="">
+        <div class="input-container mb-3 mx-auto">
+          <!-- <span class="border-none bg-transparent" id="basic-addon1"> -->
+            <svg class="search-icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.6" d="M26.6209 24.7238L21.6154 19.755C23.5583 17.3305 24.4993 14.2532 24.2447 11.1558C23.9901 8.0584 22.5594 5.17633 20.2466 3.1022C17.9339 1.02807 14.915 -0.080459 11.8106 0.00455155C8.70629 0.0895621 5.75247 1.36165 3.55654 3.55924C1.36062 5.75684 0.0894941 8.71291 0.0045481 11.8196C-0.080398 14.9263 1.02729 17.9475 3.09984 20.262C5.1724 22.5765 8.05229 24.0083 11.1473 24.2631C14.2424 24.5179 17.3174 23.5762 19.74 21.6318L24.705 26.6006C24.8305 26.7272 24.9797 26.8276 25.1441 26.8962C25.3085 26.9647 25.4848 27 25.663 27C25.8411 27 26.0174 26.9647 26.1818 26.8962C26.3462 26.8276 26.4955 26.7272 26.6209 26.6006C26.8641 26.3488 27 26.0124 27 25.6622C27 25.312 26.8641 24.9756 26.6209 24.7238ZM12.171 21.6318C10.3031 21.6318 8.47708 21.0775 6.92396 20.0389C5.37084 19.0004 4.16033 17.5242 3.44551 15.7972C2.73068 14.0701 2.54365 12.1697 2.90807 10.3363C3.27248 8.5029 4.17197 6.81879 5.49279 5.49696C6.81361 4.17514 8.49644 3.27497 10.3285 2.91027C12.1605 2.54558 14.0595 2.73276 15.7852 3.44812C17.5109 4.16349 18.9859 5.37492 20.0237 6.92922C21.0615 8.48352 21.6154 10.3109 21.6154 12.1802C21.6154 14.6869 20.6203 17.091 18.8492 18.8635C17.078 20.636 14.6758 21.6318 12.171 21.6318Z" fill="black"/>
+            </svg>
+          <!-- </span> -->
+          <input type="text" class="form-control custom-input mx-auto" placeholder="Browse courses, tags, titles." aria-label="Browse courses, tags, titles." aria-describedby="basic-addon1">
         </div>
-        <div class="card-body">
-          <h5 class="course-title"><a style="text-decoration: none;color:#302F35;font-family: Atyp Text;
-font-size: 21.77px;
-line-height: 31.33px;
-text-align: left;
-" href="{{route('course.details',[$course->id,$course->slug])}}">{{$course->title}}</a></h5>
-          <div class="course-stats">
-            <!-- <img src="assets/images/time.png" alt="time icon">
-            <span class="mx-2">•</span>
-            <img src="assets/images/modules.png" alt="modules icon"> -->
-          </div>
-          <div class="course-rating">
+     </form>
+    </div>
+    
+   <div class="d-flex mx-auto position-relative" style="max-width:820px;">
+     <img class="select-course-icon" src="{{asset('assets/images/course_icon.svg')}}" alt="">
+    <select class="form-select custom-select " aria-label="Default select example">
+        <option selected class="option">Courses</option>
+        <option value="1">PHP</option>
+        <option value="2">Devops</option>
+        <option value="3">SRE</option>
+      </select>
+   </div>
 
-            @php
-            $rating = intval(abs($course->avgRating())); // Get the rating
-            $fullStars = floor($rating); // Number of full stars
-            $halfStar = ($rating - $fullStars) >= 0.5; // Check if there's a half star
-            $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0); // Remaining empty stars
-            @endphp
-
-            <!-- Display full stars -->
-            @for ($i = 0; $i < $fullStars; $i++)
+   <!-- CARDS -->
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  gap-y-45 gx-4">
+      @forelse ($courses as $course)
+        <!-- CARD 1 -->
+        <div class="col">
+              <div class="card card-container">
+                 <img src="{{asset('assets/images/python_small.svg')}}" class="img-fluid card-top-image" alt="...">
+                  <div class="card-body" style="background-color:#EEFCFC;box-shadow: 0px 2px 12px 0px #50CAE92E;">
+                    <h5 class="card-title">Python</h5>
+                    <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
               <i class="fas fa-star"></i>
-              @endfor
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="{{route('course.details',[$course->id,$course->slug])}}" class="btn view-courses-btn">View course</a>
+           </div>
+                  </div>
+              </div>
+        </div>
+        <!-- CARD 1 -->
 
-              <!-- Display half star if necessary -->
-              @if ($halfStar)
-              <i class="fas fa-star-half"></i>
-              @endif
-
-              <!-- Display empty stars -->
-              @for ($i = 0; $i < $emptyStars; $i++)
-                <i class="fas fa-star failed"></i>
-                @endfor
-                <span class="rate">({{$course->avgRating()}})</span>
+        <!-- CARD 2 -->
+        <div class="col">
+        <div class="card card-container">
+          <img src="{{asset('assets/images/data_analysis_small.svg')}}" class="img-fluid card-top-image"  alt="...">
+            <div class="card-body" style="background-color: #F8F6FF !important;box-shadow: 0px 2px 12px 0px #937CFC2E;">
+              <h5 class="card-title">Data Analysis</h5>
+              <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="" class="btn view-courses-btn">View course</a>
+           </div>
+            </div>
           </div>
-          <a href="{{route('course.details',[$course->id,$course->slug])}}" style="text-decoration: none;" class="view-course-btn">View course</a>
-          <div style="clear: both;"></div>
+          </div>
+        <!-- CARD 2 -->
+
+        <!-- CARD 3 -->
+       <div class="col">
+       <div class="card card-container">
+          <img src="{{asset('assets/images/data_eng_small.svg')}}" class="img-fluid card-top-image"  alt="...">
+          <div class="card-body" style="background-color: #FFF6F9 !important;box-shadow: 0px 2px 12px 0px #F65F8F2E;">
+            <h5 class="card-title">Data Engineering</h5>
+            <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="" class="btn view-courses-btn">View course</a>
+           </div>
+          </div>
+        </div>
+       </div>
+        <!-- CARD 3 -->
+
+        <!-- CARD 4 -->
+        <div class="col">
+        <div class="card card-container" style="">
+          <img src="{{asset('assets/images/site_reliability_small.svg')}}" class="img-fluid card-top-image"  alt="...">
+          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
+            <h5 class="card-title text-truncate">Site Reliability Engineering</h5>
+            <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="" class="btn view-courses-btn">View course</a>
+           </div>
+          </div>
+        </div>
+        </div>
+        <!-- CARD 4 -->
+
+        <!-- CARD 5 -->
+        <div class="col">
+        <div class="card card-container" style="">
+          <img  src="{{asset('assets/images/cloud_eng_small.svg')}}" class="img-fluid card-top-image"  alt="...">
+          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
+            <h5 class="card-title">Cloud Engineering</h5>
+            <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="" class="btn view-courses-btn">View course</a>
+           </div>
+          </div>
+        </div>
+        </div>
+        <!-- CARD 5 -->
+
+        <!-- CARD 6 -->
+        <div class="col">
+        <div class="card card-container" style="">
+          <img src="{{asset('assets/images/project_management_small.svg')}}" class="img-fluid card-top-image"  alt="...">
+          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
+            <h5 class="card-title">Project Management</h5>
+            <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="" class="btn view-courses-btn">View course</a>
+           </div>
+          </div>
+        </div>
+        </div>
+        <!-- CARD 6 -->
+
+        <!-- CARD 7 -->
+        <div class="col">
+        <div class="card card-container" style="">
+          <img src="{{asset('assets/images/devops_small.svg')}}" class="img-fluid card-top-image"  alt="...">
+          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
+            <h5 class="card-title">DevOps Engineering</h5>
+            <div class="d-flex">
+              <div class="d-flex align-items-center me-3">
+                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                <p class="card-text course-card-subtitle">20 hours</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                <p class="card-text course-card-subtitle">5 modules</p>
+              </div>
+            </div>
+            <div class="course-ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <p class="course-rating-score">4.5</p>
+            </div>
+           <div class="d-flex justify-content-end">
+            <a href="" class="btn view-courses-btn">View course</a>
+           </div>
+          </div>
+        </div>
+        </div>
+        <!-- CARD 7 -->
+
+        @empty
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{getImage('assets/images/not_found.jpg')}}" class="img-fluid" alt="image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h5 class="card-title">@lang('No courses found !')</h5>
+            </div>
+          </div>
         </div>
       </div>
+      @endforelse
+      </div> 
     </div>
-    @empty
-
-    <div class="card mb-3">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="{{getImage('assets/images/not_found.jpg')}}" class="img-fluid" alt="image">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body d-flex align-items-center justify-content-center">
-            <h5 class="card-title">@lang('No courses found !')</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    @endforelse
+   <!-- CARDS -->
   </div>
+
+
+
+
+
+
+
+
+
+
   @endsection
 
   @push('script')
@@ -556,6 +701,7 @@ text-align: left;
         var route = "{{route('ad.click')}}"
         $.post(route, data).then(function(res) {})
       })
+
     })(jQuery);
   </script>
   @endpush
