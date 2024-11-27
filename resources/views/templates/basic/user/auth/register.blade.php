@@ -1,14 +1,176 @@
 @extends($activeTemplate.'layouts.auth')
 @section('style')
+<style>
+    /* container */
+    .top-padding {
+        margin-top: 2rem;
+    }
+    /* container */
+    /* First Column */
+    .title-header {
+      font-family: "Nunito",sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height:1.2;
+      color:#000000;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
 
+    .register-form label {
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        /* font-size: 10px;
+        line-height: 13.64px; */
+        font-size: 18px;
+        line-height: 24.55px;
+        color: #000000;
+        margin-bottom: 8px;
+    }
+
+    .register-form input::placeholder {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        /* font-size: 6.87px;
+        line-height: 9.37px; */
+        font-size: 14px;
+        line-height: 19.1px;
+        color: #000000;
+        opacity: 30%;
+    }
+
+    .register-form .text-input {
+      padding-top: 15.25px ;
+      padding-bottom: 15.25px ;
+      padding-left: 23px ;
+    }
+
+
+    .register-form input , .register-form select {
+        border: 2 solid #0000001A;
+        border-radius: 10px;
+    }
+
+    .register-form .form-check .form-check-input {
+    background-color: #15BAB1;
+    border-radius: 2px;
+    width: 23px !important;
+    height: 23px !important;
+    border-color: #15BAB1;
+    margin-right: 8px;
+    }
+    .register-form .form-check .form-check-label {
+        padding-top: 3px;
+    }
+    .register-form .form-check .form-check-input:checked {
+        background-color: #15BAB1;
+        width: 23px;
+        height: 23px;
+    }
+    .register-form .form-check .form-check-input:checked:focus {
+        border: none;
+    }
+    
+    .register-form .btn-register {
+        background: linear-gradient(180deg, #03BAAF -47.54%, #06807A 154.92%);
+        color: #ffffff;
+        font-family: "Nunito",sans-serif;
+        font-size: 18px;
+        line-height: 24.55px;
+        font-weight: 700;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 50px;
+        border: none;
+    }
+
+    .register-form .bottom-text span {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        text-transform:capitalize;
+        color:#0000004D;
+    
+    }
+    .register-form .bottom-text a {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        color: #15BAB1;
+        text-transform:capitalize;
+        text-decoration: none;
+    }
+
+    .finance-aid-link {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 10px;
+        line-height: 13.64px;
+        text-transform:capitalize;
+        color: #00000080;
+    }
+    
+    /* END OF FIRST COLUMN */
+
+    /* SECOND COLUMN */
+    .register-img {
+      border-radius: 10px;
+    }
+    /* END OF SECOND COLUMN */
+
+
+    /* MEDIA QUERY */
+    @media (min-width:576px) {
+   
+   
+    }
+
+    @media (min-width:768px) {
+   
+    .title-header {
+      font-size: 38.69px;
+      line-height: 52.77px;
+      /* margin-top: 65.26px;
+      margin-bottom: 89px; */
+    }
+
+    .logo{
+      /* padding-top: 4.2rem; */
+    }
+   
+    }
+    @media (min-width:992px) {
+     
+    
+	}
+    @media (min-width:1200px) {
+    .register-img {
+      width: 690px !important;
+      min-height: 100vh;
+    }
+    }
+    @media (min-width:1400px) {
+      
+    }
+    /* MEDIA QUERY */
+
+</style>
 @endsection
+@push('style')
+<style>
+   
+</style>
+
+@endpush
 @section('content')
 
 @php
 $content = getContent('login.content',true)->data_values;
 @endphp
 
-<!-- <section class="account-section style--two">
+{{-- <section class="account-section style--two">
         <div class="left">
             <div class="top-el">
                 <img src="{{getImage('assets/images/frontend/login/'.@$content->texture_image_up,'1595x645')}}" alt="image">
@@ -130,10 +292,91 @@ $content = getContent('login.content',true)->data_values;
               <p class="text-white mt-3">{{__(@$content->sub_heading)}}</p>
             </div>
           </div>
-      </section>  -->
+      </section>  --}}
 
 <!-- //new implementation// -->
-<div class="container-fluid">
+
+<div class="container-fluid top-padding px-md-4 pb-5">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div>
+                <img class="logo" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
+            </div>
+            <h1 class="title-header">Create an Account.</h1>
+            <form class="row g-3 register-form">
+                <div class="col-md-6">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control text-input" id="first_name" placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control text-input" id="last_name" placeholder="Last Name">
+                </div>
+                <div class="col-md-6">
+                    <label for="" class="form-label">Country</label>
+                    <select id="" class="form-select text-input">
+                        <option selected>Nigeria</option>
+                        <option value="">Ghana</option>
+                        <option value="">Egypt</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inlineFormInputGroupUsername">Phone Number</label>
+                    <div class="input-group">
+                    <div class="input-group-text">+234</div>
+                    <input type="text" class="form-control text-input" id="inlineFormInputGroupUsername" placeholder="Your Phone Number">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAddress2" class="form-label">User Name</label>
+                    <input type="text" class="form-control text-input" id="inputAddress2" placeholder="Username">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAddress" class="form-label">E-mail Address</label>
+                    <input type="text" class="form-control text-input" id="inputAddress" placeholder="E-mail address">
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Password</label>
+                    <input type="password" class="form-control text-input" id="inputCity" placeholder="Password">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputZip" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control text-input" id="inputZip" placeholder="Confirm Password">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Remember me
+                    </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-register w-100">Register</button>
+                </div>
+
+                <div class="text-center bottom-text">
+                    <span>Have an Account? </span>
+                    <a href="{{route('user.login')}}" class="login-link">Login</a>
+                </div>
+               <div class="text-center">
+               <a href="foundation.html" class="finance-aid-link">Financial Aid Available</a>
+               </div>
+            </form>
+        </div>
+       <div class="d-none d-lg-block col-md-6">
+        <img class="img-fluid register-img" src="{{asset('assets/images/register_img.png')}}" alt="Register Image">
+       </div>
+    </div>
+</div>
+
+
+
+
+
+
+ {{-- <div class="container-fluid">
     <div class="row align-items-center">
         <div class="col-md-6 p-5">
             <h1 class="mb-5">Create an Account.</h1>
@@ -206,7 +449,7 @@ $content = getContent('login.content',true)->data_values;
                         Remember me
                     </label>
                 </div>
-                <div class="form-group col-sm-6">
+                <div class="form-group col-md-6">
                     @php echo loadReCaptcha() @endphp
                 </div>
                 @include($activeTemplate.'partials.custom_captcha')
@@ -236,7 +479,7 @@ $content = getContent('login.content',true)->data_values;
             <img src="assets/images/signup_image.jpg" class="img-fluid" alt="Create Account">
         </div>
     </div>
-</div>
+ </div>
 
 
 <div class="modal fade" id="existModalCenter" tabindex="-1" role="dialog" aria-labelledby="existModalCenterTitle" aria-hidden="true">
@@ -258,100 +501,8 @@ $content = getContent('login.content',true)->data_values;
         </div>
     </div>
 </div>
+--}}
 @endsection
-@push('style')
-<style>
-    .country-code .input-group-prepend .input-group-text {
-        background: #fff !important;
-    }
-
-    .country-code select {
-        border: none;
-    }
-
-    .country-code select:focus {
-        border: none;
-        outline: none;
-    }
-
-    .hover-input-popup {
-        position: relative;
-    }
-
-    .hover-input-popup:hover .input-popup {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .input-popup {
-        position: absolute;
-        bottom: 130%;
-        left: 50%;
-        width: 280px;
-        background-color: #1a1a1a;
-        color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-
-    .input-popup::after {
-        position: absolute;
-        content: '';
-        bottom: -19px;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 10px 10px 10px 10px;
-        border-style: solid;
-        border-color: transparent transparent #1a1a1a transparent;
-        -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-
-    .input-popup p {
-        padding-left: 20px;
-        position: relative;
-    }
-
-    .input-popup p::before {
-        position: absolute;
-        content: '';
-        font-family: 'Line Awesome Free';
-        font-weight: 900;
-        left: 0;
-        top: 4px;
-        line-height: 1;
-        font-size: 18px;
-    }
-
-    .input-popup p.error {
-        text-decoration: line-through;
-    }
-
-    .input-popup p.error::before {
-        content: "\f057";
-        color: #ea5455;
-    }
-
-    .input-popup p.success::before {
-        content: "\f058";
-        color: #28c76f;
-    }
-</style>
-
-@endpush
 @push('script-lib')
 <script src="{{ asset('assets/global/js/secure_password.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -370,59 +521,59 @@ $content = getContent('login.content',true)->data_values;
     }
 
     (function($) {
-        @if($mobile_code)
-        $(`option[data-code={{ $mobile_code }}]`).attr('selected', '');
-        @endif
+        // @if($mobile_code)
+        // $(`option[data-code={{ $mobile_code }}]`).attr('selected', '');
+        // @endif
 
-        $('select[name=country]').on('change', function() {
-            console.log('k');
-            $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
-            $('input[name=country_code]').val($('select[name=country] :selected').data('code'));
-            $('.mobile-code').text('+' + $('select[name=country] :selected').data('mobile_code'));
-        });
-        $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
-        $('input[name=country_code]').val($('select[name=country] :selected').data('code'));
-        $('.mobile-code').text('+' + $('select[name=country] :selected').data('mobile_code'));
+        // $('select[name=country]').on('change', function() {
+        //     console.log('k');
+        //     $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
+        //     $('input[name=country_code]').val($('select[name=country] :selected').data('code'));
+        //     $('.mobile-code').text('+' + $('select[name=country] :selected').data('mobile_code'));
+        // });
+        // $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
+        // $('input[name=country_code]').val($('select[name=country] :selected').data('code'));
+        // $('.mobile-code').text('+' + $('select[name=country] :selected').data('mobile_code'));
 
-        @if($general->secure_password)
-        $('input[name=password]').on('input', function() {
-            secure_password($(this));
-        });
-        @endif
+        // @if($general->secure_password)
+        // $('input[name=password]').on('input', function() {
+        //     secure_password($(this));
+        // });
+        // @endif
 
-        $('.checkUser').on('focusout', function(e) {
-            var url = "{{ route('user.checkUser') }}";
-            var value = $(this).val();
-            var token = '{{ csrf_token() }}';
-            if ($(this).attr('name') == 'mobile') {
-                var mobile = `${$('.mobile-code').text().substr(1)}${value}`;
-                var data = {
-                    mobile: mobile,
-                    _token: token
-                }
-            }
-            if ($(this).attr('name') == 'email') {
-                var data = {
-                    email: value,
-                    _token: token
-                }
-            }
-            if ($(this).attr('name') == 'username') {
-                var data = {
-                    username: value,
-                    _token: token
-                }
-            }
-            $.post(url, data, function(response) {
-                if (response['data'] && response['type'] == 'email') {
-                    $('#existModalCenter').modal('show');
-                } else if (response['data'] != null) {
-                    $(`.${response['type']}Exist`).text(`${response['type']} already exist`);
-                } else {
-                    $(`.${response['type']}Exist`).text('');
-                }
-            });
-        });
+        // $('.checkUser').on('focusout', function(e) {
+        //     var url = "{{ route('user.checkUser') }}";
+        //     var value = $(this).val();
+        //     var token = '{{ csrf_token() }}';
+        //     if ($(this).attr('name') == 'mobile') {
+        //         var mobile = `${$('.mobile-code').text().substr(1)}${value}`;
+        //         var data = {
+        //             mobile: mobile,
+        //             _token: token
+        //         }
+        //     }
+        //     if ($(this).attr('name') == 'email') {
+        //         var data = {
+        //             email: value,
+        //             _token: token
+        //         }
+        //     }
+        //     if ($(this).attr('name') == 'username') {
+        //         var data = {
+        //             username: value,
+        //             _token: token
+        //         }
+        //     }
+        //     $.post(url, data, function(response) {
+        //         if (response['data'] && response['type'] == 'email') {
+        //             $('#existModalCenter').modal('show');
+        //         } else if (response['data'] != null) {
+        //             $(`.${response['type']}Exist`).text(`${response['type']} already exist`);
+        //         } else {
+        //             $(`.${response['type']}Exist`).text('');
+        //         }
+        //     });
+        // });
 
     })(jQuery);
 </script>

@@ -4,7 +4,7 @@
 $content = getContent('login.content',true)->data_values;
 @endphp
 @section('style')
-<style>
+{{-- <style>
   h1 {
     font-family: 'Nunito', sans-serif;
     width: 294px;
@@ -107,6 +107,201 @@ $content = getContent('login.content',true)->data_values;
     border-color: #4ECDC4;
     box-shadow: 0 0 0 0.25rem rgba(78, 205, 196, 0.25);
   }
+  --}}
+</style>
+
+<style>
+    /* container */
+    .top-padding {
+        margin-top: 2rem;
+    }
+    /* container */
+    /* First Column */
+    .title-header {
+      font-family: "Nunito",sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height:1.2;
+      color:#000000;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .login-form label {
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24.55px;
+        color: #000000;
+        margin-bottom: 8px;
+    }
+
+    .login-form input::placeholder {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19.1px;
+        color: #000000;
+        opacity: 30%;
+    }
+     
+    .login-form .text-input {
+      padding-top: 15.25px ;
+      padding-bottom: 15.25px ;
+      padding-left: 23px ;
+    }
+
+    .login-form input , .login-form select {
+        border: 2px solid #0000001A;
+        border-radius: 10px;
+    }
+
+    .login-form .input-group-text {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        line-height: 14.21px;
+        color: #000000;
+        opacity: 30%;
+        background-color: #E3E3E3;
+    }
+
+    .login-form .form-check .form-check-input {
+    background-color: #15BAB1;
+    border-radius: 2px;
+    width: 23px !important;
+    height: 23px !important;
+    border-color: #15BAB1;
+    margin-right: 8px;
+    }
+    .login-form .form-check .form-check-label {
+        padding-top: 3px;
+    }
+    .login-form .form-check .form-check-input:checked {
+        background-color: #15BAB1;
+        width: 23px;
+        height: 23px;
+    }
+    .login-form .form-check .form-check-input:checked:focus {
+        border: none;
+    }
+        
+    .login-form .btn-login {
+        background: linear-gradient(201.36deg, #00E8DB -15.01%, #095450 127.23%);
+        color: #ffffff;
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24.55px;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 59px;
+        border: none;
+
+    }
+
+    .login-form .btn-google {
+        color:#000000;
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24.55px;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 59px;
+        border: 2px solid #0000001A;
+        background-color:#ffffff;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .login-form .bottom-text span {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        text-transform:capitalize;
+        color:#0000004D;
+    
+    }
+    .login-form .bottom-text a {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        color: #15BAB1;
+        text-transform:capitalize;
+        text-decoration: none;
+    }
+
+    .vstack{
+      /* padding-top:3.625rem; */
+      padding-top:1.8rem;
+    }
+
+    .forgot-password {
+      font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        line-height: 18px;
+        line-height: 24.55px;
+        color: #000000;
+        text-transform:capitalize;
+        text-decoration: none;
+    }
+
+    .finance-aid-link {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 10px;
+        line-height: 13.64px;
+        text-transform:capitalize;
+        color: #00000080;
+    }
+    
+    /* END OF FIRST COLUMN */
+
+    /* SECOND COLUMN */
+    .login-img {
+      border-radius: 10px;
+    }
+    /* END OF SECOND COLUMN */
+
+
+    /* MEDIA QUERY */
+    @media (min-width:576px) {
+   
+   
+    }
+
+    @media (min-width:768px) {
+   
+    .title-header {
+      font-size: 38.69px;
+      line-height: 52.77px;
+      margin-top: 65.26px;
+      margin-bottom: 89px;
+    }
+
+    .logo-img{
+      /* padding-top: 4.2rem; */
+    }
+   
+    }
+    @media (min-width:992px) {
+     
+    
+	}
+    @media (min-width:1200px) {
+    .login-img {
+      width: 690px !important;
+      min-height: 100vh;
+    }
+    }
+    @media (min-width:1400px) {
+      
+    }
+    /* MEDIA QUERY */
+
 </style>
 @endsection
 @section('content')
@@ -159,7 +354,63 @@ $content = getContent('login.content',true)->data_values;
           </div>
         </div>
 </section>  -->
-<div class="container-fluid w-100">
+
+
+<!--LOGIN NEW TEMPLATE  -->
+<div class="container-fluid top-padding px-md-4 pb-5">
+  <div class="row">
+    <div class="col-md-6">
+          <div>
+            <img class="logo-img" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
+          </div>
+        <h1 class="title-header">Welcome, Chike!</h1>
+      <form class="row g-3 login-form">
+        <div class="col-md-12">
+          <label for="inputEmail4" class="form-label">Username or Email</label>
+          <input type="email" class="form-control text-input" id="inputEmail4" placeholder="chikeivor">
+        </div>
+        <div class="col-md-12">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control text-input" id="inputPassword4" placeholder="at least 8 character">
+        </div>
+
+        <div class="col-12 hstack">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+             Remember me
+            </label>
+          </div>
+          <div class="ms-auto">
+            <a class="forgot-password" href="">Forgot Password?</a>
+          </div>
+        </div>
+        <div class="col-12 vstack pb-2">
+          <button type="submit" class="btn-login w-100 mb-3">Log in</button>
+          <button type="submit" class="btn-google w-100">
+            <img class="me-2" src="{{asset('assets/images/google_image.svg')}}" alt="Google Image" />
+            Sign in with Google
+          </button>
+        </div>
+           <div class="hstack d-flex justify-content-center">
+           <div class="bottom-text">
+              <span>Not registered yet?</span>
+              <a href="{{route('user.login')}}" class="login-link">Create an Account</a>
+            </div>
+           </div>
+      </form>
+    </div>
+
+    <div class="d-none d-md-block col-md-6">
+      <img class="img-fluid login-img" src="{{asset('assets/images/login_img.png')}}" alt="">
+    </div>
+  </div>
+</div>
+<!--LOGIN NEW TEMPLATE  -->
+
+
+
+{{-- <div class="container-fluid w-100">
   <div class="row align-items-center">
     <div class="col-md-6 p-5">
 
@@ -208,6 +459,7 @@ $content = getContent('login.content',true)->data_values;
     </div>
   </div>
 </div>
+--}}
 @endsection
 
 @push('script')

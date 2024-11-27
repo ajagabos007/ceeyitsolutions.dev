@@ -16,7 +16,7 @@
   @stack('style')
   @yield('style')
   <style>
-    h1 {
+    /* h1 {
       width: 334px;
       height: 27px;
       font-family: 'Nunito', sans-serif;
@@ -24,12 +24,11 @@
       font-size: 38.69px;
       line-height: 52.77px;
       color: #000000;
-      /* margin-top: 190px;
-      margin-left: 40px; */
+     
     }
 
     label {
-      /* width: 25px; */
+
       height: 7px;
       font-family: 'Nunito', sans-serif;
       font-weight: 700;
@@ -91,7 +90,7 @@
     .form-check-input:focus {
       border-color: #4ECDC4;
       box-shadow: 0 0 0 0.25rem rgba(78, 205, 196, 0.25);
-    }
+    } */
   </style>
   
 </head>
