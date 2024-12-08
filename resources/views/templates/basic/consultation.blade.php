@@ -55,9 +55,407 @@
 		border-radius: 50%;
 		margin-right: 8px;
 	}
+    
+	.hero-title {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 45px;
+		font-weight: 600;
+		line-height: 55px;
+		letter-spacing: -0.04em;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: #2C2B31;
+	}
 
+	.hero-para {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 21.36px;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: #2C2B31;
+		max-width: 100%;
+	}
+
+	.content-header {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 30px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
+	}
+
+	.content-para {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 21px;
+		font-weight: 400;
+		line-height: 21.36px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: #302F35;
+	}
+
+	.appointment-header {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 50px;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
+	}
+
+	.appointment-para {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 15.98px;
+		font-weight: 400;
+		line-height: 26.64px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+	}
+
+	.contact-form label {
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24.55px;
+        color: #000000;
+        margin-bottom: 8px;
+    }
+
+    .contact-form input::placeholder {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19.1px;
+        color: #000000;
+        opacity: 30%;
+    }
+     
+    .contact-form .text-input {
+      padding-top: 15.25px ;
+      padding-bottom: 15.25px ;
+      padding-left: 23px ;
+    }
+
+    .contact-form input , .contact-form select {
+        border: 1px solid #0000001A;
+        border-radius: 10px;
+    }
+
+    .contact-form .input-group-text {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        line-height: 14.21px;
+        color: #000000;
+        opacity: 30%;
+        background-color: #E3E3E3;
+    }
+
+    .contact-form .form-check .form-check-input {
+    background-color: #15BAB1;
+    border-radius: 2px;
+    width: 23px !important;
+    height: 23px !important;
+    border-color: #15BAB1;
+    margin-right: 8px;
+    }
+    .contact-form .form-check .form-check-label {
+        padding-top: 3px;
+    }
+    .contact-form .form-check .form-check-input:checked {
+        background-color: #15BAB1;
+        width: 23px;
+        height: 23px;
+    }
+    .contact-form .form-check .form-check-input:checked:focus {
+        border: none;
+    }
+        
+    .contact-form .btn-login {
+        background: linear-gradient(201.36deg, #00E8DB -15.01%, #095450 127.23%);
+        color: #ffffff;
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24.55px;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 59px;
+        border: none;
+
+    }
+
+    .contact-form .btn-google {
+        color:#000000;
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24.55px;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 59px;
+        border: 2px solid #0000001A;
+        background-color:#ffffff;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .contact-form .bottom-text span {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        text-transform:capitalize;
+        color:#0000004D;
+    
+    }
+    .contact-form .bottom-text a {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        color: #15BAB1;
+        text-transform:capitalize;
+        text-decoration: none;
+    }
+
+	.btn-consultant {
+		width: 152px;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+		color: #FFFFFF;
+		border:none;
+		border-radius:20px;
+	}
+
+	.btn-consultant:hover {
+		color: #ffffff;
+	}
+
+	.assessment-container img{
+     width:100%;
+	 height:auto
+	}
+
+     @media (min-width:576px) {
+	.hero-title {
+		font-size: 75px;
+		line-height: 85px;
+		letter-spacing: -0.04em;
+	}
+
+	.hero-para {
+		font-size: 15px;
+		line-height: 21.36px;
+	}
+
+	.content-header {
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 50px;
+	}
+
+	.content-para {
+		font-size: 15.98px;
+		line-height: 26.64px;
+	}
+
+	.appointment-header {
+		font-size: 40px;
+		line-height: 50px;
+
+	}
+
+	.appointment-para {
+		font-size: 15.98px;
+		font-weight: 400;
+		line-height: 26.64px;
+	}
+   
+	.hero-para {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 21.36px;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: #2C2B31;
+		max-width: 60%;
+	}
+
+	.content-header {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 50px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
+	}
+
+	.content-para {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 15.98px;
+		font-weight: 400;
+		line-height: 26.64px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: #302F35;
+	}
+
+	.appointment-header {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 50px;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
+	}
+
+	.appointment-para {
+		font-family: "Atyp Text",sans-serif;
+		font-size: 15.98px;
+		font-weight: 400;
+		line-height: 26.64px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+	}
+
+	.contact-form label {
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24.55px;
+        color: #000000;
+        margin-bottom: 8px;
+    }
+
+    .contact-form input::placeholder {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19.1px;
+        color: #000000;
+        opacity: 30%;
+    }
+     
+    .contact-form .text-input {
+      padding-top: 15.25px ;
+      padding-bottom: 15.25px ;
+      padding-left: 23px ;
+    }
+
+    .contact-form input , .contact-form select {
+        border: 1px solid #0000001A;
+        border-radius: 10px;
+    }
+
+    .contact-form .input-group-text {
+        font-family: "Nunito",sans-serif;
+        font-weight: 500;
+        line-height: 14.21px;
+        color: #000000;
+        opacity: 30%;
+        background-color: #E3E3E3;
+    }
+
+    .contact-form .form-check .form-check-input {
+    background-color: #15BAB1;
+    border-radius: 2px;
+    width: 23px !important;
+    height: 23px !important;
+    border-color: #15BAB1;
+    margin-right: 8px;
+    }
+    .contact-form .form-check .form-check-label {
+        padding-top: 3px;
+    }
+    .contact-form .form-check .form-check-input:checked {
+        background-color: #15BAB1;
+        width: 23px;
+        height: 23px;
+    }
+    .contact-form .form-check .form-check-input:checked:focus {
+        border: none;
+    }
+        
+    .contact-form .btn-login {
+        background: linear-gradient(201.36deg, #00E8DB -15.01%, #095450 127.23%);
+        color: #ffffff;
+        font-family: "Nunito",sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24.55px;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 59px;
+        border: none;
+
+    }
+
+    .contact-form .btn-google {
+        color:#000000;
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24.55px;
+        padding-top:15.25px;
+        padding-bottom:15.25px;
+        border-radius: 59px;
+        border: 2px solid #0000001A;
+        background-color:#ffffff;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .contact-form .bottom-text span {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        text-transform:capitalize;
+        color:#0000004D;
+    
+    }
+    .contact-form .bottom-text a {
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        line-height: 12.92px;
+        line-height: 17.63px;
+        color: #15BAB1;
+        text-transform:capitalize;
+        text-decoration: none;
+    }
+
+	.btn-consultant {
+		width: 152px;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+		color: #FFFFFF;
+		border:none;
+		border-radius:20px;
+	}
+
+	.btn-consultant:hover {
+		color: #ffffff;
+	}
+} 
 	/* Mobile navbar styles */
-	@media (max-width: 991px) {
+	@media (min-width: 991px) {
 		.navbar-collapse {
 			background-color: white;
 			padding: 1rem;
@@ -85,22 +483,6 @@
 
 	span {
 		color: #15bab1 !important;
-	}
-
-	h1 {
-		font-family: 'Inter', sans-serif;
-		font-size: 75px;
-		font-weight: 400;
-	}
-
-	h2 {
-		font-family: 'Inter', sans-serif;
-		/* width: 678px; */
-		/* height: 28px; */
-		font-size: 40px;
-		font-weight: 400;
-		color: #2C2B31;
-		line-height: 50px;
 	}
 
 	p.lead {
@@ -158,6 +540,9 @@
 		font-size: 12px;
 		color: #DDFFFD;
 	}
+
+	
+
 </style>
 @endsection
 @section('content')
@@ -486,15 +871,15 @@ understand their fears or challenges and create a personalised solution.</p>
 <section class="container mb-5">
 	<div class="row align-items-center">
 		<div class="col-lg-6">
-			<h1 class="display-4 fw-bold mb-3">
+			<h1 class="display-4 fw-bold mb-3 hero-title">
 				Expert <span class="">Career</span> <br />
 				Guidance in <span class="">Tech</span>
 			</h1>
-			<p class="lead mb-5">
+			<p class="lead mb-5 hero-para">
 				Every Consultation is unique and tailored to suit the learning or career need of every individual.
 			</p>
 			<a href="{{route('user.register')}}">
-				<button class="btn btn-primary rounded-pill hsb px-4 py-2">Book Now</button></a>
+				<button class="btn btn-consultant">Book Now</button></a>
 		</div>
 		<div class="col-lg-6">
 			<img src="assets/images/3d-rendering-cartoon-like-woman-working-computer 1.png" alt="Career Guidance" class="img-fluid" style="float: right;">
@@ -504,8 +889,8 @@ understand their fears or challenges and create a personalised solution.</p>
 
 <!-- Consultation Services -->
 <section class="container mb-5">
-	<h2 class="text-center mb-2">Personalized Consultation Services</h2>
-	<p class="text-center mb-4">
+	<h2 class="text-center mb-2 content-header ">Personalized Consultation Services</h2>
+	<p class="text-center mb-4 content-para">
 		Our Consultation services ensure that you get the best from your learning journey.
 		We also offer after learning support, till you have secured a job and can stand on your feet.
 	</p>
@@ -612,14 +997,14 @@ understand their fears or challenges and create a personalised solution.</p>
 
 <!-- Process Section -->
 <section class="container mb-5">
-	<h2 class="text-center mb-2">Our Process</h2>
-	<p text-center>Our consultation process seeks to identify the specific needs of individuals,
+	<h2 class="text-center mb-2 content-header">Our Process</h2>
+	<p class="text-center content-para">Our consultation process seeks to identify the specific needs of individuals,
 		understand their fears or challenges and create a personalized solution.</p>
-	<div class="row process-section">
+	<div class="row process-section mx-auto">
 		<!-- Repeat this card structure for each process step -->
 		<div class="col-md-4 mb-2 mt-2">
-			<div class="card border-1 h-100 p-4">
-				<img src="assets/images/res_optimization.png" alt="" class="mb-3" style="width: 300px; height: 200px;">
+			<div class="card border-1 h-100 p-4 assessment">
+				<img src="assets/images/res_optimization.png" alt="" class="mb-3">
 				<h5 class="fw-bold mb-3">Resume Optimization</h5>
 				<p class="text-muted small mb-0">
 					Due to the competitiveness of the job market, we train on how to craft a resume that stands out,
@@ -631,8 +1016,8 @@ understand their fears or challenges and create a personalised solution.</p>
 		<!-- Repeat for other process steps -->
 
 		<div class="col-md-4 mb-2 mt-2">
-			<div class="card border-1 h-100 p-4">
-				<img src="assets/images/assessment.png" alt="" class="mb-3" style="width: 300px; height: 200px;">
+			<div class="card border-1 h-100 p-4 assessment-container">
+				<img src="assets/images/assessment.png" alt="" class="mb-3">
 				<h5 class="fw-bold mb-3">Assessment</h5>
 				<p class="text-muted small mb-0">
 					Each individual is evaluated to determine their current knowledge, identify strengths,
@@ -644,7 +1029,7 @@ understand their fears or challenges and create a personalised solution.</p>
 
 		<div class="col-md-4 mb-2 mt-2">
 			<div class="card border-1 h-100 p-4">
-				<img src="assets/images/Interview.png" alt="" class="mb-3" style="width: 300px; height: 200px;">
+				<img src="assets/images/Interview.png" alt="" class="mb-3">
 				<h5 class="fw-bold mb-3">Interview</h5>
 				<p class="text-muted small mb-0">
 					Upon successful completion of assessments, individuals are scheduled for interviews with our job partners,
@@ -656,28 +1041,32 @@ understand their fears or challenges and create a personalised solution.</p>
 </section>
 
 <!-- let's Talk section -->
-<section class="container mb-5">
+<section class="container mb-5 py-5 my-5">
 	<div>
-		<h3 class="text-center" style="font-weight: bolder;">Let's <span style="color: cyan;">Talk</span></h3>
-		<p class="text-center">Book an appointment with any of our consultants today!</p>
+		<h3 class="text-center appointment-header">Let's <span style="color: #15BAB1;">Talk</span></h3>
+		<p class="text-center appointment-para">Book an appointment with any of our consultants today!</p>
+	</div>
+
+	<form class="contact-form">
+	<div class="mb-3">
+		<label for="Name" class="form-label mb-0">Name</label>
+		<input type="text" class="form-control text-input" id="username" placeholder="Name">
 	</div>
 
 	<div class="mb-4">
-		<label for="Name" class="form-label mb-2">Name</label>
-		<input type="text" class="form-control" id="username" placeholder="Name">
-	</div>
-
-	<div class="mb-4">
-		<label for="subject" class="form-label mb-2">Subject</label>
-		<input type="text" class="form-control" id="username" placeholder="Write your subject">
+		<label for="subject" class="form-label mb-0">Subject</label>
+		<input type="text" class="form-control text-input" id="username" placeholder="Write your subject">
 	</div>
 
 	<div class="mb-2">
-		<label for="message" class="form-label mb-2">Your messge</label>
-		<textarea class="form-control" id="message" rows="5" placeholder="Write your message"></textarea>
+		<label for="message" class="form-label mb-0">Your messge</label>
+		<textarea class="form-control text-input" id="message" rows="5" placeholder="Write your message"></textarea>
 	</div>
 
-	<button class="btn btn-primary rounded-pill hsb frm-btn" style="float: right; width: 152px;">Submit</button>
+	<div class="d-flex justify-content-end">
+	 <button class="btn btn-consultant">Submit</button>
+	</div>
+	</form>
 </section>
 
 @endsection
