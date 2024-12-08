@@ -1,6 +1,11 @@
 @extends($activeTemplate.'layouts.frontend')
 @section('style')
 <style>
+  *::before ,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+  }
   :root {
     --primary-color: #00A884;
   }
@@ -11,11 +16,6 @@
     font-size: medium;
     margin: 0px;
   }
-
-  /* p {
-    text-align: center;
-  } */
-
   .navbar {
     padding: 15px 0;
     background-color: white;
@@ -26,35 +26,19 @@
     margin-left: auto;
   }
 
-  .video-container {
-    position: relative;
-    width: 100%;
-    background: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .video-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: #d1d1d1; */
-  }
-
   .play-button {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.9);
+    width: 99px;
+    height: 99px;
+    background:#2C2B31;
     border-radius: 50%;
+    opacity: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
 
-  .course-tabs {
+  /* .course-tabs {
     margin-top: 20px;
     border-bottom: 1px solid #dee2e6;
   }
@@ -81,74 +65,49 @@
     right: 0;
     height: 2px;
     background: var(--primary-color);
-  }
+  } */
 
-  .premium-card {
+  /* .premium-card {
     background-color: #2C2B31;
     color: white;
     border-radius: 20px;
     padding: 20px;
     margin-top: 12000px;
-  }
+  } */
 
-  .premium-features {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-
-  .premium-features li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .premium-btn {
-    background: linear-gradient(180deg, #00E8DB 0%, #095450 100%);
-    color: white;
-    border: none;
-    width: 100%;
-    height: 43px;
-    padding: 12px;
-    border-radius: 14.93px;
-    font-weight: 400;
-    font-size: 11.2px;
-  }
-
-  .rating-stars {
+  /* .rating-stars {
     color: #ffd700;
     font-size: 20px;
-  }
+  } */
 
-  .instructor-info {
-    /* display: flex; */
+  /* .instructor-info {
+    display: flex;
     align-items: center;
     gap: 15px;
 
-  }
+  } */
 
-  .instructor-avatar {
-    width: 60px;
-    /* height: 50px; */
+  /* .instructor-avatar {
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     object-fit: cover;
-  }
+  } */
 
   .comments-section {
     margin-top: 20px;
   }
 
-  .rtcd {
+  /* .ratecard {
     background-color: #2C2B31;
     border-radius: 20px;
     color: #FFFFFF;
-  }
+  } */
 
-  a.rsp {
+  /* a.rsp {
     color: #3ADBD2 !important;
     text-decoration: none;
-  }
+  } */
 
   .profile-span {
     width: 64px;
@@ -179,30 +138,12 @@
     margin-right: 8px;
   }
 
-  a.nav-link {
+  /* a.nav-link {
     font-size: 15px;
-  }
-
-  h1 {
-    font-size: 31.46px;
-    color: #302F35;
-    height: 22px;
-    font-weight: 400;
-    line-height: 45.27px;
-  }
+  } */
 
   .navbar {
     border-bottom: 0px;
-  }
-
-  .tnld {
-    font-size: 20px;
-    color: #2C2B31;
-  }
-
-  h4 {
-    font-size: 34.66px;
-    font-weight: 600;
   }
 
   span.foot-text {
@@ -309,6 +250,631 @@
     text-align: right;
     color: var(--text-gray);
     font-size: 0.8rem;
+  }
+
+  .course-title {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 21.46px;
+    font-weight: 600;
+    line-height: 35.27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 17px;
+  }
+
+  .course-subtitle {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity:40%;
+    margin-bottom: 18px;
+
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    background: #C7CACA;
+    border-radius: 20px;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .video-placeholder {
+    position:absolute;
+    top:0;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.26);
+  }
+
+  .course-tabs {
+    margin-top: 20px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .course-tabs .nav-link {
+    color: #666;
+    border: none;
+    position: relative;
+  }
+  a.nav-link.active{
+    padding:8px 0px;
+  }
+  .course-tabs .nav-link.active {
+    position: relative; 
+    font-family: "Atyp Text", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28.78px;
+    text-align: left;
+    color: #2C2B31;
+    display: inline-block;
+}
+
+.course-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%; 
+    height: 4px;
+    background-color: #049E96;
+    border-radius: 50px;
+}
+
+
+  .tab-course-description {
+    font-family: "Nunito",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#2C2B31;
+
+  }
+
+
+  .premium-card {
+    display: flex;
+    flex-direction:column;
+    align-items:start;
+    width: 100%;
+    height: 340.41px;
+    border-radius: 20px;
+    background: #2C2B31;
+    padding-left: 37.46px;
+    padding-top: 38.56px;
+    padding-bottom: 37.41px;
+    padding-right: 39px;
+  }
+
+  .premium-card-title {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 34.66px;
+    font-weight: 400;
+    line-height: 49.87px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+  }
+  
+  .premium-car-para {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 19.83px;
+    font-weight: 400;
+    line-height: 28.24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#ffffff;
+    padding-bottom: 11.1px;
+
+  }
+
+  .premium-features {
+    list-style: none;
+    padding: 0;
+    margin:0;
+  }
+
+  .premium-features li {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 15.42px;
+    font-weight: 400;
+    line-height: 21.96px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color:white;
+  }
+
+  .premium-btn {
+    margin-top: 26.3px;
+    background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    height: 43px;
+    padding: 12px;
+    border-radius: 14.93px;
+    font-weight: 500;
+    font-size: 11.2px;
+    line-height: 15.95px;
+  }
+  
+  .rating-card-container {
+    margin-top: 8px;
+    width: 100%;
+    height: 151px;
+    border-radius: 20px;
+    background-color: #2C2B31;
+    padding-top: 24px;
+    padding-left: 37px;
+    padding-right: 36px;
+    padding-bottom: 22.31px;
+  }
+  .ratecard {
+    background-color: #2C2B31;
+    border-radius: 20px;
+    color: #FFFFFF;
+  }
+
+  .rating-card-title {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 19.83px;
+    font-weight: 400;
+    line-height: 28.24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#ffffff;
+
+  }
+
+  .rating-card-subtitle {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 11.28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#ffffff;
+
+  }
+
+   .rating-stars {
+    /* color: #ffd700;
+    font-size: 20px; */
+  }
+
+  .rating-stars img {
+    padding-right: 15px;
+  }
+
+  .rating-stars img:last-child {
+    padding-right: 0px;
+  }
+
+  .comment-title{
+    font-family: "Atyp Text",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28.48px;
+    text-align: left;
+    text-underline-position: "from-font";
+    text-decoration-skip-ink: none;
+    margin-top: 24px;
+    margin-left: 37px;
+  }
+
+  .comment-container{
+    display: flex;
+    align-items:center;
+    column-gap: 10px;
+    row-gap: 14px;
+  }
+
+  .img-container {
+    flex-shrink: 0;
+  }
+
+  .img-container img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+  }
+
+  .comment-content-container {
+    flex-grow:1;
+  }
+
+  .comment-content {
+    display: flex;
+    column-gap:5px;
+  }
+  
+  .comment-content-title {
+    font-family: "Nunito",sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28.68px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#2C2B31;
+  }
+
+  .comment-content-subtitle-container{
+    width: 48px;
+    height: 9px;
+    /* padding: 2px 3px 3px 3px; */
+    border-radius: 6.58px;
+    background-color: #DDFFFD;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .comment-content-subtitle{
+    font-family: "Nunito",sans-serif;
+    font-size: 5.52px;
+    font-weight: 400;
+    line-height: 28.68px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#2C2B31;
+  }
+
+  .comment-content-comment {
+    font-family: "Nunito",sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2B31;
+  }
+
+  .instructor-info {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .instruction-info-about {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.9px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2B31;
+    margin-top: 0.5rem;
+    /* margin-bottom: 14px; */
+  }
+  
+  .instructor-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .instructor-info-title {
+    font-family:"Nunito",sans-serif ;
+    font-size: 12.07px;
+    font-weight: 700;
+    /* line-height: 26px; */
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2B31;
+    text-wrap:nowrap;
+ 
+  }
+
+  .instruction-info-right{
+    display: flex;
+    column-gap:7.2px;
+  }
+  .instructor-info-jobtitle {
+    font-family: "Nunito",sans-serif;
+    font-size: 9.29px;
+    font-weight: 600;
+    /* line-height: 26px; */
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2B31;
+    opacity:40%;
+
+  }
+
+  .star-value {
+    display: flex;
+    align-items:center;
+  }
+  .star-value span{
+    font-family: "Nunito",sans-serif;
+    font-size: 7.83px;
+    font-weight: 600;
+    /* line-height: 43.83px; */
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2B31;
+    margin-left:5px ;
+  }
+
+  .instructor-info-detail {
+    font-family: "Nunito",sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 15px;
+
+  }
+
+  .comment-question {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.9px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
+
+  .comment-textarea {
+    width:100%;
+    height: 119px;
+    padding: 13px 312px 97px 16px;
+    border-radius: 10px !important;
+    border: 0.5px solid #00000033 !important;
+
+  }
+
+  .comment-submit-btn {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width: 103px;
+    height: 29.14px;
+    border-radius: 13.55px;
+    background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+    font-family: "Atyp Text",sans-serif;
+    font-size: 10.16px;
+    font-weight: 400;
+    line-height: 14.47px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    border: none;
+    color:#ffffff;
+    margin-top: 15px;
+
+  }
+
+ 
+
+  @media (min-width:576px) {
+    .course-title {
+    font-size: 31.46px;
+    font-weight: 600;
+    line-height: 45.27px;
+    text-wrap:nowrap;
+  }
+
+  .course-subtitle {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity:40%;
+    margin-bottom: 18px;
+
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-container {
+    height: 499px;
+  }
+   
+
+  .premium-card {
+    display: flex;
+    flex-direction:column;
+    align-items:start;
+    width: 401px;
+    height: 340.41px;
+    border-radius: 20px;
+    background: #2C2B31;
+    padding-left: 37.46px;
+    padding-top: 38.56px;
+    padding-bottom: 37.41px;
+    padding-right: 39px;
+  }
+
+  .premium-card-title {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 34.66px;
+    font-weight: 400;
+    line-height: 49.87px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+  }
+  
+  .premium-car-para {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 19.83px;
+    font-weight: 400;
+    line-height: 28.24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#ffffff;
+    padding-bottom: 11.1px;
+
+  }
+
+  .premium-features {
+    list-style: none;
+    padding: 0;
+    margin:0;
+  }
+
+  .premium-features li {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 15.42px;
+    font-weight: 400;
+    line-height: 21.96px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color:white;
+  }
+
+  .premium-btn {
+    margin-top: 26.3px;
+    background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    height: 43px;
+    padding: 12px;
+    border-radius: 14.93px;
+    font-weight: 500;
+    font-size: 11.2px;
+    line-height: 15.95px;
+  }
+
+  .review {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 11.43px;
+    font-weight: 400;
+    line-height: 16.45px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#3ADBD2;
+    margin-top: 8px;
+  }
+  
+  .rating-card-container {
+    width:401px;
+  }
+  .rating-stars img {
+    padding-right: 15px;
+  }
+
+  .rating-stars img:last-child {
+    padding-right: 0px;
+  }
+
+  .instruction-info-about {
+    margin-bottom: 14px;
+  }
+  .margin-right {
+    margin-right:2rem;
+  }
+
+  }
+  @media (min-width:768px) {
+    .course-title {
+    font-size: 31.46px;
+    font-weight: 600;
+    line-height: 45.27px;
+    text-wrap:nowrap;
+  }
+
+  .course-subtitle {
+    font-family: "Atyp Text",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity:40%;
+    margin-bottom: 18px;
+  }
+
+  /* .main-container {
+    flex-direction: row;
+    column-gap:20px;
+  } */
+
+  /* .video-container {
+    width: 899px;
+  } */
+
+  .rating-card-container {
+    width: 401px;
+  }
+
+
+  }
+  @media (min-width:992px) {
+
+  }
+  @media (min-width:1400px) {
+    .main-container {
+    flex-direction: row;
+    column-gap:20px;
+  }
+    .video-container {
+    width: 899px;
+  }
+  .comment-textarea {
+    width:449px;
+  }
+
+  
   }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -798,22 +1364,25 @@
 
 
 <!-- Main Content -->
-<div class="container my-3">
-  <div class="row g-3">
+<div class="container my-4 py-4 my-md-5 py-md-5">
+<h1 class="course-title">{{__($course->title)}}</h1>
+     <div>
+      <p class="course-subtitle">
+           {{$course->will_learn}}
+        </p>
+     </div>
+  <div class="main-container">
     <!-- Left Column - Video and Course Content -->
-    <div class="col-lg-8">
-      <h1 class="mb-4">{{__($course->title)}}</h1>
-      <p class="text-start"> @php
-        echo $course->will_learn;
-        @endphp
-      </p>
-
+    <div class="">
       <!-- Video Player -->
       <div class="video-container" style="background-image: url('{{ getImage(imagePath()['course']['path'].'/'.$course->thumbnail, imagePath()['course']['preview_size']) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="video-placeholder">
           <div class="">
             <!-- <img src="{{getImage(imagePath()['course']['path'].'/'.$course->thumbnail,imagePath()['course']['preview_size'])}}" alt="image"> -->
-            <a href="{{$course->preview == 1 ? asset(imagePath()['course']['preview_video_path'].'/'.$course->preview_video) : $course->preview_url}}" data-rel="lightcase" class="video-btn"> <img src="/assets/images/play_button.png" alt=""></a>
+            <a href="{{$course->preview == 1 ? asset(imagePath()['course']['preview_video_path'].'/'.$course->preview_video) : $course->preview_url}}" data-rel="lightcase" class="video-btn"> 
+              <div class="play-button">
+               <img src="/assets/images/play_button_vector.svg" alt=""></a>
+              </div>
 
           </div>
         </div>
@@ -822,13 +1391,13 @@
       <!-- Course Tabs -->
       <ul class="nav course-tabs" id="courseTabs" role="tablist">
         <li class="nav-item">
-          <a class="nav-link tnld active" data-bs-toggle="tab" href="#about">About</a>
+          <a class="nav-link active" data-bs-toggle="tab" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link tnld" data-bs-toggle="tab" href="#content">Course Content</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#content">Course Content</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link tnld" data-bs-toggle="tab" href="#comments">Comments</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#comments">Comments</a>
         </li>
       </ul>
 
@@ -839,25 +1408,24 @@
           <!-- Content for "DW Completed" section -->
           <div class="row mt-1">
             <div class="col-lg-8">
-
-              @php
-              echo $course->description;
-              @endphp
-
+              <p class="tab-course-description">
+               {{$course->description}}
+              </p>
             </div>
 
             <div class="col-lg-4">
               <div class="instructor-info">
                 <div>
-                  <h5 class="mb-0">About Instructor</h5>
-                  <div class="row mt-2">
-                    <div class="col-lg-3 p-0"> <img src="/assets/images/instructor_picture_placeholder.png" alt="" width="30px" class="instructor-avatar"></div>
-                    <div class="col-lg-9 p-1">
-                      <p class="text-muted mb-0">{{$course->author->fullname}}</p>
-                      <p class="text-muted mb-0">{{@$course->author->instructor_info->occupation}}</p>
+                  <h5 class="instruction-info-about">About Instructor</h5>
+                  <div class="instruction-info-right">
+                    <div class=""> <img src="/assets/images/instructor_picture_placeholder.png" alt="" class="instructor-avatar"></div>
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+                      <p class="instructor-info-title mb-0">{{$course->author->fullname}}</p>
+                      <p class="instructor-info-jobtitle mb-0">{{@$course->author->instructor_info->occupation}}</p>
+                      <div class="star-value"><img src="/assets/images/yellow_star_vector.svg" alt="" class="mb-0"><span>4.6</span></div>
                     </div>
                   </div>
-                  <p class="text-left mt-2">{{@$course->author->instructor_info->detail}}</p>
+                  <p class="instructor-info-detail">{{@$course->author->instructor_info->detail}}</p>
                 </div>
               </div>
             </div>
@@ -917,15 +1485,16 @@
             <div class="col-lg-4">
               <div class="instructor-info">
                 <div>
-                  <h5 class="mb-0">About Instructor</h5>
-                  <div class="row mt-2">
-                    <div class="col-lg-3 p-0"> <img src="/assets/images/instructor_picture_placeholder.png" alt="" width="30px" class="instructor-avatar"></div>
-                    <div class="col-lg-9 p-1">
-                      <p class="text-muted mb-0">{{$course->author->fullname}}</p>
-                      <p class="text-muted mb-0">{{@$course->author->instructor_info->occupation}}</p>
+                  <h5 class="instruction-info-about">About Instructor</h5>
+                  <div class="instruction-info-right">
+                    <div class=""> <img src="/assets/images/instructor_picture_placeholder.png" alt="" class="instructor-avatar"></div>
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+                      <p class="instructor-info-title mb-0">{{$course->author->fullname}}</p>
+                      <p class="instructor-info-jobtitle mb-0">{{@$course->author->instructor_info->occupation}}</p>
+                      <div class="star-value"><img src="/assets/images/yellow_star_vector.svg" alt="" class="mb-0"><span>4.6</span></div>
                     </div>
                   </div>
-                  <p class="text-left mt-2">{{@$course->author->instructor_info->detail}}</p>
+                  <p class="instructor-info-detail">{{@$course->author->instructor_info->detail}}</p>
                 </div>
               </div>
             </div>
@@ -935,37 +1504,39 @@
       </div>
 
       <!-- content Tab Content -->
-      <div class="container py-4 tab-content mt-4">
+      <div class="container tab-content mt-2">
         <div class="row tab-pane fade show" id="comments">
           <!-- <h3>What's on your mind?</h3> -->
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
               <form action="{{route('user.post.comment')}}" method="POST">
                 @csrf
-                <input type="hidden" name="course_id" value="{{$course->id}}">
-                <h5 for="message" class="form-label mb-2" style="font-size: 18px; font-weight: 600;
-                  line-height: 25.9px; text-align: left; text-underline-position: from-font; text-decoration-skip-ink: none;">
+               <div class="d-flex flex-column">
+               <input type="hidden" name="course_id" value="{{$course->id}}">
+                <h5 for="message" class="form-label comment-question">
                   What's on your mind?</h5>
-                <textarea name="comment" class="form-control" id="message" rows="5" placeholder="Write your comment" style="
-                border-radius: 20px; border: 0.5px 0px 0px 0px;opacity: 0px;
-                "></textarea>
-                <button class="btn premium-btn rounded-pill hsb frm-btn mb-4 mt-2" style="float: right; width: 152px;">Submit</button>
+                <textarea name="comment" class="form-control comment-textarea" id="message" rows="5" placeholder="Write your comment"></textarea>
+                <div class="d-flex justify-content-end margin-right">
+                  <button class="btn comment-submit-btn">Submit</button>
+                </div>
+               </div>
               </form>
             </div>
 
             <!-- </section> -->
-            <div class="col-lg-4">
+            <div class="col-lg-5">
               <div class="instructor-info">
                 <div>
-                  <h5 class="mb-0">About Instructor</h5>
-                  <div class="row mt-2">
-                    <div class="col-lg-3 p-0"> <img src="/assets/images/instructor_picture_placeholder.png" alt="" width="30px" class="instructor-avatar"></div>
-                    <div class="col-lg-9 p-1">
-                      <p class="text-muted mb-0">{{$course->author->fullname}}</p>
-                      <p class="text-muted mb-0">{{@$course->author->instructor_info->occupation}}</p>
+                  <h5 class="instruction-info-about">About Instructor</h5>
+                  <div class="instruction-info-right">
+                    <div class=""> <img src="/assets/images/instructor_picture_placeholder.png" alt="" class="instructor-avatar"></div>
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+                      <p class="instructor-info-title mb-0">{{$course->author->fullname}}</p>
+                      <p class="instructor-info-jobtitle mb-0">{{@$course->author->instructor_info->occupation}}</p>
+                      <div class="star-value"><img src="/assets/images/yellow_star_vector.svg" alt="" class="mb-0"><span>4.6</span></div>
                     </div>
                   </div>
-                  <p class="text-left mt-2">{{@$course->author->instructor_info->detail}}</p>
+                  <p class="instructor-info-detail">{{@$course->author->instructor_info->detail}}</p>
                 </div>
               </div>
             </div>
@@ -977,29 +1548,29 @@
     </div>
 
     <!-- Right Column - Premium Card -->
-    <div class="col-lg-4">
-      <div class="premium-card my-5">
-        <h4> @if ($course->value == 1) {{$general->cur_sym}} {{getAmount($course->price)}} @else @lang('Free') @endif</h4>
-        <p class="text-start">@lang('This course includes'):</p>
+    <div class="">
+      <div class="premium-card">
+        <h4 class="premium-card-title"> @if ($course->value == 1) {{$general->cur_sym}} {{getAmount($course->price)}} @else @lang('Free') @endif</h4>
+        <p class="premium-car-para">@lang('This course includes'):</p>
         <ul class="premium-features">
-          <li><img src="/assets/images/clock_icon.png" alt=""> {{$course->totalDuration()}} @lang('hours on-demand video') </li>
-          <li><img src="/assets/images/book_icon.png" alt=""> {{$course->lectures_count}} lectures</li>
-          <li><img src="/assets/images/hour-glass_icon.png" alt=""> @lang('Full lifetime access')</li>
+          <li><img src="/assets/images/clock_vector.svg" alt=""> {{$course->totalDuration()}} @lang('hours on-demand video') </li>
+          <li><img src="/assets/images/lectures_vector.svg" alt=""> {{$course->lectures_count}} lectures</li>
+          <li><img src="/assets/images/access_vector.svg" alt=""> @lang('Full lifetime access')</li>
         </ul>
 
         @auth
         @if(auth()->user()->is_instructor != 1)
         @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"success")->first())
-        <a href="{{route('user.course.play',[$course->id,$course->slug])}}" class="btn mt-5 w-100 premium-btn">@lang('Goto Course')</a>
+        <a href="{{route('user.course.play',[$course->id,$course->slug])}}" class="btn w-100 premium-btn">@lang('Goto Course')</a>
         @else
         @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"pending")->first())
 
-        <a href="javascript:void(0)" class="btn premium-btn mt-5 w-100 purchase disabled">@lang('Pending Approval')</a>
+        <a href="javascript:void(0)" class="btn premium-btn  w-100 purchase disabled">@lang('Pending Approval')</a>
         @elseif(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"rejected")->first())
-        <a href="javascript:void(0)" class="btn premium-btn mt-5 w-100 purchase disabled">@lang('Approval Rejected')</a>
+        <a href="javascript:void(0)" class="btn premium-btn  w-100 purchase disabled">@lang('Approval Rejected')</a>
 
         @else
-        <a href="javascript:void(0)" class="btn btn--light mt-5 w-100 purchase premium-btn" data-payment_route="{{route('user.payment',$course->code)}}">@lang('Purchase')</a>
+        <a href="javascript:void(0)" class="btn btn--light  w-100 purchase premium-btn" data-payment_route="{{route('user.payment',$course->code)}}">@lang('Purchase')</a>
 
         @endif
 
@@ -1018,64 +1589,66 @@
         @else
         @if ($course->author_id != auth()->id())
         @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->first())
-        <a href="{{route('user.course.play',[$course->id,$course->slug])}}" class="btn premium-btn mt-5 w-100 ">@lang('Goto Course')</a>
+        <a href="{{route('user.course.play',[$course->id,$course->slug])}}" class="btn premium-btn  w-100 ">@lang('Goto Course')</a>
         @else
-        <a href="javascript:void(0)" class="btn btn--light mt-5 w-100 purchase premium-btn" data-payment_route="{{route('user.payment',$course->code)}}">@lang('Purchase')</a>
+        <a href="javascript:void(0)" class="btn btn--light  w-100 purchase premium-btn" data-payment_route="{{route('user.payment',$course->code)}}">@lang('Purchase')</a>
         @endif
 
         @endif
 
         @endif
         @else
-        <a href="{{route('user.login')}}" class="btn mt-5 w-100 premium-btn">@lang('Purchase')</a>
+        <a href="{{route('user.login')}}" class="btn  w-100 premium-btn">@lang('Purchase')</a>
         @endauth
       </div>
 
       <!-- Rating Section -->
-      <div class="card mt-4 mb-3">
-        <div class="card-body rtcd">
-          <h5>Rate this course</h5>
-          <p class="text-start">Tell others what you think</p>
-          <div class="rating-stars mb-3">
-            <img src="/assets/images/Star 6.png" alt="" class="px-2">
-            <img src="/assets/images/Star 6.png" alt="" class="px-2">
-            <img src="/assets/images/Star 6.png" alt="" class="px-2">
-            <img src="/assets/images/Star 6.png" alt="" class="px-2">
-            <img src="/assets/images/Star 6.png" alt="" class="px-2">
+      <div class="rating-card-container">
+        <div class="rate-card-body">
+          <h5 class="rating-card-title">Rate this course</h5>
+          <p class="rating-card-subtitle">Tell others what you think</p>
+          <div class="rating-stars">
+            <img src="/assets/images/course_star.svg" alt="" class="">
+            <img src="/assets/images/course_star.svg" alt="" class="">
+            <img src="/assets/images/course_star.svg" alt="" class="">
+            <img src="/assets/images/course_star.svg" alt="" class="">
+            <img src="/assets/images/course_star.svg" alt="" class="">
           </div>
           @guest
-          <h5 class="block-title text-danger text-left">@lang('Please login first')</h5>
+          <h5 class="review">@lang('Please login first')</h5>
           @else
-          <a href="javascript:void(0)" class="text-start rsp review">write a review</a>
+          <a href="javascript:void(0)" class="review">write a review</a>
           @endguest
 
         </div>
       </div>
 
       <div>
-        <h3 style="font-size: 20px;">All Comments ({{$course->comments_count}})</h3>
+        <h3 class="comment-title">All Comments ({{$course->comments_count}})</h3>
       </div>
 
       <div class="container">
         @foreach ($course->comments as $k => $comment)
-        <div class="d-flex align-items-start gap-3">
+        <div class="comment-container">
           <!-- Profile Image -->
-          <div class="flex-shrink-0">
+          <div class="img-container">
             <img src="{{getImage('/assets/images/user/profile/'.$comment->user->image,'350x350')}}"
               alt="Profile"
               class="rounded-circle"
-              style="width: 48px; height: 48px; background-color: #f0f0f0;">
+            >
 
           </div>
 
           <!-- Content -->
-          <div class="flex-grow-1">
-            <div class="d-flex align-items-center gap-2">
-              <h6 class="mb-0 fw-bold">{{$comment->user->fullname}}</h6>
-              <span class="text-primary" style="font-size: 14px; background-color: #DDFFFD !important; color: #2C2B31 !important;">{{diffForHumans($comment->created_at)}}</span>
+          <div class="comment-content-container">
+            <div class="comment-content">
+              <h6 class="mb-0 comment-content-title">{{$comment->user->fullname}}</h6>
+              <div class="comment-content-subtitle-container">
+                <span class="comment-content-subtitle">{{diffForHumans($comment->created_at)}}</span>
+              </div>
               <a class="reply" data-bs-toggle="collapse" href="#reply-btn-{{$k}}" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-reply"></i>Reply</a>
             </div>
-            <p class="mb-0 text-muted text-left" style="font-size: 10px;">
+            <p class="mb-0 comment-content-comment">
               {{__($comment->comment)}}
             </p>
             <ul>
