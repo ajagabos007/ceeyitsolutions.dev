@@ -364,20 +364,20 @@ $content = getContent('login.content',true)->data_values;
             <img class="logo-img" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
           </div>
         <h1 class="title-header">Welcome, Chike!</h1>
-      <form class="row g-3 login-form">
+      <form class="row g-3 login-form" method="POST" action="{{ route('user.login')}}" onsubmit="return submitUserForm();">
         <div class="col-md-12">
-          <label for="inputEmail4" class="form-label">Username or Email</label>
-          <input type="email" class="form-control text-input" id="inputEmail4" placeholder="chikeivor">
+          <label for="username" class="form-label">Username or Email</label>
+          <input type="email" class="form-control text-input" id="username" name="username" placeholder="chikeivor" required>
         </div>
         <div class="col-md-12">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control text-input" id="inputPassword4" placeholder="at least 8 character">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control text-input" id="password" name="password" placeholder="at least 8 character" required>
         </div>
 
         <div class="col-12 hstack">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
+            <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">
              Remember me
             </label>
           </div>
@@ -395,7 +395,7 @@ $content = getContent('login.content',true)->data_values;
            <div class="hstack d-flex justify-content-center">
            <div class="bottom-text">
               <span>Not registered yet?</span>
-              <a href="{{route('user.login')}}" class="login-link">Create an Account</a>
+              <a href="{{route('user.register')}}" class="login-link">Create an Account</a>
             </div>
            </div>
       </form>

@@ -303,42 +303,55 @@ $content = getContent('login.content',true)->data_values;
                 <img class="logo" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
             </div>
             <h1 class="title-header">Create an Account.</h1>
-            <form class="row g-3 register-form">
+            <form class="row g-3 register-form" action="{{ route('user.register') }}" method="POST" onsubmit="return submitUserForm();">
                 <div class="col-md-6">
-                    <label for="first_name" class="form-label">First Name</label>
-                    <input type="text" class="form-control text-input" id="first_name" placeholder="First Name">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control text-input" id="firstName" placeholder="First Name" name="firstname" value="{{ old('firstname') }}" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="last_name" class="form-label">Last Name</label>
-                    <input type="text" class="form-control text-input" id="last_name" placeholder="Last Name">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control text-input" id="lastName" placeholder="Last Name" name="lastname" value="{{ old('lastname') }}" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="" class="form-label">Country</label>
-                    <select id="" class="form-select text-input">
-                        <option selected>Nigeria</option>
-                        <option value="">Ghana</option>
-                        <option value="">Egypt</option>
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select text-input" id="country" name="country" required>
+                        <option>Please select a country</option>
+                        <option>Please select a country</option>
+                            @foreach($countries as $key => $country)
+                        <option data-mobile_code="{{ $country->dial_code }}" value="{{ $country->country }}" data-code="{{ $key }}">{{ __($country->country) }}</option>
+                            @endforeach
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label" for="inlineFormInputGroupUsername">Phone Number</label>
+                    <label class="form-label" for="mobile">Phone Number</label>
+                    <input type="hidden" name="mobile_code">
+                    <input type="hidden" name="country_code">
                     <div class="input-group">
                     <div class="input-group-text">+234</div>
-                    <input type="text" class="form-control text-input" id="inlineFormInputGroupUsername" placeholder="Your Phone Number">
+                    <input type="text" class="form-control text-input" name="mobile" id="mobile" value="{{ old('mobile') }}" placeholder="Phone Number" required>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <label for="inputAddress2" class="form-label">User Name</label>
-                    <input type="text" class="form-control text-input" id="inputAddress2" placeholder="Username">
+                    <label for="username" class="form-label">User Name</label>
+                    <input type="text" class="form-control text-input" id="username" placeholder="Username" name="username" value="{{ old('username') }}" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="inputAddress" class="form-label">E-mail Address</label>
-                    <input type="text" class="form-control text-input" id="inputAddress" placeholder="E-mail address">
+                    <label for="email" class="form-label">E-mail Address</label>
+                    <input type="text" class="form-control text-input" id="email" name="email" placeholder="E-mail Address" value="{{ old('email') }}" required>
                 </div>
                 
                 <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Password</label>
-                    <input type="password" class="form-control text-input" id="inputCity" placeholder="Password">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control text-input" id="password" placeholder="Password" name="password" required>
+                    @if($general->secure_password)
+                        <div class="input-popup">
+                            <p class="error lower">@lang('1 small letter minimum')</p>
+                            <p class="error capital">@lang('1 capital letter minimum')</p>
+                            <p class="error number">@lang('1 number minimum')</p>
+                            <p class="error special">@lang('1 special character minimum')</p>
+                            <p class="error minimum">@lang('6 character password')</p>
+                        </div>
+                        @endif
                 </div>
                 <div class="col-md-6">
                     <label for="inputZip" class="form-label">Confirm Password</label>

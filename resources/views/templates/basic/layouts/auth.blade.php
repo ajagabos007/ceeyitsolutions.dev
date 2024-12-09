@@ -82,7 +82,7 @@
       opacity: 30%
     }
 
-    .form-check-input:checked {
+    .form-check-input:checked
       background-color: #4ECDC4;
       border-color: #4ECDC4;
     }
