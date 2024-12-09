@@ -1172,7 +1172,7 @@
 	  }
 
 	  .who-card img {
-		height: 100%;
+		height: 261.38px;
 		border-top-right-radius:19.33px;
 		border-bottom-right-radius:19.33px;
 	  }
@@ -1293,7 +1293,7 @@
          max-width: 194px;
        } */
 	   .who-card img {
-		height: 100%;
+		height:276.38px;
 		border-radius: 0px;
 		border-top-right-radius:19.33px;
 		border-bottom-right-radius:19.33px;
