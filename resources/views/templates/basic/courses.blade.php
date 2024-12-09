@@ -50,14 +50,19 @@
     color: #059B93;
     padding-top: 17px;
     padding-bottom: 17px;
-    padding-left:25px;
+    padding-left:40px;
     font-family:"Atyp Text",sans-serif;
     font-weight:500;
     font-size: 18px;
     line-height: 25.54px;
-    padding-left: 40px;
     
    }
+
+   .failed {
+    color: #9b98ad !important;
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
 
    .custom-select .option {
     color:#059B93;
@@ -408,7 +413,8 @@
 <!-- //// NEW IMPLEMENTATION /// -->
   <div class="container container-top mx-auto " style="min-height: screen;">
     <div>
-      <form action="">
+    
+      <form  action="" method="GET">
         <div class="input-container mb-3 mx-auto">
           <!-- <span class="border-none bg-transparent" id="basic-addon1"> -->
             <svg class="search-icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -416,275 +422,100 @@
             </svg>
           <!-- </span> -->
           <input type="text" class="form-control custom-input mx-auto" placeholder="Browse courses, tags, titles." aria-label="Browse courses, tags, titles." aria-describedby="basic-addon1">
+          
         </div>
      </form>
     </div>
     
-   <div class="d-flex mx-auto position-relative" style="max-width:820px;">
+   <div class="d-flex mx-auto position-relative" style="max-width:900px;">
      <img class="select-course-icon" src="{{asset('assets/images/course_icon.svg')}}" alt="">
-    <select class="form-select custom-select " aria-label="Default select example">
-        <option selected class="option">Courses</option>
-        <option value="1">PHP</option>
-        <option value="2">Devops</option>
-        <option value="3">SRE</option>
+     <div>
+      <select class="form-select custom-select"  onChange="window.location.href=this.value" aria-label="Default select example">
+        <option selected class="{{queryBuild('category','')}}">Courses</option>
+        @foreach ($categories as $category)
+          <option value="{{queryBuild('category',$category->slug)}}" {{request('category') == $category->slug ? 'selected':''}}>{{$category->name}}</option>
+        @endforeach
       </select>
+     </div>
+
    </div>
 
-   <!-- CARDS -->
-    <div class="container my-5">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  gap-y-45 gx-4">
-      @forelse ($courses as $course)
-        <!-- CARD 1 -->
-        <div class="col">
-              <div class="card card-container">
-                 <img src="{{asset('assets/images/python_small.svg')}}" class="img-fluid card-top-image" alt="...">
-                  <div class="card-body" style="background-color:#EEFCFC;box-shadow: 0px 2px 12px 0px #50CAE92E;">
-                    <h5 class="card-title">Python</h5>
-                    <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="{{route('course.details',[$course->id,$course->slug])}}" class="btn view-courses-btn">View course</a>
-           </div>
+   <div class="container">
+      <div class="row my-5">
+        @forelse ($courses as $course)
+          <div class="col col-sm-6 col-md-4 col-lg-3 my-4">
+            <div class="card shadow border-0" style="border-radius: 20px !important; box-shadow: 0px 2px 12px 0px #50CAE92E;">
+              <img src="{{ $loop->index%2 > 0 ?asset('assets/images/site_reliability_small.svg'): asset('assets/images/project_management_small.svg')}}" class="card-img-top" alt="...">
+              <div class="card-body" >
+                <h5 class="card-title">{{$course->title}}</h5>
+                <div class="card-text">
+                  <div class="d-flex gap-2">
+                    <div class="d-flex align-items-center">
+                      <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
+                      <p class="card-text course-card-subtitle">{{$course->chapter->count() * random_int(1,3)}} hours</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
+                      <p class="card-text course-card-subtitle">{{$course->chapter->count()}} modules</p>
+                    </div>
                   </div>
-              </div>
-        </div>
-        <!-- CARD 1 -->
+                </div>
 
-        <!-- CARD 2 -->
-        <div class="col">
-        <div class="card card-container">
-          <img src="{{asset('assets/images/data_analysis_small.svg')}}" class="img-fluid card-top-image"  alt="...">
-            <div class="card-body" style="background-color: #F8F6FF !important;box-shadow: 0px 2px 12px 0px #937CFC2E;">
-              <h5 class="card-title">Data Analysis</h5>
-              <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="" class="btn view-courses-btn">View course</a>
-           </div>
-            </div>
-          </div>
-          </div>
-        <!-- CARD 2 -->
+                @php
+                  $rating = intval(abs($course->avgRating())); // Get the rating
+                  $fullStars = floor($rating); // Number of full stars
+                  $halfStar = ($rating - $fullStars) >= 0.5; // Check if there's a half star
+                  $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0); // Remaining empty stars
+                @endphp
+                
+                <div class="course-ratings">
+                  @for ($i = 0; $i < $fullStars; $i++)
+                    <i class="fas fa-star"></i>
+                  @endfor
 
-        <!-- CARD 3 -->
-       <div class="col">
-       <div class="card card-container">
-          <img src="{{asset('assets/images/data_eng_small.svg')}}" class="img-fluid card-top-image"  alt="...">
-          <div class="card-body" style="background-color: #FFF6F9 !important;box-shadow: 0px 2px 12px 0px #F65F8F2E;">
-            <h5 class="card-title">Data Engineering</h5>
-            <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="" class="btn view-courses-btn">View course</a>
-           </div>
-          </div>
-        </div>
-       </div>
-        <!-- CARD 3 -->
+                  <!-- Display half star if necessary -->
+                  @if ($halfStar)
+                    <i class="fas fa-star-half"></i>
+                  @endif
 
-        <!-- CARD 4 -->
-        <div class="col">
-        <div class="card card-container" style="">
-          <img src="{{asset('assets/images/site_reliability_small.svg')}}" class="img-fluid card-top-image"  alt="...">
-          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
-            <h5 class="card-title text-truncate">Site Reliability Engineering</h5>
-            <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="" class="btn view-courses-btn">View course</a>
-           </div>
-          </div>
-        </div>
-        </div>
-        <!-- CARD 4 -->
+                  <!-- Display empty stars -->
+                  @for ($i = 0; $i < $emptyStars; $i++)
+                    <i class="fas fa-star failed"></i>
+                  @endfor
 
-        <!-- CARD 5 -->
-        <div class="col">
-        <div class="card card-container" style="">
-          <img  src="{{asset('assets/images/cloud_eng_small.svg')}}" class="img-fluid card-top-image"  alt="...">
-          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
-            <h5 class="card-title">Cloud Engineering</h5>
-            <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
+                  @if($rating>0)
+                  <p class="course-rating-score">4.5</p>
+                  @endif
+                </div>
+                <div class="d-flex justify-content-end">
+                  <a href="{{route('course.details',[$course->id,$course->slug])}}" class="btn view-courses-btn">View course</a>
+                </div>
               </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="" class="btn view-courses-btn">View course</a>
-           </div>
-          </div>
-        </div>
-        </div>
-        <!-- CARD 5 -->
-
-        <!-- CARD 6 -->
-        <div class="col">
-        <div class="card card-container" style="">
-          <img src="{{asset('assets/images/project_management_small.svg')}}" class="img-fluid card-top-image"  alt="...">
-          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
-            <h5 class="card-title">Project Management</h5>
-            <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="" class="btn view-courses-btn">View course</a>
-           </div>
-          </div>
-        </div>
-        </div>
-        <!-- CARD 6 -->
-
-        <!-- CARD 7 -->
-        <div class="col">
-        <div class="card card-container" style="">
-          <img src="{{asset('assets/images/devops_small.svg')}}" class="img-fluid card-top-image"  alt="...">
-          <div class="card-body" style=" background-color: #FFF9F2 !important;box-shadow: 0px 2px 12px 0px #FDA43C2E;">
-            <h5 class="card-title">DevOps Engineering</h5>
-            <div class="d-flex">
-              <div class="d-flex align-items-center me-3">
-                <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                <p class="card-text course-card-subtitle">20 hours</p>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                <p class="card-text course-card-subtitle">5 modules</p>
-              </div>
-            </div>
-            <div class="course-ratings">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <p class="course-rating-score">4.5</p>
-            </div>
-           <div class="d-flex justify-content-end">
-            <a href="" class="btn view-courses-btn">View course</a>
-           </div>
-          </div>
-        </div>
-        </div>
-        <!-- CARD 7 -->
-
-        @empty
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="{{getImage('assets/images/not_found.jpg')}}" class="img-fluid" alt="image">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body d-flex align-items-center justify-content-center">
-              <h5 class="card-title">@lang('No courses found !')</h5>
             </div>
           </div>
+          @empty
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{{getImage('assets/images/not_found.jpg')}}" class="img-fluid" alt="image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <h5 class="card-title">@lang('No courses found !')</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        @endforelse
+        <div class="text-end mt-4 pagination-md">
+          <ul class="pagination d-inline-flex">
+            {{paginateLinks($courses,'')}}
+            </li>
+          </ul>
         </div>
       </div>
-      @endforelse
-      </div> 
-    </div>
-   <!-- CARDS -->
+   </div>
   </div>
-
-
-
-
-
-
-
-
-
 
   @endsection
 

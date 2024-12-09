@@ -4,7 +4,8 @@
 $content = getContent('login.content',true)->data_values;
 @endphp
 @section('style')
-{{-- <style>
+{{-- 
+<style>
   h1 {
     font-family: 'Nunito', sans-serif;
     width: 294px;
@@ -107,9 +108,9 @@ $content = getContent('login.content',true)->data_values;
     border-color: #4ECDC4;
     box-shadow: 0 0 0 0.25rem rgba(78, 205, 196, 0.25);
   }
-  --}}
+  
 </style>
-
+--}}
 <style>
     /* container */
     .top-padding {
@@ -363,8 +364,9 @@ $content = getContent('login.content',true)->data_values;
           <div>
             <img class="logo-img" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
           </div>
-        <h1 class="title-header">Welcome, Chike!</h1>
+        <h1 class="title-header">Login</h1>
       <form class="row g-3 login-form" method="POST" action="{{ route('user.login')}}" onsubmit="return submitUserForm();">
+        @csrf
         <div class="col-md-12">
           <label for="username" class="form-label">Username or Email</label>
           <input type="email" class="form-control text-input" id="username" name="username" placeholder="chikeivor" required>
