@@ -127,7 +127,7 @@
 	.main-header-title {
 		display: flex;
 		flex-direction:column;
-		font-family:"Atyp Text",sans-serif;
+		font-family:"Poppins", sans-serif;
 		font-size: 45px;
 		font-weight: 600;
 		line-height: 60px;
@@ -144,7 +144,7 @@
 	}
 
 	.main-header-title .content {
-		font-family:"Atyp Text",sans-serif;
+		font-family:"Poppins", sans-serif;
 		font-size: 6.14px;
 		font-weight: 400;
 		line-height: 8.74px;
@@ -172,7 +172,7 @@
 		/* padding-top:11px;
 		padding-bottom:11px; */
 		height:43px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -194,7 +194,7 @@
 		/* padding-top:11px;
 		padding-bottom:11px; */
 		height:43px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -211,7 +211,7 @@
 	}
 
 	.info-section h2 {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 32.48px;
 		font-weight: 400;
 		line-height: 50.5px;
@@ -222,7 +222,7 @@
 	}
 
 	.our-goal {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 33.1px;
 		font-weight: 600;
 		line-height: 39.48px;
@@ -236,7 +236,7 @@
 	}
 	
 	.skill {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 23.99px;
 		font-weight: 400;
 		line-height: 28.23px;
@@ -269,7 +269,7 @@
 		border: 0.97px solid #FFFFFF;
 	}
 	.card-info-content {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 24.02px;
 		font-weight: 400;
 		line-height: 27.97px;
@@ -307,7 +307,7 @@
 	}
 
 	.info-cards  p {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 24.02px;
 		font-weight: 400;
 		line-height: 37.97px;
@@ -336,7 +336,7 @@
 		display: flex;
 		flex-direction:column;
 		align-items: center;
-		font-family:"Atyp Text",sans-serif;
+		font-family:"Poppins", sans-serif;
 		font-size: 65px;
 		font-weight: 700;
 		line-height: 75px;
@@ -353,7 +353,7 @@
 	}
 
 	.main-header-title .content {
-		font-family:"Atyp Text",sans-serif;
+		font-family:"Poppins", sans-serif;
 		font-size: 22.5px;
 		font-weight: 400;
 		line-height: 32.04px;
@@ -380,7 +380,7 @@
 		/* padding-top:11px;
 		padding-bottom:11px; */
 		height:43px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -402,7 +402,7 @@
 		/* padding-top:11px;
 		padding-bottom:11px; */
 		height:43px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -419,7 +419,7 @@
 	}
 
 	.info-section h2 {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 42.48px;
 		font-weight: 400;
 		line-height: 60.5px;
@@ -430,7 +430,7 @@
 	}
 
 	.our-goal {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 43.1px;
 		font-weight: 600;
 		line-height: 49.48px;
@@ -444,7 +444,7 @@
 	}
 
 	.skill {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 33.99px;
 		font-weight: 400;
 		line-height: 38.23px;
@@ -476,7 +476,7 @@
 		border: 0.97px solid #FFFFFF;
 	}
 	.card-info-content {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 24.02px;
 		font-weight: 400;
 		line-height: 27.97px;
@@ -514,7 +514,7 @@
 	}
 
 	.info-cards  p {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 34.02px;
 		font-weight: 400;
 		line-height: 47.97px;
@@ -545,7 +545,7 @@
 		display: flex;
 		flex-direction:column;
 		align-items: center;
-		font-family:"Atyp Text",sans-serif;
+		font-family:"Poppins", sans-serif;
 		font-size: 75px;
 		font-weight: 700;
 		line-height: 85px;
@@ -562,7 +562,7 @@
 	}
 
 	.main-header-title .content {
-		font-family:"Atyp Text",sans-serif;
+		font-family:"Poppins", sans-serif;
 		font-size: 22.5px;
 		font-weight: 400;
 		line-height: 32.04px;
@@ -589,7 +589,7 @@
 		/* padding-top:11px;
 		padding-bottom:11px; */
 		height:43px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -611,7 +611,7 @@
 		/* padding-top:11px;
 		padding-bottom:11px; */
 		height:43px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -628,7 +628,7 @@
 	}
 
 	.info-section h2 {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 42.48px;
 		font-weight: 400;
 		line-height: 60.5px;
@@ -639,7 +639,7 @@
 	}
 
 	.our-goal {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 53.1px;
 		font-weight: 600;
 		line-height: 59.48px;
@@ -653,7 +653,7 @@
 	}
 
 	.skill {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 43.99px;
 		font-weight: 400;
 		line-height: 48.23px;
@@ -687,7 +687,7 @@
 		border: 0.97px solid #FFFFFF;
 	}
 	.card-info-content {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 34.02px;
 		font-weight: 400;
 		line-height: 47.97px;
@@ -725,7 +725,7 @@
 	}
 
 	.info-cards  p {
-		font-family: "Atyp Text",sans-serif;
+		font-family: "Poppins", sans-serif;
 		font-size: 34.02px;
 		font-weight: 400;
 		line-height: 47.97px;
