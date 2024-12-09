@@ -36,7 +36,7 @@
 
 
 	.hero-section {
-		padding: 1rem 0;
+		padding-top: 1rem;
 	}
 
 	.hero-title {
@@ -59,23 +59,30 @@
 
 	.section-header {
 		text-align: center;
-		margin-bottom: 3rem;
+		/* margin-bottom: 3rem; */
 	}
 
 	
 
 	.section-title {
-		font-family:'Atyp Text',sans-serif;
+		/* font-family:'Atyp Text',sans-serif;
 		font-size: 2.5rem;
 		font-weight: 600;
 		line-height:50px;
 		margin-bottom: 28px;
 		text-align: center;
-		color:#2C2B32;
+		color:#2C2B32; */
+		font-family:'Atyp Text',sans-serif;
+		font-size: 18px;
+		font-weight: 600;
+		/* line-height: 50px; */
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
 	}
 
 	.section-subtitle {
-		font-family:'Atyp Text',sans-serif;
+		/* font-family:'Atyp Text',sans-serif;
 		color: #302F35;
 		font-size:15.98px;
 		line-height:26.64px;
@@ -83,38 +90,27 @@
 		text-align: center;
 		margin: auto;
 		max-width: 476px;
-		margin-bottom: 2.9rem;
+		margin-bottom: 2.9rem; */
+		font-family:'Atyp Text',sans-serif;
+		font-size: 8px;
+		font-weight: 400;
+		line-height: 26.64px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
 	}
 
-	/* .course-card {
-		background-color: white;
-		border-radius: 12px;
-		padding: 1.5rem;
-		height: 100%;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 1.5rem;
-	}
-
-	.course-card .icon {
-		width: 48px;
-		height: 48px;
-		margin-bottom: 1rem;
-	}
-
-	.course-card hr {
-		margin: 2rem 0;
-		opacity: 0.2;
-	} */
 
 	.who-card {
 		background: linear-gradient(103.12deg, #201E27 7.94%, #4B4B4B 114.59%);
-		border-radius: 19.33px;
+		/* border-radius: 19.33px; */
+		border-radius:11.52px;
 	    width:100%;
 		/* max-height: 278px; */
 		height: 100%;
-		border-radius:19.33px;
+		/* border-radius:19.33px; */
+		padding-left:15.56px; 
 
 	}
 
@@ -122,18 +118,18 @@
 		color: white;
 	}
 	 .content-left {
-		padding: 1rem 1rem 0rem 1rem;
+		/* padding: 1rem 1rem 0rem 1rem; */
 	}
 	.content-right {
-		padding: 1rem 1rem 0rem 1rem;
+		/* padding: 1rem 1rem 0rem 1rem; */
 	} 
 
 	.who-card img {
 		padding: 0;
 		width:100%;
 		height:100%;
-		object-fit:contain;
-		border-bottom-left-radius: 19.33px;
+		object-fit:cover;
+		border-top-right-radius: 19.33px;
 		border-bottom-right-radius:19.33px;
 	}
 
@@ -262,10 +258,10 @@
 	}
 
 	.card-title {
-		font-size: 1.2rem;
+		/* font-size: 1.2rem;
 		font-weight: bold;
 		margin-top: 0.5rem;
-		text-align: start;
+		text-align: start; */
 	}
 
 	.card {
@@ -279,49 +275,91 @@
 	} */
 
 	.hero-title {
-		font-family:"Atyp text",sans-serif;
+		/* font-family:"Atyp text",sans-serif;
 		font-size: 60px;
 		font-weight: 400;
 		line-height: 1.2;
 		margin-bottom: 20px;
 		letter-spacing: -0.04em;
-		color:#2C2B31;
+		color:#2C2B31; */
+		font-family: "Atyp Text",sans-serif;
+		font-size: 39.96px;
+		font-weight: 400;
+		line-height: 45.28px;
+		letter-spacing: -0.04em;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+        color:#2C2B31;
 	}
 
 	.hero-title .highlight {
-		font-family:"Atyp text",sans-serif;
-		font-size: 48px;
+		font-family: "Atyp Text",sans-serif;
+		font-size: 39.96px;
 		font-weight: 400;
-		line-height: 1.2;
+		line-height: 45.28px;
 		letter-spacing: -0.04em;
-		color: #15BAB1;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+        color: #15BAB1;
 	}
 
 	.hero-description {
 		font-family:"Atyp text",sans-serif;
-		font-size: 15px;
-		font-weight:400;
-		line-height:21.36px;
+		font-size: 7.99px;
+		font-weight: 400;
+		line-height: 11.38px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
 		color: #2C2B31;
-		max-width: 548px; 
+
+	}
+	.hero-buttons {
+		display: flex;
+		justify-content:center;
 	}
 
 	.hero-buttons .btn {
-		padding: 12px 30px;
+		/* padding: 12px 30px;
 		border-radius: 25px;
 		font-weight: 500;
-		margin-right: 15px;
+		margin-right: 15px; */
+		margin-right:15px;
+		font-family: "Atyp Text",sans-serif;
+		font-size: 7.99px;
+		font-weight: 400;
+		line-height: 11.38px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		width: 80.98px;
+		height: 22.91px;
+		border-radius:20px;
+        box-shadow: 0px 2.13px 7.99px 0px #03BDB359;
 	}
 
 	.btn-financial-aid {
-		font-family: "Atyp Text", sans-serif;
+		/* font-family: "Atyp Text", sans-serif;
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 21.36px;
 		width: 152px;
 		background-color: transparent;
 		border: 1px solid #15BAB1;
+		color: #15BAB1; */
+		font-family: "Atyp Text", sans-serif;
+		font-size: 7.99px;
+		font-weight: 400;
+		line-height: 11.38px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		background-color: transparent;
+		border: 1px solid #15BAB1;
 		color: #15BAB1;
+
 		
 	}
 
@@ -336,13 +374,44 @@
 		height: 100%;
 		overflow: hidden;
 		z-index: 2;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		margin-top: 39.86px;
 	}
 
 	.hero-image img {
 		max-width: 100%;
-		width: 358px;
+		width: 251px;
 		height: auto;
 
+	}
+
+	.hero-image .aid-overlay {
+		position: absolute; 
+		border-radius: 10px; 
+		left: -10.36px;
+		right:237.48px; 
+		width: 120.16px;
+		top: 50px;
+	}
+
+	.hero-image .it-overlay {
+		position: absolute; 
+		border-radius: 10px; 
+		left: 5.64px;
+		right:237.48px; 
+		width: 120.16px;
+		top: 99px;
+	}
+
+	.hero-image .chart-overlay {
+		position: absolute;
+		border-radius: 10px;
+		left: -16.36px;
+		right: 237.48px;
+		width: 120.16px;
+		top: 162px;
 	}
 
 	.floating-element {
@@ -379,49 +448,74 @@
 
 	.icon-wrapper {
 		font-size: 2rem;
-		margin-bottom: 1rem;
-		margin-top: 2rem;
+		/* margin-bottom: 1rem; */
+		margin-top: 1.5rem;
 	}
+	
+	.icon-wrapper img{
+       width:15.89px;
+	   height:15.91px;
+	}
+	/* .icon-wrapper .python-vector{
+       width:15.89px;
+	   height:15.91px;
+	} */
 
 
 	.course-card {
+		position: relative;
 		/* aspect-ratio: 1 / 1; */
-		width: 294px;
-		min-width: 100%;
-		height: 258px;
-		border-radius: 40px;
+		/* width: 294px; */
+		width:133.78px;
+		/* min-width: 100%; */
+		/* height: 258px; */
+		/* border-radius: 40px; */
+		border-radius:18.14px;
 		/* padding: 20px; */
-		padding-left: 29px;
-		padding-right:30px;
+		/* padding-left: 29px;
+		padding-right:30px; */
+		padding-left: 13.15px;
+		/* padding-top: 31.29px; */
 		color: white;
-		column-gap:20px !important;
+		column-gap:20px;
 		transition: transform 0.3s ease;
 		/* margin-bottom: 20px; */
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		align-items: start;
+		/* justify-content: space-between;
+		align-items: start; */
 		/* justify-content: center; */
-		flex-shrink:0;
-		padding-bottom: 31px;;
+		/* flex-shrink:0; */
+		padding-bottom: 18px;
 	}
 
     .course-card .icon {
 		width: 48px;
 		height: 48px;
-		margin-bottom: 1rem;
+		margin-bottom: 0rem;
 	}
 
-	.course-card hr {
-		/* margin: 2rem 0; */
-		opacity: 0.2;
+	.course-card .hr {
+		position:absolute;
+		left:13px;
+		bottom:15px;
+		width: 107.02px;
+		height: 1.36px;
+		border-radius: 4.53px;
+		background-color:#ffffff;
+		opacity: 40%;
+
 	} 
 
 	.course-card h5 {
-		font-family:"Atyp text",sans-serif;
-		font-size:28px;
-		font-weight:400;
-		line-height:28px;
+		font-family: "Atyp Text",sans-serif;
+		font-size: 12.7px;
+		font-weight: 400;
+		line-height: 12.7px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
 	}
 
 	.course-card:hover {
@@ -466,32 +560,70 @@
 
 	.icon-wrapper {
 		font-size: 2rem;
-		margin-bottom: 1rem;
+		/* margin-bottom: 1rem; */
 	}
 
 	.courses-section {
-		padding: 40px 0;
+		/* padding: 40px 0; */
 	}
 
 	.courses-title {
-		font-family:"Atyp Text", sans-serif;
+		/* font-family:"Atyp Text", sans-serif;
 		color: #2C2B31;
 		font-size: 2rem;
 		font-weight:600;
 		line-height:32px;
-		margin: 1rem 0;
+		margin: 1rem 0; */
+		font-family:"Atyp Text", sans-serif;
+		font-size: 18.06px;
+		font-weight: 600;
+		line-height: 22.58px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: #2C2B31;		
 	}
 
 	.courses-subtitle {
-		font-family:"Atyp Text", sans-serif;
+		/* font-family:"Atyp Text", sans-serif;
 		font-weight: 400;
 		font-size:15.98px;
 		line-height: 20px;
 		opacity: 80%;
 		color: #302F35;
-		margin-bottom: 2rem;
+		margin-bottom: 2rem; */
+		font-family:"Atyp Text", sans-serif;
+		font-size: 7.57px;
+		font-weight: 400;
+		line-height: 10px;
+		text-align: center;
+		opacity: 80%;
+		color: #302F35;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		max-width:210px;
+        margin:auto;
+		margin-bottom: 0.875rem;
 	
 	}
+
+	
+.row-item {
+    display: flex;
+    overflow-x: auto; 
+    flex-wrap: nowrap;
+    gap: 15px;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.row-item .col {
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 80%;
+}
+
+	/* horizontal scroll */
 
 	.container {
 		max-width: 1200px;
@@ -499,22 +631,16 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		font-size: 75px;
-		font-weight: 400;
-	}
-
-	h2 {
-		font-size: 40px;
-		font-weight: 400;
-	}
 
 	.content h3 {
 		font-family:"Atyp Text",sans-serif;
-		font-weight:400;
-		font-size:27.07px;
-		line-height:39.25px;
-		color:#ffffff
+		font-weight:600;
+		/* font-size:27.07px;
+		line-height:39.25px; */
+		font-size:16.13px;
+		line-height:23.39px;
+		color:#ffffff;
+		padding-top: 27.04px;
 	}
 
 	p.about-us {
@@ -524,8 +650,10 @@
     .content .about-us {
 		font-family:"Atyp Text",sans-serif;
 		font-weight:400;
-		font-size:12.57px;
-		line-height:17.72px;
+		/* font-size:12.57px;
+		line-height:17.72px; */
+		font-size:7.49px;
+		line-height:10.56px;
 		color:#ffffff
 	}
 	.no-wrap {
@@ -559,9 +687,12 @@
 		color:#ffffff;
 		border:0;
 		outline:0;
-		font-size:15px;
-		line-height:21.36px;
-		width:152px;
+		/* font-size:15px;
+		line-height:21.36px; */
+		font-size:8.91px;
+		line-height:12.68px;
+		/* width:152px; */
+		width:90.25px;
 	}
 
 	.access-btn:hover{
@@ -579,53 +710,65 @@
 	}
 
 	.card-bg {
-		background-color: #313036 !important;
-		border-radius: 59.94px;
-		padding: 12px;
-		height: 100%;
+		background-color: #313036;
+		border-radius: 17.55px;
+		padding: 5px;
+		background-color:#313036;
+		height: 135px;
+		width:114.63px;
 	}
 
 	.rounded-img {
-	 width: 368.94px;
-	 height:251.73px;
-	 /* width:100%;
-	 height:100%; */
-	 border-top-left-radius: 53.28px;
-	 border-top-right-radius: 53.28px;
+	 width:114.63px;
+	 height:125.16px;
+	 border-top-left-radius:17.55px;
+	 border-top-right-radius:17.55px;
 	}
 	.card-content {
 		display: flex;
 		flex-direction:column;
 		align-items:center;
-		margin-top: 36px;
+		margin-top: 6px;
+		color:#ffffff;
 
 	}
 	.card-content h5{
+		color:#ffffff;
 	  font-family:"Atyp Text",sans-serif;
 	  font-weight: 400;
-	  font-size: 24px;
-	  line-height:35px;
+	  font-size: 7.02px;
 	  text-align:center;
 	}
 	.card-content p {
 	  font-family:"Atyp Text",sans-serif;
 	  font-weight: 400;
-	  font-size: 1rem;
-	  line-height: 27px;
+	  font-size: 4.68px;
+	  line-height: 7.8px;
 	  opacity: 70%;
 	  text-align:center;
 	  max-width: 258px;
 	}
 
 	.btn-consult {
-		width:230px;
+		width:115.86px;
 		padding-top:10px;
 		padding-bottom:10px;
 		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
 		box-shadow: 0px 4px 15px 0px #03BDB359;
 		color: #ffffff;
 		border: 0;
-        border-radius: 20px;
+		display: flex;
+		justify-content:center;
+		margin:auto;
+        border-radius: 10.07px;
+		font-family: "Atyp Text",sans-serif;
+		font-size: 7.56px;
+		font-weight: 400;
+		line-height: 10.76px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
 	}
 
 	.btn-consult:hover {
@@ -693,7 +836,7 @@
 		bottom: -68px;
 		left: 25px;
 		z-index: 1;
-		align-items: self-end;
+		align-items: flex-end;
 
 	}
 
@@ -765,21 +908,254 @@
 	   }
 
 	   .hero-description {
+		font-size: 15px;
+		line-height:21.36px;
 		margin-bottom: 41px;
 		max-width: 548px;
 	   }
 
-	   .courses-title {
-		font-size:40px;
-		margin-bottom: 1.75rem;
-		line-height: 40px;
-		text-align: center;
-	   }
+	   .btn-get-started {
+		width: 152px;
+	  }
 
+	  .hero-buttons .btn {
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		width: 152px;
+		font-size: 15px;
+		line-height: 21.36px;
+		padding: 16px 34px;
+		border-radius: 20px;
+		font-weight: 500;
+		margin-right: 15px;
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+
+	}
+
+	.btn-financial-aid {
+		width:152px;
+		text-wrap:nowrap;
+		font-size: 15px;
+		line-height: 21.36px;
+	}
+
+	.hero-image {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		z-index: 2;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		margin-top: 39.86px;
+	}
+
+	.hero-image img {
+		max-width: 100%;
+		width: 251px;
+		height: auto;
+
+	}
+
+	.hero-image .aid-overlay {
+		width: 202px;
+        left: 33.64px;
+        top: 26px;
+	}
+
+	.hero-image .it-overlay {
+		width: 202px;
+        left: 59.64px;
+        top: 86px;
+	}
+
+	.hero-image .chart-overlay {
+        left: 98.64px;
+        width: 120.16px;
+        top: 165px;
+	}
+
+	.section-header {
+		text-align: center;
+		/* margin-bottom: 3rem; */
+	}
+
+	
+
+	.section-title {
+		font-family:'Atyp Text',sans-serif;
+		font-size: 2.5rem;
+		font-weight: 600;
+		line-height:50px;
+		margin-bottom: 28px;
+		text-align: center;
+		color:#2C2B32; 
+
+	}
+
+	.section-subtitle {
+		font-size:15.98px;
+		line-height:26.64px;
+		font-weight:400;
+		text-align: center;
+		margin: auto;
+		max-width: 476px;
+		margin-bottom: 2.9rem;
+		opacity:80%;
+		color:#302F35;
+
+	}
+
+	.who-card {
+		background: linear-gradient(103.12deg, #201E27 7.94%, #4B4B4B 114.59%);
+		border-radius: 19.33px;
+	    width:100%;
+		max-height: 278px;
+		padding-left:15.56px; 
+
+	}
+
+	.who-card .content {
+		color: white;
+	}
+	 .content-left {
+		padding: 1rem 1rem 0rem 1rem;
+	}
+	.content-right {
+		padding: 1rem 1rem 0rem 1rem;
+	} 
+
+	.who-card img {
+		padding: 0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		border-top-right-radius: 19.33px;
+		border-bottom-right-radius:19.33px;
+	}
+
+
+	.card {
+		width:609px;
+		border-radius: 19.33px;
+		height: 323px;
+	}
+
+	.card:hover {
+		transform: translateY(-5px);
+	}
+
+	.card-img-top {
+		height: 150px;
+		object-fit: cover;
+	}
+
+	.card-body {
+		padding: 1rem;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.card-title {
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin-top: 0.5rem;
+		text-align: start;
+	}
+
+	
+	.card-bg {
+		background-color: #313036;
+		border-radius: 59.94px;
+		padding: 12px;
+		 height: 430px; 
+		width: 25rem; 
+	}
+
+	.rounded-img {
+	 width: 368.94px;
+	 height:251.73px; 
+	 border-top-left-radius: 53.28px;
+	 border-top-right-radius: 53.28px;
+	}
+	.card-content {
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		margin-top: 36px;
+		/* background-color:#313036; */
+		color:#ffffff;
+
+	}
+	.card-content h5{
+		color:#ffffff;
+	  font-weight: 400;
+	  font-size: 24px;
+	  line-height:35px;
+	  text-align:center;
+	}
+	.card-content p {
+	  font-family:"Atyp Text",sans-serif;
+	  font-weight: 400;
+	  font-size: 1rem;
+	  line-height: 27px;
+	  opacity: 70%;
+	  text-align:center;
+	  max-width: 258px;
+	}
+
+
+	.btn-consult {
+		width:230px;
+		padding-top:10px;
+		padding-bottom:10px;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+		color: #ffffff;
+		border: 0;
+		display: flex;
+		justify-content:center;
+		margin:auto;
+        border-radius: 20px;
+		font-family: "Atyp Text",sans-serif;
+		font-size: 15px;
+		line-height: 21.36px;
+
+	}
+
+
+	.content h3 {
+		font-size:27.07px;
+		line-height:39.25px;
+		color:#ffffff;
+		padding-top: 27.04px;
+	}
+
+    .content .about-us {
+		font-size:12.57px;
+		line-height:17.72px;
+		color:#ffffff
+	}
+
+	.access-btn {
+		font-family:"Atyp Text",sans-serif;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		border-radius:20px;
+		font-size:15px;
+		line-height:21.36px;
+		width:152px;
+	}
+	  
 	  .courses-subtitle {
+		font-size: 15.98px;
 		line-height:26.64px;
 		text-align: center;
+		margin:auto;
 		margin-bottom: 4rem;
+		max-width:100%;
 	   }
        
 	  .card-container {
@@ -795,26 +1171,65 @@
         border-radius:19.33px;
 	  }
 
-	  /* .who-card img {
+	  .who-card img {
 		height: 100%;
 		border-top-right-radius:19.33px;
 		border-bottom-right-radius:19.33px;
-	  } */
+	  }
 
 	  .content-left {
-		padding-top: 45.37px;
+		padding-top: 25.37px;
 		padding-left: 26px;
 		padding-right: 30px;
 		/* padding-bottom: 4rem; */
 	}
 	.content-right {
-		padding-top: 45.37px;
+		padding-top: 25.37px;
 		padding-left: 26px;
 		padding-right: 30px;
 	}
 
 	.card-width {
 		width: 300px;
+	}
+
+	.btn-consult {
+		width:230px;
+		padding-top:10px;
+		padding-bottom:10px;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+		color: #ffffff;
+		border: 0;
+        border-radius: 20px;
+	}
+
+	.btn-consult:hover {
+		color: #ffffff;
+		box-shadow: 0px 4px 15px 0px #03BDB359;
+	}
+
+	.site-reliability-bg {
+		background-color: #FFA500;
+	}
+
+	.courses-title {
+		font-family:"Atyp Text", sans-serif;
+		color: #2C2B31;
+		font-size: 2rem;
+		font-weight:600;
+		line-height:32px;
+		margin: 1rem 0;
+	}
+
+	.courses-subtitle {
+		font-family:"Atyp Text", sans-serif;
+		font-weight: 400;
+		font-size:15.98px;
+		line-height: 20px;
+		opacity: 80%;
+		color: #302F35;
+		margin-bottom: 2rem;
 	}
 
 	/* .owl-prev{
@@ -829,12 +1244,54 @@
 		.hero-section {
 		padding: 4rem 0;
 	   }
-       .course-card h5 {
-		max-width: 150px;
-	   }
-       .course-card h5:last-of-type {
+
+	   .hero-title {	
+			text-align: start;
+		}
+	   .hero-subtitle {	
+			text-align: start;
+		}
+
+		.hero-btns {
+			text-align:start;
+		}
+
+	   .icon-wrapper {
+		font-size: 2rem;
+		/* margin-bottom: 1rem; */
+	}
+	
+	.icon-wrapper img{
+       width:44px;
+	   height:35.48px;
+	}
+	.course-card h5 {
+		font-family:"Atyp text",sans-serif;
+		font-size:28px;
+		font-weight:400;
+    	line-height:40px;
+		margin-bottom: 1.75rem;
+		/* max-width: 150px; */
+
+	}
+
+
+	.course-card {
+		background-color: white;
+		border-radius: 40px;
+		padding: 1.5rem;
+		height: 258px;
+		margin-bottom: 1.5rem;
+	}
+
+	.course-card .icon {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 1rem;
+	}
+       /* .course-card h5:last-of-type {
          max-width: 194px;
-       }
+       } */
 	   .who-card img {
 		height: 100%;
 		border-radius: 0px;
@@ -845,14 +1302,89 @@
 	  .card-width {
 		width: 400px;
 	}
+	.access-btn {
+		font-family:"Atyp Text",sans-serif;
+		background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
+		box-shadow: 0px 4px 15px 0px #03BDB359; 
+		font-size:15px;
+		line-height:21.36px;
+		width:152px;
+	}
+
+	.site-reliability-bg {
+		background-color: #FFA500;
+	}
+
+	.hero-buttons .btn {
+		justify-content:flex-start;
+		align-items:center;
+
+	}
+
+	.btn-financial-aid {
+		width:152px;
+		text-wrap:nowrap;
+		font-size: 15px;
+		line-height: 21.36px;
+	}
+
+
 	}
 	@media (min-width:992px) {
 		.hero-section {
 		padding: 4rem 0;
 	   }
+	   .hero-buttons {
+		justify-content:flex-start;
+	   }
+	   .hero-image img {
+        max-width: 100%;
+        width: 358.44px;
+        height: 398px;
+    }
+
+	    .hero-image .aid-overlay {
+        width: 202px;
+        left: -6.36px;
+        top: -94px;
+    }
+
+		.hero-image .it-overlay {
+		width: 202px;
+		left: 25.64px;
+		top: -5px;
+    }
+
+	    .hero-image .chart-overlay {
+        left: 41.64px;
+        width: 145px;
+        top: 87px;
+    }
 	   .course-card {
 		width:294px;
 	  }
+	  .row-item {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        /* gap: 20px; */
+        overflow: visible;
+    }
+
+    .row-item:last-child {
+        /* grid-template-columns: repeat(3, 1fr);  */
+	}
+
+    .row-item .col {
+        flex: none;
+        width: auto; 
+    }
+
+	.course-card .hr {
+		width: 236px;
+		left: 30px;
+		bottom: 35px;
+	} 
+	
 	}
 	@media (min-width:1200px) {
 		.hero-section {
@@ -886,7 +1418,7 @@ $banner = getContent('banner.content',true)->data_values;
 							<p style="padding: 5px;font-size:15px">@lang('Get Started')</p>
 						</a>
 					</div>
-					{{-- <form class="hero-search-form mt-xl-5 mt-4" action="{{route('courses')}}" method="GET">
+					{{-- <form class="hero-search-form mt-xl-5 mt-4"rted action="{{route('courses')}}" method="GET">
 					<i class="las la-search"></i>
 					<input type="text" name="search" autocomplete="on" class="form--control" placeholder="@lang('title, tags eg. web design, art, skill development')...">
 					<button type="submit" class="hero-search-form__btn">@lang('Search')</button>
@@ -899,21 +1431,21 @@ $banner = getContent('banner.content',true)->data_values;
 <!-- Hero Section -->
 <div class="container mx-auto">
 	<div class="hero-section row align-items-center">
-		<div class="col col-md-6">
+		<div class="col-md-6">
 			<h1 class="hero-title">Building the<br><span class="no-wrap">Next <span class="highlight">Tech&nbsp;Giants</span></span></span></h1>
-			<p class="hero-description">Ceeyit offers a self-paced platform to learn software development and management skills. Our e-learning programs has been developed to build <br> giants in tech.</p>
+			<p class="hero-description text-lg-start">Ceeyit offers a self-paced platform to learn software development and management skills. Our e-learning programs has been developed to build <br> giants in tech.</p>
 			<div class="hero-buttons">
 				<a href="{{route('user.register')}}" class="btn btn-get-started">@lang('Get Started')</a>
 				<button class="btn btn-financial-aid">Financial Aid</button>
 			</div>
 		</div>
-		<div class="d-none d-md-block col col-md-6">
+		<div class="col-md-6">
 			<div class="hero-image">
 			<!-- <img src="assets/images/hero_image.png" alt="Student learning" style="float: right;"> -->
 				<img src="assets/images/boy_with_book.jpg" alt="Student learning" style="float: right;">
-				<img src="assets/images/aid_overlay_svg.svg" alt="" style="position: absolute; border-radius: 10px; right: 250px; width: 354px; height: 150px; top: 50px;">
-				<img src="assets/images/it_overlay_svg.svg" alt="" style="position: absolute; border-radius: 10px; top: 90px; right: 200px; width: 354px; height: 150px; top: 130px; right: 190px;">
-				<img src="assets/images/chart_overlay_svg.svg" alt="" style="position: absolute; top: 200px; right: 240px; width: 400px; height: 180px; top: 240px; right: 190px;">
+				<img src="assets/images/aid_overlay_svg.svg" class="aid-overlay" alt="">
+				<img src="assets/images/it_overlay_svg.svg" alt="" class="it-overlay">
+				<img src="assets/images/chart_overlay_svg.svg" alt=""  class="chart-overlay">
 			</div>
 
 			<!-- Floating Elements -->
@@ -934,125 +1466,125 @@ $banner = getContent('banner.content',true)->data_values;
 		<h2 class="courses-title">Our top essential career courses</h2>
 		<p class="courses-subtitle">Introductory courses or modules that covers basic principles and concepts of information technology.</p>
 
-		<div class="row flex-xl-nowrap g-3" style="gap:15px !important;">
+		<div class="flex-xl-nowrap gx-3 row-item" style="gap:15px !important;">
 			<!-- First Row -->
 			<!-- CARD 1 -->
-			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+			<div class="col-md-4 col-lg-3">
 				<div class="course-card pink-gradient">
 					<div class="icon-wrapper">
-						<img src="{{asset('/assets/images/python_vector.svg')}}" alt="">
+						<img class="python-vector" src="{{asset('/assets/images/python_vector.svg')}}" alt="">
 					</div>
 					<h5>Phython</h5>
-					<hr class="me-5 w-100">
+					<div class="hr"></div>
 				</div>
             </div>
 			<!-- END CARD 1 -->
 
-				<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="col-md-4 col-lg-3">
 				 <!-- CARD 2 -->
 				  <div class="course-card purple-gradient">
 					<div class="icon-wrapper">
-						<img src="{{asset('assets/images/data_analysis_vector.svg')}}" alt="">
+						<img class="data-analysis-vector" src="{{asset('assets/images/data_analysis_vector.svg')}}" alt="">
 					</div>
-					<h5>Data Analysis</h5>
-					<hr class="w-100" style="clear: both;">
+					<h5>Data <br>Analysis</h5>
+					<div class="hr"></div>
 				  </div>
                 </div>
 				 <!-- END CARD 2 -->
 
 				  <!-- CARD 3 -->
-				  <div class="col-12 col-sm-6  col-md-4 col-lg-3">
-				   <div class="course-card light-blue-gradient">
-					<div class="icon-wrapper">
-						<img src="{{asset('assets/images/data_engineering_vector.svg')}}" alt="">
-					</div>
-					<h5>Data Engineering</h5>
-					<hr class="w-100">
+				    <div class="col-md-4 col-lg-3">
+					    <div class="course-card light-blue-gradient">
+							<div class="icon-wrapper">
+								<img src="{{asset('assets/images/data_engineering_vector.svg')}}" alt="">
+							</div>
+							<h5>Data <br>Engineering</h5>
+							<div class="hr"></div>
+					    </div>
 				   </div>
-				 </div>
 				  <!-- END OF CARD 3 -->
 				   <!-- CARD 4 -->
-				   <div class="col-12  col-sm-6 col-md-4 col-lg-3">
-				   <div class="course-card site-reliability-bg">
-						<div class="icon-wrapper">
-							<img src="{{asset('assets/images/site_reliability_vector.svg')}}" alt="">
+				   <div class="col-md-4 col-lg-3">
+					    <div class="course-card site-reliability-bg">
+							<div class="icon-wrapper">
+								<img src="{{asset('assets/images/site_reliability_vector.svg')}}" alt="">
+							</div>
+							<h5>Site Reliability Engineering</h5>
+							<div class="hr"></div>
 						</div>
-						<h5>Site Reliability Engineering</h5>
-						<hr class="w-100">
-				    </div>
 				    </div>
 				   <!--END OF CARD 4 -->
-		</div>
-		<!-- SECOND ROW-->
-		<div class="row justify-content-start justify-content-lg-center" style="gap: 20px;">
-			<!-- CARD 1 -->
-			<div class="col" style="max-width: 295px;">
-				<div class="course-card light-blue-gradient">
-					<div class="icon-wrapper">
-						<img src="{{asset('assets/images/cloud_vector.svg')}}" alt="">
-					</div>
-					<h5>Cloud Engineering</h5>
-					<hr class="me-5 w-100">
-				</div>
-			</div>
-			<!-- END CARD 1 -->
-
-			<!-- CARD 2 -->
-			<div class="col" style="max-width: 294px;">
-				<div class="course-card pink-gradient">
-					<div class="icon-wrapper">
-						<img src="assets/images/project_management_vector.svg" alt="">
-					</div>
-					<h5>Project Management</h5>
-					<hr class="w-100" style="clear: both;">
-				</div>
-			</div>
-			<!-- END CARD 2 -->
-
-			<!-- CARD 3 -->
-			<div class="col" style="max-width: 295px;">
-				<div class="course-card purple-gradient">
-					<div class="icon-wrapper">
-						<img src="assets/images/devops_vector.svg" alt="">
-					</div>
-					<h5>Devops Engineering</h5>
-					<hr class="w-100">
-				</div>
-			</div>
-			<!-- END CARD 3 -->
+				   <!-- SECOND ROW-->
+				   <!-- <div class="d-flex align-items-center g-3 justify-content-center"> -->
+					   <!-- CARD 1 -->
+					   <div class="col-md-4 col-lg-3">
+						   <div class="course-card light-blue-gradient">
+							   <div class="icon-wrapper">
+								   <img src="{{asset('assets/images/cloud_vector.svg')}}" alt="">
+							   </div>
+							   <h5>Cloud <br>Engineering</h5>
+							   <div class="hr"></div>
+						   </div>
+					   </div>
+					   <!-- END CARD 1 -->
+		   
+					   <!-- CARD 2 -->
+					   <div class="col-md-4 col-lg-3">
+						   <div class="course-card pink-gradient">
+							   <div class="icon-wrapper">
+								   <img src="assets/images/project_management_vector.svg" alt="">
+							   </div>
+							   <h5>Project <br>Management</h5>
+							   <div class="hr"></div>
+						   </div>
+					   </div>
+					   <!-- END CARD 2 -->
+		   
+					   <!-- CARD 3 -->
+					   <div class="col-md-4 col-lg-3">
+						   <div class="course-card purple-gradient">
+							   <div class="icon-wrapper">
+								   <img src="assets/images/devops_vector.svg" alt="">
+							   </div>
+							   <h5>Devops Engineering</h5>
+							   <div class="hr"></div>
+						   </div>
+					   </div>
+					   <!-- END CARD 3 -->
+				   <!-- </div> -->
 		</div>
 
 		
 	</div>
 </section>
 
-<section class="py-5 bg-light">
+<section class=" py-5 bg-light">
 	<div class="container">
 		<div class="section-header">
-			<h2 class="section-title">Who Are We?</h2>
-			<p class="section-subtitle">Your trusted tech partner building solutions for a digital world.</p>
+			<h2 class="section-title mb-0">Who Are We?</h2>
+			<p class="section-subtitle pt-0">Your trusted tech partner building solutions for a digital world.</p>
 		</div>
 
 		<div class="row g-4 g-lg-3">
-			<div class="col-12 col-sm-6">
+			<div class="col-12 col-md-6">
 				<div class="who-card">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-6">
 							<div class="content content-left">
 								<h3>About us</h3>
 								<p class="about-us">Ceeyit Solutions equips individuals with the skills needed to succeed as IT professionals. We offer live classes, pre-recorded videos, and online resources, along with assignments, quizzes, and exams. We also provide certification training and interview prep to ensure our students are job-ready.</p>
 							</div>
 						</div>
-						<div class="col-12 col-md-6">
+						<div class="col-6">
 							<img class="img-fluid" src="{{asset('assets/images/what-WE_Offer-1.png')}}">
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-sm-6">
+			<div class="col-12 col-md-6">
 				<div class="who-card">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-6">
 							<div class="content content-right">
 								<h3>Eligibility</h3>
 								<p class="about-us">Individuals with or without background and experience in Computer Science and Engineering fields can join it. If you desire to be a software developer, project manager, data analyst and engineer.</p>
@@ -1063,7 +1595,7 @@ $banner = getContent('banner.content',true)->data_values;
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-6">
 							<img class="img-fluid" src="{{asset('assets/images/what-we-offer-2.png')}}">
 						</div>
 					</div>
@@ -1081,12 +1613,12 @@ $banner = getContent('banner.content',true)->data_values;
 			<p class="section-subtitle">Essential principles and core concepts for beginners in IT.</p>
 		</div>
 
-		<div class="row align-items-center gy-5">
+		<div class="row row-cols-3 align-items-center gy-3 gx-2  gx-md-4 gy-md-5">
 			<!-- CARD 1 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<div class="card card-bg ">
 					<img src="assets/images/clear_fundamental_concept.png" alt="Fundamental Concepts" class="img-fluid rounded-img">
-					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+					<div class="card-content">
 						<h5 class="card-title">Fundamental Concepts</h5>
 						<p class="card-text">Building a Strong Knowledge Base in IT Fundamentals.</p>
 					</div>
@@ -1097,9 +1629,9 @@ $banner = getContent('banner.content',true)->data_values;
 			<!-- Repeat for other features -->
 			 <!-- CARD 2 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<div class="card card-bg ">
 				<img src="assets/images/clear_hands_experience.png" alt="Fundamental Concepts" class="img-fluid rounded-img">
-					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+					<div class="card-content">
 						<h5 class="card-title">Hands-on Experience</h5>
 						<p class="card-text">Gaining Practical Skills Through Real-World Applications.</p>
 					</div>
@@ -1109,9 +1641,9 @@ $banner = getContent('banner.content',true)->data_values;
 
 			 <!-- CARD 3 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<div class="card card-bg ">
 				<img src="assets/images/clear_tool_chain.png" alt="Tool chain" class="img-fluid rounded-img">
-					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+					<div class="card-content">
 						<h5 class="card-title">Toolchain Training</h5>
 						<p class="card-text">Equipping You with Essential Tools and Techniques.</p>
 					</div>
@@ -1120,9 +1652,9 @@ $banner = getContent('banner.content',true)->data_values;
 			<!-- END CARD 3 -->
 			 <!-- CARD 4 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<div class="card card-bg">
 				<img src="assets/images/clear_cloud_infastructure_img.png" alt="Cloud Infrastructure" class="img-fluid rounded-img">
-					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+					<div class="card-content">
 						<h5 class="card-title">Cloud Infrastructure</h5>
 						<p class="card-text">Developing Expertise in Cloud-Based Systems and Services.</p>
 					</div>
@@ -1131,10 +1663,10 @@ $banner = getContent('banner.content',true)->data_values;
 			<!-- END CARD 4 -->
 			 <!-- CARD 5 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<div class="card card-bg ">
 				<img src="assets/images/clear_certificate_image.png" alt="Certification & Assessments" class="img-fluid rounded-img">
-					<div class="card-content" style="background-color:#313036;color:#ffffff;">
-						<h5 class="card-title">Certification & Assessments</h5>
+					<div class="card-content">
+						<h5 class="card-title text-truncate">Certification & Assessments</h5>
 						<p class="card-text">Preparing You for Industry-Recognized Certifications.</p>
 					</div>
 				</div>
@@ -1142,9 +1674,9 @@ $banner = getContent('banner.content',true)->data_values;
 			<!-- END CARD 5 -->
 			 <!-- CARD 6 -->
 			<div class="col-md-4 d-flex justify-content-center">
-				<div class="card card-bg " style="width: 25rem;background-color:#313036;height:428px;">
+				<div class="card card-bg ">
 				<img src="assets/images/clear_support.png" alt="Support" class="img-fluid rounded-img">
-					<div class="card-content" style="background-color:#313036;color:#ffffff;">
+					<div class="card-content">
 						<h5 class="card-title">Support</h5>
 						<p class="card-text">Providing Guidance and Resources Every Step of the Way.</p>
 					</div>
@@ -1519,7 +2051,7 @@ $banner = getContent('banner.content',true)->data_values;
 </section> -->
 
 <!-- Student's Feedback Section -->
-<section class="py-5 bg-light">
+<section class="py-5 my bg-light">
 	<div class="container-fluid">
 		<div class="section-header">
 			<h2 class="section-title">Student’s Feedback</h2>
@@ -1530,7 +2062,7 @@ $banner = getContent('banner.content',true)->data_values;
 		<!-- <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"> -->
 		<div id="" class="owl-carousel owl-theme">
 		    <div class="">
-                <div class="" style="height:40%">
+                <div class="" style="height:40%;">
                     <div class="position-relative align-items-center justify-content-center bg-pink card-width">
 					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
 					    <p class="para">Ceeyit Solutions offered a curriculum that connected every concept to real-world applications, making it easier to shift my perspective and embrace a new set of tools and methodologies. I highly recommend Ceeyit Solutions to anyone looking to make a similar transition.</p>
@@ -1547,7 +2079,7 @@ $banner = getContent('banner.content',true)->data_values;
 				
 			<div class="">
                 <div class="" style="height:40%">
-                    <div class="card position-relative align-items-center justify-content-center bg-orange card-width">
+                    <div class="position-relative align-items-center justify-content-center bg-orange card-width">
 					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
 					     <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
                         <div class="img-container">
@@ -1562,7 +2094,7 @@ $banner = getContent('banner.content',true)->data_values;
             </div>
 			<div class="">
                 <div class="" style="height:40%">
-                    <div class="card position-relative align-items-center justify-content-center bg-purple card-width">
+                    <div class="position-relative align-items-center justify-content-center bg-purple card-width">
 					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
 					    <p class="para">Till this day, I belive that Cynthia from CeeyIT was sent to my life by my guardian angel. If you are reading this don’t think twice, register from here. I secured myself a 6-figure salary job in under 3 months after the class. Life changing is an understatement.</p>
                         <div class="img-container">
@@ -1578,7 +2110,7 @@ $banner = getContent('banner.content',true)->data_values;
 
 			<div class="">
                 <div class="" style="height:40%">
-                    <div class="card position-relative align-items-center justify-content-center bg-orange card-width">
+                    <div class="position-relative align-items-center justify-content-center bg-orange card-width">
 					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
                         <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
                         <div class="img-container">
