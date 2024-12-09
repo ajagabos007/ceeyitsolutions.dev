@@ -758,7 +758,7 @@
 				Help Build Talents with<span class="header-2">CeeY-Solutions Foundation</span></h1>
 			<p class="content">We're in the business of building world-class tech talents and we are in <br> need of your help to impact more lives.</p>
 			<div class="apply-btn-container">
-				<a href="#" class="btn apply-btn">Apply for scholarships <img class="d-none d-sm-block ms-1" src="assets/images/arrow_up.svg" alt=""></a>
+				<a href="{{route('user.application.form')}}" class="btn apply-btn">Apply for scholarships <img class="d-none d-sm-block ms-1" src="assets/images/arrow_up.svg" alt=""></a>
 				<a href="#" class="btn apply-btn-transparent">Sponsor a talent</a>
 			</div>
 		</div>
