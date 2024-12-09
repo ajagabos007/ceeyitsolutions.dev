@@ -354,17 +354,32 @@ $content = getContent('login.content',true)->data_values;
                         @endif
                 </div>
                 <div class="col-md-6">
-                    <label for="inputZip" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control text-input" id="inputZip" placeholder="Confirm Password">
+                    <label for="password-confirm" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control text-input" id="password-confirm" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
                 </div>
                 <div class="col-md-6">
                     <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
+                    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">
                         Remember me
                     </label>
                     </div>
                 </div>
+                <div class="form-group col-md-6">
+                    @php echo loadReCaptcha() @endphp
+                </div>
+                @include($activeTemplate.'partials.custom_captcha')
+
+                @if($general->agree)
+                <div class="form-group col-sm-6 row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-8">
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">@lang('I agree with *****')</label>
+                    </div>
+                </div>
+                @endif
                 <div class="col-12">
                     <button type="submit" class="btn btn-register w-100">Register</button>
                 </div>
