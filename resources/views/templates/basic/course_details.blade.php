@@ -1367,8 +1367,8 @@
 <div class="container my-4 py-4 my-md-5 py-md-5">
 <h1 class="course-title">{{__($course->title)}}</h1>
      <div>
-      <p class="course-subtitle">
-           {{$course->will_learn}}
+      <p class="">
+           {!!$course->will_learn!!}
         </p>
      </div>
   <div class="main-container">
@@ -1378,7 +1378,7 @@
       <div class="video-container" style="background-image: url('{{ getImage(imagePath()['course']['path'].'/'.$course->thumbnail, imagePath()['course']['preview_size']) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="video-placeholder">
           <div class="">
-            <!-- <img src="{{getImage(imagePath()['course']['path'].'/'.$course->thumbnail,imagePath()['course']['preview_size'])}}" alt="image"> -->
+            <img src="{{getImage(imagePath()['course']['path'].'/'.$course->thumbnail,imagePath()['course']['preview_size'])}}" alt="image">
             <a href="{{$course->preview == 1 ? asset(imagePath()['course']['preview_video_path'].'/'.$course->preview_video) : $course->preview_url}}" data-rel="lightcase" class="video-btn"> 
               <div class="play-button">
                <img src="/assets/images/play_button_vector.svg" alt=""></a>
@@ -1409,7 +1409,7 @@
           <div class="row mt-1">
             <div class="col-lg-8">
               <p class="tab-course-description">
-               {{$course->description}}
+               {!!$course->description!!}
               </p>
             </div>
 
@@ -1560,14 +1560,14 @@
 
         @auth
         @if(auth()->user()->is_instructor != 1)
-        @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"success")->first())
-        <a href="{{route('user.course.play',[$course->id,$course->slug])}}" class="btn w-100 premium-btn">@lang('Goto Course')</a>
-        @else
-        @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"pending")->first())
+          @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"success")->first())
+          <a href="{{route('user.course.play',[$course->id,$course->slug])}}" class="btn w-100 premium-btn">@lang('Goto Course')</a>
+          @else
+          @if(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"pending")->first())
 
-        <a href="javascript:void(0)" class="btn premium-btn  w-100 purchase disabled">@lang('Pending Approval')</a>
-        @elseif(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"rejected")->first())
-        <a href="javascript:void(0)" class="btn premium-btn  w-100 purchase disabled">@lang('Approval Rejected')</a>
+            <a href="javascript:void(0)" class="btn premium-btn  w-100 purchase disabled">@lang('Pending Approval')</a>
+          @elseif(\App\Models\UserCourse::where('user_id',auth()->id())->where('course_id',$course->id)->where('status',"rejected")->first())
+          <a href="javascript:void(0)" class="btn premium-btn  w-100 purchase disabled">@lang('Approval Rejected')</a>
 
         @else
         <a href="javascript:void(0)" class="btn btn--light  w-100 purchase premium-btn" data-payment_route="{{route('user.payment',$course->code)}}">@lang('Purchase')</a>

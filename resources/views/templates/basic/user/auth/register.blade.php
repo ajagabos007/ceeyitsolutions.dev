@@ -302,7 +302,9 @@ $content = getContent('login.content',true)->data_values;
     <div class="row">
         <div class="col-12 col-lg-6">
             <div>
-                <img class="logo" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
+            <a href="{{URL('/')}}">
+                <img class="logo-img" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
+            </a>
             </div>
             <h1 class="title-header">Create an Account.</h1>
             <form class="row g-3 register-form" action="{{ route('user.register') }}" method="POST" onsubmit="return submitUserForm();">

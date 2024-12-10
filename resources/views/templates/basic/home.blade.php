@@ -9,11 +9,11 @@
 @section('style')
 <style>
 	@font-face {
-    font-family: 'Atyp text';
-    src: url("/public/assets/font/AtypText-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-  }
+		font-family: 'Atyp text';
+		src: url("/public/assets/font/AtypText-Medium.woff") format("woff");
+		font-weight: 500;
+		font-style: normal;
+	}
 	body {
 		/* font-family: 'Inter', sans-serif; */
 	}
@@ -608,20 +608,20 @@
 	}
 
 	
-.row-item {
-    display: flex;
-    overflow-x: auto; 
-    flex-wrap: nowrap;
-    gap: 15px;
-    scroll-behavior: smooth;
-    padding-bottom: 10px;
-}
+	.row-item {
+		display: flex;
+		overflow-x: auto; 
+		flex-wrap: nowrap;
+		gap: 15px;
+		scroll-behavior: smooth;
+		padding-bottom: 10px;
+	}
 
-.row-item .col {
-    flex: 0 0 auto;
-    width: 80%;
-    max-width: 80%;
-}
+	.row-item .col {
+		flex: 0 0 auto;
+		width: 80%;
+		max-width: 80%;
+	}
 
 	/* horizontal scroll */
 

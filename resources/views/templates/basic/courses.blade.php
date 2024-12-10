@@ -445,18 +445,18 @@
         @forelse ($courses as $course)
           <div class="col col-sm-6 col-md-4 col-lg-3 my-4">
             <div class="card shadow border-0" style="border-radius: 20px !important; box-shadow: 0px 2px 12px 0px #50CAE92E;">
-              <img src="{{ $loop->index%2 > 0 ?asset('assets/images/site_reliability_small.svg'): asset('assets/images/project_management_small.svg')}}" class="card-img-top" alt="...">
+              <img src="{{getImage(imagePath()['course']['path'].'/thumb_'.$course->thumbnail,imagePath()['course']['preview_size'])}}" class="card-img-top" alt="..." >
               <div class="card-body" >
-                <h5 class="card-title">{{$course->title}}</h5>
+                <h5 class="card-title" style="over">{{$course->title}}</h5>
                 <div class="card-text">
                   <div class="d-flex gap-2">
                     <div class="d-flex align-items-center">
                       <img src="{{asset('assets/images/time_icon.svg')}}" class="time-icon" alt="...">
-                      <p class="card-text course-card-subtitle">{{$course->chapter->count() * random_int(1,3)}} hours</p>
+                      <p class="card-text course-card-subtitle">{{$course->totalDuration()}} hours</p>
                     </div>
                     <div class="d-flex align-items-center">
                       <img src="{{asset('assets/images/course_icon_small.svg')}}" class="course-icon" alt="...">
-                      <p class="card-text course-card-subtitle">{{$course->chapter->count()}} modules</p>
+                      <p class="card-text course-card-subtitle">{{$course->lectures()->count()}} modules</p>
                     </div>
                   </div>
                 </div>

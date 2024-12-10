@@ -362,7 +362,9 @@ $content = getContent('login.content',true)->data_values;
   <div class="row">
     <div class="col-md-6">
           <div>
+            <a href="{{URL('/')}}">
             <img class="logo-img" src="{{asset('assets/images/ceeyit_logo.svg')}}" alt="">
+            </a>
           </div>
         <h1 class="title-header">Login</h1>
       <form class="row g-3 login-form" method="POST" action="{{ route('user.login')}}" onsubmit="return submitUserForm();">
