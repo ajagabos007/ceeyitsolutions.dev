@@ -1461,97 +1461,29 @@ $banner = getContent('banner.content',true)->data_values;
 
 <!-- Courses Section -->
 <section>
+	
 	<!-- Courses Section -->
 	<div class="container courses-section">
+		
 		<h2 class="courses-title">Our top essential career courses</h2>
 		<p class="courses-subtitle">Introductory courses or modules that covers basic principles and concepts of information technology.</p>
 
-		<div class="flex-xl-nowrap gx-3 row-item" style="gap:15px !important;">
-			<!-- First Row -->
-			<!-- CARD 1 -->
+		<div class="flex-xl-nowrap gx-3 row-item" style="gap:30px !important;">
+			@foreach(\App\Models\Course::active()->topCourse()->inRandomOrder()->take(6)->get() as $course)
 			<div class="col-md-4 col-lg-3">
-				<div class="course-card pink-gradient">
+				<a href="{{route('course.details',[$course->id,$course->slug])}}" style="text-decoration:none;">
+				<div class="course-card {{$loop->index%3==0? 'pink-gradient': ($loop->index%3==1? 'purple-gradient':'light-blue-gradient')}}">
 					<div class="icon-wrapper">
-						<img class="python-vector" src="{{asset('/assets/images/python_vector.svg')}}" alt="">
+						<img src="{{getImage(imagePath()['course']['path'].'/thumb_'.$course->thumbnail,imagePath()['course']['preview_size'])}}" class="rounded" alt="..." >
 					</div>
-					<h5>Phython</h5>
+					<h5>{{$course->title}}</h5>
 					<div class="hr"></div>
 				</div>
+				</a>
             </div>
+			@endforeach
 			<!-- END CARD 1 -->
 
-				<div class="col-md-4 col-lg-3">
-				 <!-- CARD 2 -->
-				  <div class="course-card purple-gradient">
-					<div class="icon-wrapper">
-						<img class="data-analysis-vector" src="{{asset('assets/images/data_analysis_vector.svg')}}" alt="">
-					</div>
-					<h5>Data <br>Analysis</h5>
-					<div class="hr"></div>
-				  </div>
-                </div>
-				 <!-- END CARD 2 -->
-
-				  <!-- CARD 3 -->
-				    <div class="col-md-4 col-lg-3">
-					    <div class="course-card light-blue-gradient">
-							<div class="icon-wrapper">
-								<img src="{{asset('assets/images/data_engineering_vector.svg')}}" alt="">
-							</div>
-							<h5>Data <br>Engineering</h5>
-							<div class="hr"></div>
-					    </div>
-				   </div>
-				  <!-- END OF CARD 3 -->
-				   <!-- CARD 4 -->
-				   <div class="col-md-4 col-lg-3">
-					    <div class="course-card site-reliability-bg">
-							<div class="icon-wrapper">
-								<img src="{{asset('assets/images/site_reliability_vector.svg')}}" alt="">
-							</div>
-							<h5>Site Reliability Engineering</h5>
-							<div class="hr"></div>
-						</div>
-				    </div>
-				   <!--END OF CARD 4 -->
-				   <!-- SECOND ROW-->
-				   <!-- <div class="d-flex align-items-center g-3 justify-content-center"> -->
-					   <!-- CARD 1 -->
-					   <div class="col-md-4 col-lg-3">
-						   <div class="course-card light-blue-gradient">
-							   <div class="icon-wrapper">
-								   <img src="{{asset('assets/images/cloud_vector.svg')}}" alt="">
-							   </div>
-							   <h5>Cloud <br>Engineering</h5>
-							   <div class="hr"></div>
-						   </div>
-					   </div>
-					   <!-- END CARD 1 -->
-		   
-					   <!-- CARD 2 -->
-					   <div class="col-md-4 col-lg-3">
-						   <div class="course-card pink-gradient">
-							   <div class="icon-wrapper">
-								   <img src="assets/images/project_management_vector.svg" alt="">
-							   </div>
-							   <h5>Project <br>Management</h5>
-							   <div class="hr"></div>
-						   </div>
-					   </div>
-					   <!-- END CARD 2 -->
-		   
-					   <!-- CARD 3 -->
-					   <div class="col-md-4 col-lg-3">
-						   <div class="course-card purple-gradient">
-							   <div class="icon-wrapper">
-								   <img src="assets/images/devops_vector.svg" alt="">
-							   </div>
-							   <h5>Devops Engineering</h5>
-							   <div class="hr"></div>
-						   </div>
-					   </div>
-					   <!-- END CARD 3 -->
-				   <!-- </div> -->
 		</div>
 
 		
@@ -1590,7 +1522,9 @@ $banner = getContent('banner.content',true)->data_values;
 								<p class="about-us">Individuals with or without background and experience in Computer Science and Engineering fields can join it. If you desire to be a software developer, project manager, data analyst and engineer.</p>
 
 								<div class="d-flex pb-4 pb-lg-0">
-									<button class="btn access-btn">Gain access</button>
+									<a href="{{route('user.login')}}" class="btn access-btn">
+										Gain acces
+									</a>
 									<button class="btn students-btn">For students</button>
 								</div>
 							</div>
@@ -2057,74 +1991,26 @@ $banner = getContent('banner.content',true)->data_values;
 			<h2 class="section-title">Student’s Feedback</h2>
 			<p class="section-subtitle">Testimonials from our CEEYIT alumnis.</p>
 		</div>
-
 		
 		<!-- <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"> -->
 		<div id="" class="owl-carousel owl-theme">
+			@foreach(\App\Models\Review::InRandomOrder()->distinct('user_id')->take(9)->get() as $review)
 		    <div class="">
                 <div class="" style="height:40%;">
-                    <div class="position-relative align-items-center justify-content-center bg-pink card-width">
+                    <div class="position-relative align-items-center justify-content-center {{$loop->index%3==0? 'bg-pink': ($loop->index%3==1? 'bg-orange':'bg-purple')}} card-width">
 					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
-					    <p class="para">Ceeyit Solutions offered a curriculum that connected every concept to real-world applications, making it easier to shift my perspective and embrace a new set of tools and methodologies. I highly recommend Ceeyit Solutions to anyone looking to make a similar transition.</p>
+					    <p class="para">{{$review->review}}</p>
                         <div class="img-container">
-                            <img src="{{asset('assets/images/person_vector.svg')}}" class="img-bottom" alt="Student Feedback">
+                            <img src="{{getImage('/assets/images/user/profile/'.$review->user->image,'350x350')}}" class="img-bottom" alt="Student Feedback">
                             <div class="professional-title">
-                                <h5 class="mb-0">Tosin</h5>
-                                <p class="mb-0">DevOps Student, United States</p>
+                                <h5 class="mb-0">{{$review->user->fullname}}</h5>
+                                <p class="mb-0">@if($review->course){{$review->course->category->name}} Student, @endif{{$review->user->address->country}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-				
-			<div class="">
-                <div class="" style="height:40%">
-                    <div class="position-relative align-items-center justify-content-center bg-orange card-width">
-					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
-					     <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
-                        <div class="img-container">
-                            <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
-                            <div class="professional-title">
-                                <h5 class="mb-0">Dave</h5>
-                                <p class="mb-0">DevOps Student, United Kingdom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="">
-                <div class="" style="height:40%">
-                    <div class="position-relative align-items-center justify-content-center bg-purple card-width">
-					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
-					    <p class="para">Till this day, I belive that Cynthia from CeeyIT was sent to my life by my guardian angel. If you are reading this don’t think twice, register from here. I secured myself a 6-figure salary job in under 3 months after the class. Life changing is an understatement.</p>
-                        <div class="img-container">
-                            <img src="{{asset('assets/images/carousel_2.jpeg')}}" class="img-bottom" alt="Student Feedback">
-                            <div class="professional-title">
-                                <h5 class="mb-0">Chika</h5>
-                                <p class="mb-0">DevOps Student, United Kingdom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-			<div class="">
-                <div class="" style="height:40%">
-                    <div class="position-relative align-items-center justify-content-center bg-orange card-width">
-					<img src="../../assets/images/angle_image.svg" alt="Angle Image" class="position-absolute" style="top:-20px; left: 185px; width:240px;">
-                        <p class="para">Cynthia’s DevOps Boot Camp was a game-changer for me! The hands-on approach and real-world projects helped me build confidence and skills quickly. I highly recommend this boot camp to anyone looking to break into DevOps.</p>
-                        <div class="img-container">
-                            <img src="{{asset('assets/images/carousel_1.jpeg')}}" class="img-bottom" alt="Student Feedback">
-                            <div class="professional-title">
-                                <h5 class="mb-0">Dave</h5>
-                                <p class="mb-0">DevOps Student, United Kingdom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+			@endforeach
         </div>
 	</div>
 </section>
