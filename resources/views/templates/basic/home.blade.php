@@ -1435,8 +1435,13 @@ $banner = getContent('banner.content',true)->data_values;
 			<h1 class="hero-title">Building the<br><span class="no-wrap">Next <span class="highlight">Tech&nbsp;Giants</span></span></span></h1>
 			<p class="hero-description text-lg-start">Ceeyit offers a self-paced platform to learn software development and management skills. Our e-learning programs has been developed to build <br> giants in tech.</p>
 			<div class="hero-buttons">
-				<a href="{{route('user.register')}}" class="btn btn-get-started">@lang('Get Started')</a>
-				<button class="btn btn-financial-aid">Financial Aid</button>
+			@guest
+			<a href="{{route('user.register')}}" class="btn btn-get-started">@lang('Get Started')</a>
+			@endguest
+			@auth
+			<a href="{{route('user.course.purchased')}}" class="btn btn-get-started">@lang('My Courses')</a>
+			@endauth
+			<button class="btn btn-financial-aid">Financial Aid</button>
 			</div>
 		</div>
 		<div class="col-md-6">

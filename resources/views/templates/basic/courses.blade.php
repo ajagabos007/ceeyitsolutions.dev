@@ -44,7 +44,7 @@
    /* SELECT DROPDOWN */
    .custom-select {
     position: relative;
-    width: 190px;
+    width: fit-content;
     background-color: #DDFFFD;
     border-radius: 50px;
     color: #059B93;
@@ -431,7 +431,7 @@
      <img class="select-course-icon" src="{{asset('assets/images/course_icon.svg')}}" alt="">
      <div>
       <select class="form-select custom-select"  onChange="window.location.href=this.value" aria-label="Default select example">
-        <option selected class="{{queryBuild('category','')}}">Courses</option>
+        <option selected value="{{queryBuild('category','')}}">All Category</option>
         @foreach ($categories as $category)
           <option value="{{queryBuild('category',$category->slug)}}" {{request('category') == $category->slug ? 'selected':''}}>{{$category->name}}</option>
         @endforeach
