@@ -47,7 +47,7 @@
         @yield('content')
     </div>
 
-    @include($activeTemplate.'partials.footer')
+    @include($activeTemplate.'partials.master_footer')
     
     <script src="{{asset('assets/global/js/jquery-3.6.0.min.js')}}"></script>
     
