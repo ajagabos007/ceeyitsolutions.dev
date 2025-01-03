@@ -18,6 +18,16 @@
  *   'breakpoint': 768px
  * );
  */
+
+ @font-face {
+  font-family: 'AtypDisplay';
+  src: url('../../../fonts/atyp-font-family/AtypDisplay-Regular.eot') format('opentype'),
+      url('../../../fonts/atyp-font-family/AtypDisplay-Regular.ttf') format('truetype'),
+      url('../../../fonts/atyp-font-family/AtypDisplay-Regular.woff') format('woff'),
+      url('../../../fonts/atyp-font-family/AtypDisplay-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
 @font-face {
   font-family: 'lightcase';
   src: url("../fonts/lightcase.eot?55356177");
@@ -27,7 +37,7 @@
 }
 /* line 12, ../scss/components/fonts/_font-lightcase.scss */
 [class*='lightcase-icon-']:before {
-  font-family: 'lightcase', sans-serif;
+  font-family: 'AtypDisplay','lightcase', sans-serif;
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -181,7 +191,7 @@
   z-index: 2002;
   top: 50%;
   left: 50%;
-  font-family: arial, sans-serif;
+  font-family: 'AtypDisplay' arial, sans-serif;
   font-size: 13px;
   line-height: 1.5;
   text-align: left;

@@ -25,7 +25,7 @@ $policies = getContent('policies.element',false,'',1);
   .footer-links li {
     padding: 12px;
     border: 0.61px solid #FFFFFF80 ;
-    border-radius: 6.1px;
+    border-radius: 6.1px; 
     list-style: none;
   }
 
@@ -34,7 +34,7 @@ $policies = getContent('policies.element',false,'',1);
   }
 
   .privacy-policy {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 26.64px;

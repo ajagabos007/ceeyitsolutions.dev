@@ -17,9 +17,11 @@
   <!-- slick slider css -->
   <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/lib/slick.css')}}">
   <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/lightcase.css')}}">
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'AtypDisplay', 'Inter', 'sans-serif';
       background-color: white !important;
     }
 

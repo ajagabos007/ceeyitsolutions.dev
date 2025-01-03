@@ -8,7 +8,7 @@
   }
 
   .nav-link {
-   font-family: "Atyp Text",sans-serif;
+   font-family: 'AtypDisplay',sans-serif;
    font-weight: 400;
    font-size: 15px;
    line-height: 22px;

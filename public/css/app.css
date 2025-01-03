@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'AtypDisplay';
+    src: url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.eot') format('opentype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.ttf') format('truetype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.woff') format('woff'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Regular';
+    src: url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.eot') format('opentype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.ttf') format('truetype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.woff') format('woff'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Light';
+    src: url('../assets/fonts/atyp-font-family/AtypDisplay-Light.eot') format('opentype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Light.ttf') format('truetype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Light.woff') format('woff'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Light.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Medium';
+    src: url('../assets/fonts/atyp-font-family/AtypDisplay-Medium.eot') format('opentype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Medium.ttf') format('truetype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Medium.eot') format('woff'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Bold';
+    src: url('../assets/fonts/atyp-font-family/AtypDisplay-Bold.eot') format('opentype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Bold.ttf') format('truetype'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Bold.woff') format('woff'),
+        url('../assets/fonts/atyp-font-family/AtypDisplay-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}

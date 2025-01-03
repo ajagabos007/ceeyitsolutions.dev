@@ -2,10 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Poppins:wght@400;500&display=swap");
 
 @font-face {
-    font-family: 'Atyp text';
-    src: url("/public/assets/font/AtypText-Medium.woff") format("woff");
-    font-weight: normal;
+    font-family: 'AtypDisplay';
+    src: url('../../../fonts/atyp-font-family/AtypDisplay-Regular.eot') format('opentype'),
+        url('../../../fonts/atyp-font-family/AtypDisplay-Regular.ttf') format('truetype'),
+        url('../../../fonts/atyp-font-family/AtypDisplay-Regular.woff') format('woff'),
+        url('../../../fonts/atyp-font-family/AtypDisplay-Regular.woff2') format('woff2');
     font-style: normal;
+    font-weight: normal;
   }
 
 html {
@@ -13,7 +16,7 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'AtypDisplay', "Poppins", sans-serif;
     color: #464646;
     font-size: 1rem;
     padding: 0;
@@ -37,7 +40,7 @@ body.page-trns-active {
 body.page-trns-active::after {
     position: absolute;
     content: "\f110";
-    font-family: 'Line Awesome Free';
+    font-family: 'AtypDisplay', 'Line Awesome Free';
     font-weight: 900;
     color: #fff;
     width: 100%;
@@ -361,7 +364,7 @@ a:hover {
 }
 
 .section-subtitle {
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 500;
 }
@@ -416,7 +419,7 @@ a.text-white:hover {
 .custom--dropdown .dropdown-toggle::after {
     content: "\f107";
     border: none;
-    font-family: 'Line Awesome Free';
+    font-family: 'AtypDisplay', 'Line Awesome Free';
     font-weight: 900;
     -webkit-transform: translateY(3px);
     -ms-transform: translateY(3px);
@@ -499,7 +502,7 @@ a.text-white:hover {
     right: .8125rem;
     font-size: 1.0625rem;
     content: '\f107';
-    font-family: 'Line Awesome Free';
+    font-family: 'AtypDisplay', 'Line Awesome Free';
     font-weight: 900;
     background-image: none;
     color: #000;
@@ -558,7 +561,7 @@ a.text-white:hover {
 
 .page-breadcrumb li:first-child::before {
     content: "\f015";
-    font-family: "Font Awesome 5 Free";
+    font-family: 'AtypDisplay',"Font Awesome 5 Free";
     font-weight: 900;
     color: #5787ee;
     margin-right: .375rem;
@@ -590,7 +593,7 @@ a.text-white:hover {
     position: absolute;
     top: 0;
     left: 0;
-    font-family: 'Line Awesome Free';
+    font-family: 'AtypDisplay', 'Line Awesome Free';
     font-weight: 900;
     content: "\f058";
     font-size: 1.75rem;
@@ -690,7 +693,7 @@ a.text-white:hover {
 
 .caption-list li .caption {
     width: 30%;
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     font-weight: 700;
     font-size: .875rem;
     position: relative;
@@ -731,7 +734,7 @@ a.text-white:hover {
 }
 
 .caption-list-two li {
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     font-weight: 500;
     color: #373e4a;
     font-size: .875rem;
@@ -1575,7 +1578,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     color: #373e4a;
     font-weight: 500;
     margin: 0;
@@ -1589,7 +1592,7 @@ h3>a,
 h4>a,
 h5>a,
 h6>a {
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     color: #373e4a;
     font-weight: 500;
     -webkit-transition: all 0.3s;
@@ -1608,7 +1611,7 @@ span {
 a {
     text-decoration: none;
     display: inline-block;
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     font-weight: 400;
 }
 
@@ -1633,11 +1636,11 @@ a:hover {
 }
 
 .h--font {
-    font-family: "Poppins", sans-serif !important;
+    font-family:'AtypDisplay', "Poppins", sans-serif !important;
 }
 
 .p--font {
-    font-family: "Poppins", sans-serif !important;
+    font-family:'AtypDisplay', "Poppins", sans-serif !important;
 }
 
 .fw-medium {
@@ -2206,7 +2209,7 @@ button:focus {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     border-bottom-color: #999;
 }
 
@@ -2380,7 +2383,7 @@ label {
 .custom--checkbox label::before {
     position: absolute;
     content: "\f04d";
-    font-family: 'Line Awesome Free';
+    font-family: 'AtypDisplay', 'Line Awesome Free';
     font-weight: 900;
     top: 3px;
     left: -1.5625rem;
@@ -3334,7 +3337,7 @@ label {
 }
 
 .course-card .course-price {
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     font-weight: 700;
     font-size: 1.375rem;
     line-height: 1;
@@ -4452,7 +4455,7 @@ label {
 .action-widget__title::after {
     position: absolute;
     content: "\f107";
-    font-family: 'Line Awesome Free';
+    font-family: 'AtypDisplay', 'Line Awesome Free';
     font-weight: 900;
     top: 0;
     right: 0;
@@ -4937,7 +4940,7 @@ label {
 }
 
 .course-details-review .rating-area .rating {
-    font-family: "Poppins", sans-serif;
+    font-family:'AtypDisplay',"Poppins", sans-serif;
     font-size: 3.875rem;
     font-weight: 700;
     line-height: 1;

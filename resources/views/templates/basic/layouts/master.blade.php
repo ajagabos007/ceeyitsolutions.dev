@@ -26,7 +26,8 @@
   <!-- main css -->
   <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/main.css')}}">
   <link rel="stylesheet" href="{{ asset($activeTemplateTrue. 'css/color.php?color='.$general->base_color.'&secondColor='.$general->secondary_color) }}">
-  
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
   @stack('style-lib')
   @stack('style')
 </head>

@@ -98,7 +98,7 @@
    }
 
    .card-container h5 {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 21.77px;
     font-weight: 500;
     line-height: 31.33px;
@@ -119,7 +119,7 @@
    }
 
    .course-card-subtitle {
-     font-family: "Atyp Text",sans-serif;
+     font-family: 'AtypDisplay',sans-serif;
      font-weight: 400;
      font-size: 10px;
      line-height: 17.28px;
@@ -138,7 +138,7 @@
    }
 
    .course-rating-score {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-weight: 400;
     font-size: 9px;
     line-height: 17.28px;
@@ -148,7 +148,7 @@
    }
 
    .view-courses-btn {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-weight: 400;
     font-size: 10.16px;
     line-height: 14.47px;

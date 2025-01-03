@@ -12,7 +12,7 @@
 
   body {
     background-color: #f8f9fa;
-    font-family: 'Inter', sans-serif;
+    font-family: 'AtypDisplay',  'Inter', sans-serif;
     font-size: medium;
     margin: 0px;
   }
@@ -253,7 +253,7 @@
   }
 
   .course-title {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 21.46px;
     font-weight: 600;
     line-height: 35.27px;
@@ -263,7 +263,7 @@
   }
 
   .course-subtitle {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 12px;
@@ -319,7 +319,7 @@
   }
   .course-tabs .nav-link.active {
     position: relative; 
-    font-family: "Atyp Text", sans-serif;
+    font-family: 'AtypDisplay', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 28.78px;
@@ -368,7 +368,7 @@
   }
 
   .premium-card-title {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 34.66px;
     font-weight: 400;
     line-height: 49.87px;
@@ -379,7 +379,7 @@
   }
   
   .premium-car-para {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 19.83px;
     font-weight: 400;
     line-height: 28.24px;
@@ -398,7 +398,7 @@
   }
 
   .premium-features li {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 15.42px;
     font-weight: 400;
     line-height: 21.96px;
@@ -444,7 +444,7 @@
   }
 
   .rating-card-title {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 19.83px;
     font-weight: 400;
     line-height: 28.24px;
@@ -456,7 +456,7 @@
   }
 
   .rating-card-subtitle {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 8px;
     font-weight: 400;
     line-height: 11.28px;
@@ -481,7 +481,7 @@
   }
 
   .comment-title{
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 28.48px;
@@ -569,7 +569,7 @@
   }
 
   .instruction-info-about {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 25.9px;
@@ -647,7 +647,7 @@
   }
 
   .comment-question {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 25.9px;
@@ -674,7 +674,7 @@
     height: 29.14px;
     border-radius: 13.55px;
     background: linear-gradient(180deg, #00E8DB -31.4%, #095450 126.74%);
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 10.16px;
     font-weight: 400;
     line-height: 14.47px;
@@ -698,7 +698,7 @@
   }
 
   .course-subtitle {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 12px;
@@ -735,7 +735,7 @@
   }
 
   .premium-card-title {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 34.66px;
     font-weight: 400;
     line-height: 49.87px;
@@ -746,7 +746,7 @@
   }
   
   .premium-car-para {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 19.83px;
     font-weight: 400;
     line-height: 28.24px;
@@ -765,7 +765,7 @@
   }
 
   .premium-features li {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 15.42px;
     font-weight: 400;
     line-height: 21.96px;
@@ -794,7 +794,7 @@
   }
 
   .review {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 11.43px;
     font-weight: 400;
     line-height: 16.45px;
@@ -833,7 +833,7 @@
   }
 
   .course-subtitle {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 12px;

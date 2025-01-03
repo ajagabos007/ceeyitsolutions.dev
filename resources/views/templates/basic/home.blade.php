@@ -15,7 +15,7 @@
 		font-style: normal;
 	}
 	body {
-		/* font-family: 'Inter', sans-serif; */
+		/* font-family: 'AtypDisplay',  'Inter', sans-serif; */
 	}
 
 	.navbar {
@@ -65,14 +65,14 @@
 	
 
 	.section-title {
-		/* font-family:'Atyp Text',sans-serif;
+		/* font-family: 'AtypDisplay',sans-serif;
 		font-size: 2.5rem;
 		font-weight: 600;
 		line-height:50px;
 		margin-bottom: 28px;
 		text-align: center;
 		color:#2C2B32; */
-		font-family:'Atyp Text',sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 18px;
 		font-weight: 600;
 		/* line-height: 50px; */
@@ -82,7 +82,7 @@
 	}
 
 	.section-subtitle {
-		/* font-family:'Atyp Text',sans-serif;
+		/* font-family: 'AtypDisplay',sans-serif;
 		color: #302F35;
 		font-size:15.98px;
 		line-height:26.64px;
@@ -91,7 +91,7 @@
 		margin: auto;
 		max-width: 476px;
 		margin-bottom: 2.9rem; */
-		font-family:'Atyp Text',sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 8px;
 		font-weight: 400;
 		line-height: 26.64px;
@@ -282,7 +282,7 @@
 		margin-bottom: 20px;
 		letter-spacing: -0.04em;
 		color:#2C2B31; */
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 39.96px;
 		font-weight: 400;
 		line-height: 45.28px;
@@ -294,7 +294,7 @@
 	}
 
 	.hero-title .highlight {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 39.96px;
 		font-weight: 400;
 		line-height: 45.28px;
@@ -327,7 +327,7 @@
 		font-weight: 500;
 		margin-right: 15px; */
 		margin-right:15px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 7.99px;
 		font-weight: 400;
 		line-height: 11.38px;
@@ -341,7 +341,7 @@
 	}
 
 	.btn-financial-aid {
-		/* font-family: "Atyp Text", sans-serif;
+		/* font-family: 'AtypDisplay', sans-serif;
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 21.36px;
@@ -349,7 +349,7 @@
 		background-color: transparent;
 		border: 1px solid #15BAB1;
 		color: #15BAB1; */
-		font-family: "Atyp Text", sans-serif;
+		font-family: 'AtypDisplay', sans-serif;
 		font-size: 7.99px;
 		font-weight: 400;
 		line-height: 11.38px;
@@ -508,7 +508,7 @@
 	} 
 
 	.course-card h5 {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 12.7px;
 		font-weight: 400;
 		line-height: 12.7px;
@@ -761,7 +761,7 @@
 		justify-content:center;
 		margin:auto;
         border-radius: 10.07px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 7.56px;
 		font-weight: 400;
 		line-height: 10.76px;
@@ -823,7 +823,7 @@
 		height:173px;
 	}
     .para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-weight:400;
 		font-size: 12px;
 		line-height: 15px;
@@ -985,7 +985,7 @@
 	
 
 	.section-title {
-		font-family:'Atyp Text',sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 2.5rem;
 		font-weight: 600;
 		line-height:50px;
@@ -1120,7 +1120,7 @@
 		justify-content:center;
 		margin:auto;
         border-radius: 20px;
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 15px;
 		line-height: 21.36px;
 

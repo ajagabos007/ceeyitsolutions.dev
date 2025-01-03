@@ -36,7 +36,7 @@ $policies = getContent('policies.element',false,'',1);
   }
 
   .privacy-policy {
-    font-family: "Atyp Text",sans-serif;
+    font-family: 'AtypDisplay',sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 26.64px;

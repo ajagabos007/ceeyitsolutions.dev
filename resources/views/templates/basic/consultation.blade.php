@@ -2,7 +2,7 @@
 @section('style')
 <style>
 	body {
-		font-family: 'Inter', sans-serif;
+		font-family: 'AtypDisplay',  'Inter', sans-serif;
 		background-color: #FAFAFA;
 	}
 
@@ -57,7 +57,7 @@
 	}
     
 	.hero-title {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 45px;
 		font-weight: 600;
 		line-height: 55px;
@@ -69,7 +69,7 @@
 	}
 
 	.hero-para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -80,7 +80,7 @@
 	}
 
 	.content-header {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 30px;
@@ -91,7 +91,7 @@
 	}
 
 	.content-para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 21px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -102,7 +102,7 @@
 	}
 
 	.appointment-header {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 40px;
 		font-weight: 700;
 		line-height: 50px;
@@ -112,7 +112,7 @@
 	}
 
 	.appointment-para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 15.98px;
 		font-weight: 400;
 		line-height: 26.64px;
@@ -282,7 +282,7 @@
 	}
    
 	.hero-para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 21.36px;
@@ -293,7 +293,7 @@
 	}
 
 	.content-header {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 40px;
 		font-weight: 400;
 		line-height: 50px;
@@ -304,7 +304,7 @@
 	}
 
 	.content-para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 15.98px;
 		font-weight: 400;
 		line-height: 26.64px;
@@ -315,7 +315,7 @@
 	}
 
 	.appointment-header {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 40px;
 		font-weight: 700;
 		line-height: 50px;
@@ -325,7 +325,7 @@
 	}
 
 	.appointment-para {
-		font-family: "Atyp Text",sans-serif;
+		font-family: 'AtypDisplay',sans-serif;
 		font-size: 15.98px;
 		font-weight: 400;
 		line-height: 26.64px;
